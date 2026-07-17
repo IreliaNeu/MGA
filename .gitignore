@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Model and experiment artifacts
+checkpoints/
+outputs/
+cache/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Local datasets should be referenced through manifests, not committed.
+datasets/
+data/private/
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+

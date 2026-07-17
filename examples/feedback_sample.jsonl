@@ -1,0 +1,2 @@
+{"Win_caption":"Draft","draft":"the two scenes seem identical .","feedback":"Correction: There is a new structure visible in Image B that was not present in Image A.","gt":"there is no difference .","id":"levir-cc_test_000001","image_A_path":"datasets/LEVIR-MCI/images/test/A/test_000001.png","image_B_path":"datasets/LEVIR-MCI/images/test/B/test_000001.png","reason_draft":"The images appear identical, matching the Draft Caption.","refined":"a house appears in the lower-right corner of the scene .","status":"Refined (corrective)"}
+
