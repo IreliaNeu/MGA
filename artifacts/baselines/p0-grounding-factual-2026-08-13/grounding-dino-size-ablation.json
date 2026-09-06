@@ -1,0 +1,221 @@
+{
+  "captions": 2500,
+  "detection_delta": {
+    "mean_post_mask_fraction": -0.3591432800292968,
+    "mean_pre_mask_fraction": -0.5070497131347655,
+    "zero_post_boxes": 233,
+    "zero_pre_boxes": 423
+  },
+  "macro_model_mean": {
+    "coverage": {
+      "base_minus_tiny": -0.15762034035474426
+    },
+    "faithfulness": {
+      "base_minus_tiny": 0.1791174867540156
+    },
+    "overall": {
+      "base_minus_tiny": 0.08070956050635056
+    },
+    "temporal": {
+      "base_minus_tiny": 0.5780675338098531
+    },
+    "unverifiable_rate": {
+      "base_minus_tiny": 0.21266666666666664
+    }
+  },
+  "models": {
+    "Change-Agent": {
+      "coverage": {
+        "base": 0.6191440660568098,
+        "base_minus_tiny": -0.15973624382004403,
+        "tiny": 0.7788803098768539
+      },
+      "faithfulness": {
+        "base": 0.6603519994291511,
+        "base_minus_tiny": 0.17847459378131997,
+        "tiny": 0.48187740564783116
+      },
+      "overall": {
+        "base": 0.6013833084360952,
+        "base_minus_tiny": 0.07826464725261739,
+        "tiny": 0.5231186611834778
+      },
+      "temporal": {
+        "base": 0.7025021128027256,
+        "base_minus_tiny": 0.6242581333027379,
+        "tiny": 0.07824397949998757
+      },
+      "unverifiable_rate": {
+        "base": 0.39799999999999996,
+        "base_minus_tiny": 0.2056666666666666,
+        "tiny": 0.19233333333333336
+      }
+    },
+    "Chg2Cap": {
+      "coverage": {
+        "base": 0.6048240361039624,
+        "base_minus_tiny": -0.14986707088771312,
+        "tiny": 0.7546911069916755
+      },
+      "faithfulness": {
+        "base": 0.649835313094835,
+        "base_minus_tiny": 0.18050370480974726,
+        "tiny": 0.46933160828508774
+      },
+      "overall": {
+        "base": 0.5895761267417974,
+        "base_minus_tiny": 0.08066278900965829,
+        "tiny": 0.5089133377321391
+      },
+      "temporal": {
+        "base": 0.6961711095709505,
+        "base_minus_tiny": 0.6263965606630348,
+        "tiny": 0.06977454890791562
+      },
+      "unverifiable_rate": {
+        "base": 0.411,
+        "base_minus_tiny": 0.18800000000000003,
+        "tiny": 0.22299999999999995
+      }
+    },
+    "Draft": {
+      "coverage": {
+        "base": 0.6070274345888623,
+        "base_minus_tiny": -0.1613342500535765,
+        "tiny": 0.7683616846424388
+      },
+      "faithfulness": {
+        "base": 0.6233465694290379,
+        "base_minus_tiny": 0.18159361664549378,
+        "tiny": 0.4417529527835441
+      },
+      "overall": {
+        "base": 0.5775668548085903,
+        "base_minus_tiny": 0.08010483520263828,
+        "tiny": 0.497462019605952
+      },
+      "temporal": {
+        "base": 0.6463256925724162,
+        "base_minus_tiny": 0.5644648333454094,
+        "tiny": 0.08186085922700678
+      },
+      "unverifiable_rate": {
+        "base": 0.38799999999999996,
+        "base_minus_tiny": 0.22966666666666663,
+        "tiny": 0.15833333333333333
+      }
+    },
+    "RSICCformer": {
+      "coverage": {
+        "base": 0.5726737069267757,
+        "base_minus_tiny": -0.1561729883019125,
+        "tiny": 0.7288466952286882
+      },
+      "faithfulness": {
+        "base": 0.6161267204158979,
+        "base_minus_tiny": 0.18056274300675246,
+        "tiny": 0.43556397740914543
+      },
+      "overall": {
+        "base": 0.5635984247295643,
+        "base_minus_tiny": 0.08694241859388152,
+        "tiny": 0.4766560061356828
+      },
+      "temporal": {
+        "base": 0.6465178407540813,
+        "base_minus_tiny": 0.5905645719686524,
+        "tiny": 0.05595326878542883
+      },
+      "unverifiable_rate": {
+        "base": 0.39866666666666656,
+        "base_minus_tiny": 0.20933333333333323,
+        "tiny": 0.18933333333333333
+      }
+    },
+    "Refined": {
+      "coverage": {
+        "base": 0.5099737105351385,
+        "base_minus_tiny": -0.16099114871047515,
+        "tiny": 0.6709648592456137
+      },
+      "faithfulness": {
+        "base": 0.5267275289079706,
+        "base_minus_tiny": 0.17445277552676458,
+        "tiny": 0.352274753381206
+      },
+      "overall": {
+        "base": 0.48101525103580867,
+        "base_minus_tiny": 0.07757311247295734,
+        "tiny": 0.4034421385628513
+      },
+      "temporal": {
+        "base": 0.5523403306433259,
+        "base_minus_tiny": 0.48465356976943075,
+        "tiny": 0.06768676087389512
+      },
+      "unverifiable_rate": {
+        "base": 0.4036666666666667,
+        "base_minus_tiny": 0.23066666666666671,
+        "tiny": 0.17299999999999996
+      }
+    }
+  },
+  "protocol": "same 500 scenes, same claims, box=0.30, text=0.25, remote-sensing query expansion",
+  "representative_scenes_by_oversize_reduction": [
+    {
+      "entities": {
+        "building": {
+          "base_post_fraction": 0.0,
+          "base_pre_fraction": 0.0,
+          "tiny_post_fraction": 1.0,
+          "tiny_pre_fraction": 1.0
+        },
+        "road": {
+          "base_post_fraction": 0.0,
+          "base_pre_fraction": 0.0,
+          "tiny_post_fraction": 1.0,
+          "tiny_pre_fraction": 1.0
+        }
+      },
+      "oversize_reduction": 4.0,
+      "sample_id": "levir-cc_test_000025"
+    },
+    {
+      "entities": {
+        "building": {
+          "base_post_fraction": 0.0,
+          "base_pre_fraction": 0.0,
+          "tiny_post_fraction": 1.0,
+          "tiny_pre_fraction": 1.0
+        },
+        "road": {
+          "base_post_fraction": 0.0,
+          "base_pre_fraction": 0.0,
+          "tiny_post_fraction": 1.0,
+          "tiny_pre_fraction": 1.0
+        }
+      },
+      "oversize_reduction": 4.0,
+      "sample_id": "levir-cc_test_000144"
+    },
+    {
+      "entities": {
+        "building": {
+          "base_post_fraction": 0.0,
+          "base_pre_fraction": 0.0,
+          "tiny_post_fraction": 1.0,
+          "tiny_pre_fraction": 1.0
+        },
+        "road": {
+          "base_post_fraction": 0.0,
+          "base_pre_fraction": 0.0,
+          "tiny_post_fraction": 1.0,
+          "tiny_pre_fraction": 1.0
+        }
+      },
+      "oversize_reduction": 4.0,
+      "sample_id": "levir-cc_test_000438"
+    }
+  ],
+  "scenes": 500
+}

@@ -1,0 +1,56 @@
+{
+  "scene_count": 40,
+  "answer_count": 120,
+  "sample_types": {
+    "factual": 40,
+    "paraphrase": 40,
+    "contradiction": 40
+  },
+  "metrics": {
+    "gt_class_lookup": {
+      "n": 120,
+      "n_scored": 120,
+      "coverage": 1.0,
+      "conditional_auc": 0.8125,
+      "neutral_auc": 0.8125,
+      "balanced_accuracy": 0.8125,
+      "positive_mean": 1.0,
+      "negative_mean": 0.375,
+      "false_support_rate": 0.375
+    },
+    "open_vocab_only": {
+      "n": 120,
+      "n_scored": 0,
+      "coverage": 0.0,
+      "conditional_auc": NaN,
+      "neutral_auc": 0.5,
+      "balanced_accuracy": NaN,
+      "positive_mean": NaN,
+      "negative_mean": NaN,
+      "false_support_rate": NaN
+    },
+    "known_gt_unknown_ov": {
+      "n": 120,
+      "n_scored": 120,
+      "coverage": 1.0,
+      "conditional_auc": 0.918125,
+      "neutral_auc": 0.918125,
+      "balanced_accuracy": 0.925,
+      "positive_mean": 0.7676297075112531,
+      "negative_mean": 0.12049448509444907,
+      "false_support_rate": 0.125
+    },
+    "oracle_all_class": {
+      "n": 120,
+      "n_scored": 120,
+      "coverage": 1.0,
+      "conditional_auc": 0.9125,
+      "neutral_auc": 0.9125,
+      "balanced_accuracy": 0.9125,
+      "positive_mean": 1.0,
+      "negative_mean": 0.175,
+      "false_support_rate": 0.175
+    }
+  },
+  "note": "All variants enter the unchanged MGA scorer through the Q+A adapter. OpenVocabOnly is unavailable here because this adapter test isolates task format under complete semantic evidence."
+}

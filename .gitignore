@@ -11,7 +11,13 @@ venv/
 .env.*
 !.env.example
 
-# Model and experiment artifacts
+# Model and experiment artifacts. Keep compact, publication-facing summaries in Git;
+# raw JSONL records, per-scene images, masks, caches, and checkpoints stay external.
+artifacts/**
+!artifacts/**/
+!artifacts/**/*.json
+!artifacts/**/*.csv
+!artifacts/**/*.md
 checkpoints/
 outputs/
 cache/
@@ -25,9 +31,14 @@ wandb/
 datasets/
 data/private/
 
+# Local recovery material and human-rating workbooks are backed up separately.
+.claude_resources.json
+.tmp/
+tmp/
+*.xlsx
+
 # Editors and OS files
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-

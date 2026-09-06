@@ -1,0 +1,442 @@
+﻿sample_id,model,claim_id,entity,change_type,role,status,faithfulness,spatial_support,temporal_support,grounding_confidence,reason
+levir-cc_test_000004,Draft,c001,road,add,changed,supported,0.8991215143212424,0.8598850715246362,0.9719891938006541,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000004,Draft,c002,building,add,changed,supported,0.8790756961694339,0.8139626094914368,1.0,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000004,Draft,c003,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000004,Guided,c001,road,add,changed,supported,0.8991215143212424,0.8598850715246362,0.9719891938006541,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000004,Guided,c002,building,add,changed,supported,0.8790756961694339,0.8139626094914368,1.0,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000004,Guided,c003,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000004,Change-Agent,c001,road,add,changed,supported,0.8991215143212424,0.8598850715246362,0.9719891938006541,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000004,Change-Agent,c002,building,add,changed,supported,0.8790756961694339,0.8139626094914368,1.0,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000018,Draft,c001,building,add,changed,supported,0.8015014464409403,0.694617609909139,1.0,0.9296875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000018,Guided,c001,building,add,changed,supported,0.8015014464409403,0.694617609909139,1.0,0.9296875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000018,Change-Agent,c001,building,add,changed,supported,0.8015014464409403,0.694617609909139,1.0,0.9296875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000018,Change-Agent,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000019,Draft,c001,building,modify,changed,unverifiable,0.7396060201356072,0.5993938771317033,1.0,0.96875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000019,Draft,c002,road,none,context,supported,0.94921875,,,0.94921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000019,Guided,c001,building,modify,changed,unverifiable,0.7396060201356072,0.5993938771317033,1.0,0.96875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000019,Guided,c002,road,none,context,supported,0.94921875,,,0.94921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000019,Change-Agent,c001,building,add,changed,unverifiable,0.7396060201356072,0.5993938771317033,1.0,0.96875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000019,Change-Agent,c002,road,none,context,supported,0.94921875,,,0.94921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000048,Draft,c001,building,add,changed,supported,0.8018502202643172,0.6951541850220264,1.0,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000048,Guided,c001,building,add,changed,supported,0.8018502202643172,0.6951541850220264,1.0,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000048,Change-Agent,c001,building,add,changed,supported,0.8018502202643172,0.6951541850220264,1.0,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000049,Draft,c001,building,add,changed,contradicted,0.40804016521276576,0.09407180629000834,0.9911242603550295,0.96875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000049,Guided,c001,scene,none,no_change,contradicted,0.0,0.0,,1.0,The no-change assertion is evaluated directly against the change mask.
+levir-cc_test_000049,Change-Agent,c001,building,add,changed,contradicted,0.40804016521276576,0.09407180629000834,0.9911242603550295,0.96875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000064,Draft,c001,building,add,changed,unverifiable,0.6572808066997095,0.47273970261493764,1.0,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000064,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9765625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000064,Guided,c001,building,add,changed,unverifiable,0.6572808066997095,0.47273970261493764,1.0,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000064,Guided,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9765625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000064,Change-Agent,c001,building,add,changed,unverifiable,0.6572808066997095,0.47273970261493764,1.0,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000064,Change-Agent,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9765625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000068,Draft,c001,road,add,changed,unverifiable,0.7128684572639608,0.5720478325859492,0.9743924745231252,0.703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000068,Guided,c001,road,add,changed,unverifiable,0.7128684572639608,0.5720478325859492,0.9743924745231252,0.703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000068,Change-Agent,c001,road,add,changed,unverifiable,0.7128684572639608,0.5720478325859492,0.9743924745231252,0.703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000096,Draft,c001,building,add,changed,contradicted,0.3986372646184341,0.07482656095143707,1.0,0.98046875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000096,Guided,c001,building,add,changed,contradicted,0.3986372646184341,0.07482656095143707,1.0,0.98046875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000101,Draft,c001,building,add,changed,supported,0.7880598637483693,0.6739382519205682,1.0,0.90234375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000101,Draft,c002,road,none,context,supported,0.94140625,,,0.94140625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000101,Guided,c001,building,add,changed,supported,0.7880598637483693,0.6739382519205682,1.0,0.90234375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000101,Guided,c002,road,none,context,supported,0.94140625,,,0.94140625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000101,Change-Agent,c001,building,add,changed,supported,0.7880598637483693,0.6739382519205682,1.0,0.90234375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000124,Guided,c001,road,add,changed,contradicted,0.12939579295240575,0.17245158933138474,0.04943502824858759,0.96875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000124,Change-Agent,c001,building,add,changed,supported,0.7558536585365854,0.624390243902439,1.0,0.8515625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000133,Draft,c001,building,add,changed,unverifiable,0.5727857228698474,0.3427472659536113,1.0,0.95703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000133,Draft,c002,road,none,context,supported,0.9921875,,,0.9921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000133,Guided,c001,building,add,changed,unverifiable,0.5727857228698474,0.3427472659536113,1.0,0.95703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000133,Guided,c002,road,none,context,supported,0.9921875,,,0.9921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000133,Change-Agent,c001,building,add,changed,unverifiable,0.5727857228698474,0.3427472659536113,1.0,0.95703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000133,Change-Agent,c002,road,none,context,supported,0.9921875,,,0.9921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000153,Draft,c001,road,add,changed,contradicted,0.0,0.0,0.0,0.97265625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000153,Draft,c002,building,add,changed,unverifiable,0.6639710872811184,0.4830324419709515,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000153,Guided,c001,road,add,changed,contradicted,0.0,0.0,0.0,0.97265625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000153,Guided,c002,building,add,changed,unverifiable,0.6639710872811184,0.4830324419709515,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000153,Change-Agent,c001,building,add,changed,unverifiable,0.6639710872811184,0.4830324419709515,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000153,Change-Agent,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000158,Draft,c001,building,add,changed,supported,0.7859059030288748,0.6828504876983549,0.9772945314998401,0.96484375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000158,Draft,c002,road,none,context,supported,0.9765625,,,0.9765625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000158,Guided,c001,building,add,changed,supported,0.7859059030288748,0.6828504876983549,0.9772945314998401,0.96484375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000158,Guided,c002,road,none,context,supported,0.9765625,,,0.9765625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000158,Change-Agent,c001,building,add,changed,supported,0.7859059030288748,0.6828504876983549,0.9772945314998401,0.96484375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000158,Change-Agent,c002,road,none,context,supported,0.9765625,,,0.9765625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000172,Draft,c001,building,add,changed,unverifiable,0.5760782234532061,0.3642808912896691,0.969416126042632,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000172,Guided,c001,building,add,changed,unverifiable,0.5760782234532061,0.3642808912896691,0.969416126042632,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000172,Change-Agent,c001,building,add,changed,unverifiable,0.5760782234532061,0.3642808912896691,0.969416126042632,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000192,Draft,c001,road,add,changed,unverifiable,0.5887355335375657,0.3934259370135313,0.9514533556536295,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000192,Draft,c002,building,add,changed,supported,0.7897322043232824,0.6765110835742806,1.0,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000192,Guided,c001,road,add,changed,unverifiable,0.5887355335375657,0.3934259370135313,0.9514533556536295,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000192,Guided,c002,building,add,changed,supported,0.7897322043232824,0.6765110835742806,1.0,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000192,Change-Agent,c001,road,remove,changed,contradicted,0.043185832481175065,0.03170028818443804,0.06451612903225812,0.96875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000192,Change-Agent,c002,building,add,changed,supported,0.7897322043232824,0.6765110835742806,1.0,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000192,Change-Agent,c003,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000200,Draft,c001,building,add,changed,supported,0.7720662963575875,0.7359121298949379,0.839209748359651,0.984375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000200,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9921875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000200,Guided,c001,building,add,changed,supported,0.7720662963575875,0.7359121298949379,0.839209748359651,0.984375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000200,Guided,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9921875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000200,Change-Agent,c001,building,add,changed,supported,0.7720662963575875,0.7359121298949379,0.839209748359651,0.984375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000200,Change-Agent,c002,road,none,context,supported,0.9921875,,,0.9921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000205,Draft,c001,building,add,changed,unverifiable,0.5630173243503369,0.3277189605389798,1.0,0.953125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000205,Change-Agent,c001,building,add,changed,unverifiable,0.5630173243503369,0.3277189605389798,1.0,0.953125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000210,Draft,c001,building,add,changed,supported,0.8975479313824419,0.8423814328960646,1.0,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000210,Draft,c002,road,none,context,supported,0.9765625,,,0.9765625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000210,Guided,c001,building,add,changed,supported,0.8975479313824419,0.8423814328960646,1.0,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000210,Guided,c002,road,none,context,supported,0.9765625,,,0.9765625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000210,Change-Agent,c001,building,add,changed,supported,0.8975479313824419,0.8423814328960646,1.0,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000210,Change-Agent,c002,road,none,context,supported,0.9765625,,,0.9765625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000228,Draft,c001,road,modify,changed,unverifiable,0.6730377358490566,0.4969811320754717,1.0,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000228,Draft,c002,building,modify,changed,supported,0.8259708737864078,0.7322628827483196,1.0,0.94140625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000228,Guided,c001,road,add,changed,unverifiable,0.6730377358490566,0.4969811320754717,1.0,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000228,Guided,c002,building,add,changed,supported,0.8341668776905545,0.7448721195239301,1.0,0.94140625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000228,Change-Agent,c001,road,modify,changed,unverifiable,0.6730377358490566,0.4969811320754717,1.0,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000228,Change-Agent,c002,building,modify,changed,supported,0.8259708737864078,0.7322628827483196,1.0,0.94140625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000236,Draft,c001,road,add,changed,contradicted,0.0,0.0,0.0,0.91796875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000236,Draft,c002,building,add,changed,supported,0.817866934746847,0.7197952842259184,1.0,0.921875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000236,Guided,c001,road,add,changed,contradicted,0.0,0.0,0.0,0.91796875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000236,Guided,c002,building,add,changed,supported,0.817866934746847,0.7197952842259184,1.0,0.921875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000236,Change-Agent,c001,road,add,changed,contradicted,0.0,0.0,0.0,0.91796875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000241,Draft,c001,building,add,changed,supported,0.8111468812877263,0.7094567404426559,1.0,0.89453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000241,Guided,c001,building,add,changed,supported,0.8111468812877263,0.7094567404426559,1.0,0.89453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000241,Change-Agent,c001,building,add,changed,supported,0.8111468812877263,0.7094567404426559,1.0,0.89453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000248,Draft,c001,building,add,changed,contradicted,0.0,0.0,0.0,0.29296875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000248,Guided,c001,scene,none,no_change,contradicted,0.0,0.0,,1.0,The no-change assertion is evaluated directly against the change mask.
+levir-cc_test_000276,Draft,c001,building,add,changed,unverifiable,0.6207721511044176,0.41657254016064255,1.0,0.9140625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000276,Guided,c001,building,add,changed,unverifiable,0.6207721511044176,0.41657254016064255,1.0,0.9140625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000276,Change-Agent,c001,building,add,changed,unverifiable,0.6207721511044176,0.41657254016064255,1.0,0.9140625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000276,Change-Agent,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000285,Draft,c001,building,modify,changed,unverifiable,0.5163427449041317,0.3160688345066488,0.8882800070708856,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000285,Guided,c001,building,modify,changed,unverifiable,0.5163427449041317,0.3160688345066488,0.8882800070708856,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000285,Change-Agent,c001,building,add,changed,unverifiable,0.5351548062202477,0.3674124253498529,0.8466763706938379,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000287,Draft,c001,building,add,changed,unverifiable,0.5806088733431458,0.5204121056020605,0.6924028705765899,0.8125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000287,Guided,c001,building,add,changed,unverifiable,0.5806088733431458,0.5204121056020605,0.6924028705765899,0.8125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000287,Change-Agent,c001,building,add,changed,unverifiable,0.5806088733431458,0.5204121056020605,0.6924028705765899,0.8125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000298,Draft,c001,road,add,changed,contradicted,0.0,0.0,0.0,0.96484375,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000298,Draft,c002,building,add,changed,unverifiable,0.7099173747150065,0.5943863998583319,0.9244748994488307,0.9765625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000298,Draft,c003,road,none,context,supported,0.96484375,,,0.96484375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000298,Guided,c001,building,add,changed,unverifiable,0.7099173747150065,0.5943863998583319,0.9244748994488307,0.9765625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000298,Guided,c002,road,none,context,supported,0.96484375,,,0.96484375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000298,Change-Agent,c001,building,add,changed,unverifiable,0.7099173747150065,0.5943863998583319,0.9244748994488307,0.9765625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000298,Change-Agent,c002,road,none,context,supported,0.96484375,,,0.96484375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000300,Draft,c001,building,add,changed,unverifiable,0.5517826086956522,0.31043478260869567,1.0,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000300,Guided,c001,building,add,changed,unverifiable,0.5517826086956522,0.31043478260869567,1.0,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000300,Change-Agent,c001,building,add,changed,unverifiable,0.5517826086956522,0.31043478260869567,1.0,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000308,Draft,c001,building,add,changed,supported,0.7445457862094127,0.6069935172452502,1.0,0.95703125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000308,Guided,c001,building,add,changed,supported,0.7445457862094127,0.6069935172452502,1.0,0.95703125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000308,Change-Agent,c001,building,add,changed,supported,0.7445457862094127,0.6069935172452502,1.0,0.95703125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000308,Change-Agent,c002,road,add,changed,unverifiable,0.6352320675105485,0.4388185654008439,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000314,Draft,c001,road,add,changed,supported,0.7436564137229206,0.6218123297846001,0.9699382838940872,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000314,Draft,c002,building,add,changed,unverifiable,0.7264184928085591,0.5992397082457659,0.9626076641394605,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000314,Guided,c001,road,add,changed,supported,0.7436564137229206,0.6218123297846001,0.9699382838940872,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000314,Guided,c002,building,add,changed,unverifiable,0.7264184928085591,0.5992397082457659,0.9626076641394605,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000314,Change-Agent,c001,building,add,changed,unverifiable,0.7264184928085591,0.5992397082457659,0.9626076641394605,0.97265625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000314,Change-Agent,c002,road,add,changed,supported,0.7436564137229206,0.6218123297846001,0.9699382838940872,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000321,Draft,c001,building,add,changed,unverifiable,0.7244367796018163,0.5760565840027942,1.0,0.95703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000321,Guided,c001,building,add,changed,unverifiable,0.7244367796018163,0.5760565840027942,1.0,0.95703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000321,Change-Agent,c001,building,add,changed,unverifiable,0.7244367796018163,0.5760565840027942,1.0,0.95703125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000322,Draft,c001,building,add,changed,unverifiable,0.7299830444611906,0.5845892991710625,1.0,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000322,Draft,c002,road,none,context,supported,0.96875,,,0.96875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000322,Guided,c001,building,add,changed,unverifiable,0.7299830444611906,0.5845892991710625,1.0,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000322,Guided,c002,road,none,context,supported,0.96875,,,0.96875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000322,Change-Agent,c001,building,add,changed,unverifiable,0.7299830444611906,0.5845892991710625,1.0,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000322,Change-Agent,c002,road,none,context,supported,0.96875,,,0.96875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000331,Draft,c001,road,add,changed,supported,0.7947893566648068,0.694695405265875,0.9806781235485369,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000331,Draft,c002,building,add,changed,supported,0.7536008599068434,0.6209243998566822,1.0,0.63671875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000331,Guided,c001,building,add,changed,supported,0.7536008599068434,0.6209243998566822,1.0,0.63671875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000331,Guided,c002,road,add,changed,supported,0.7947893566648068,0.694695405265875,0.9806781235485369,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000331,Change-Agent,c001,road,add,changed,supported,0.7947893566648068,0.694695405265875,0.9806781235485369,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000331,Change-Agent,c002,building,add,changed,supported,0.7536008599068434,0.6209243998566822,1.0,0.63671875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000333,Draft,c001,building,add,changed,contradicted,0.2393404945799935,0.3534373681990721,0.027446300715990413,0.8828125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000333,Guided,c001,building,add,changed,contradicted,0.2393404945799935,0.3534373681990721,0.027446300715990413,0.8828125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000334,Draft,c001,building,add,changed,unverifiable,0.5097683379041896,0.3596430591340414,0.7885724270487506,0.92578125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000334,Guided,c001,building,add,changed,unverifiable,0.5097683379041896,0.3596430591340414,0.7885724270487506,0.92578125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000334,Change-Agent,c001,building,add,changed,unverifiable,0.5097683379041896,0.3596430591340414,0.7885724270487506,0.92578125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000345,Draft,c001,building,add,changed,unverifiable,0.7301620233155504,0.5848646512546928,1.0,0.86328125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000345,Guided,c001,building,add,changed,unverifiable,0.7301620233155504,0.5848646512546928,1.0,0.86328125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000345,Change-Agent,c001,building,add,changed,unverifiable,0.7301620233155504,0.5848646512546928,1.0,0.86328125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000349,Draft,c001,building,add,changed,supported,0.7655163974547234,0.6392559960841899,1.0,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000349,Draft,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000349,Guided,c001,building,add,changed,supported,0.7655163974547234,0.6392559960841899,1.0,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000349,Guided,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000349,Change-Agent,c001,building,add,changed,supported,0.7655163974547234,0.6392559960841899,1.0,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000349,Change-Agent,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000362,Draft,c001,building,add,changed,supported,0.8170872188699945,0.7185957213384531,1.0,0.9140625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000362,Draft,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000362,Guided,c001,building,add,changed,supported,0.8170872188699945,0.7185957213384531,1.0,0.9140625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000362,Guided,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000362,Change-Agent,c001,building,add,changed,supported,0.8170872188699945,0.7185957213384531,1.0,0.9140625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000362,Change-Agent,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000363,Draft,c001,building,add,changed,supported,0.8693649685973482,0.7990230286113049,1.0,0.94921875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000363,Guided,c001,building,add,changed,supported,0.8693649685973482,0.7990230286113049,1.0,0.94921875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000363,Change-Agent,c001,building,add,changed,supported,0.8693649685973482,0.7990230286113049,1.0,0.94921875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000366,Draft,c001,building,add,changed,unverifiable,0.6366750078198311,0.4410384735689709,1.0,0.92578125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000366,Draft,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000366,Guided,c001,building,add,changed,unverifiable,0.6366750078198311,0.4410384735689709,1.0,0.92578125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000366,Guided,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000366,Change-Agent,c001,building,add,changed,unverifiable,0.6366750078198311,0.4410384735689709,1.0,0.92578125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000366,Change-Agent,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000374,Draft,c001,building,add,changed,contradicted,0.31946100946541034,0.1884181532004197,0.5628263139575357,0.97265625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000374,Draft,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000374,Guided,c001,building,add,changed,contradicted,0.31946100946541034,0.1884181532004197,0.5628263139575357,0.97265625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000374,Guided,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000374,Change-Agent,c001,building,add,changed,contradicted,0.31946100946541034,0.1884181532004197,0.5628263139575357,0.97265625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000374,Change-Agent,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000376,Draft,c001,building,add,changed,unverifiable,0.5350979090607368,0.2847660139395951,1.0,0.9453125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000376,Guided,c001,building,add,changed,unverifiable,0.5350979090607368,0.2847660139395951,1.0,0.9453125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000376,Change-Agent,c001,building,add,changed,unverifiable,0.5350979090607368,0.2847660139395951,1.0,0.9453125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000379,Draft,c001,building,add,changed,unverifiable,0.606890189591551,0.395215676294694,1.0,0.9609375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000379,Guided,c001,building,add,changed,unverifiable,0.606890189591551,0.395215676294694,1.0,0.9609375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000379,Change-Agent,c001,building,add,changed,unverifiable,0.606890189591551,0.395215676294694,1.0,0.9609375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000385,Draft,c001,building,add,changed,contradicted,0.3966183388601835,0.0717205213233593,1.0,0.98828125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000385,Guided,c001,building,add,changed,contradicted,0.3966183388601835,0.0717205213233593,1.0,0.98828125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000385,Change-Agent,c001,building,add,changed,contradicted,0.3966183388601835,0.0717205213233593,1.0,0.98828125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000385,Change-Agent,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000389,Draft,c001,building,add,changed,unverifiable,0.5859236067481901,0.3703424140533864,0.9862886788956828,0.9296875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000389,Draft,c002,road,none,context,supported,0.99609375,,,0.99609375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000389,Guided,c001,building,add,changed,unverifiable,0.5859236067481901,0.3703424140533864,0.9862886788956828,0.9296875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000389,Guided,c002,road,none,context,supported,0.99609375,,,0.99609375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000389,Change-Agent,c001,building,add,changed,unverifiable,0.5859236067481901,0.3703424140533864,0.9862886788956828,0.9296875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000389,Change-Agent,c002,road,none,context,supported,0.99609375,,,0.99609375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000390,Draft,c001,building,add,changed,contradicted,0.4290403682719547,0.12160056657223796,1.0,0.953125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000390,Guided,c001,scene,none,no_change,contradicted,0.0,0.0,,1.0,The no-change assertion is evaluated directly against the change mask.
+levir-cc_test_000390,Change-Agent,c001,building,add,changed,contradicted,0.4290403682719547,0.12160056657223796,1.0,0.953125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000390,Change-Agent,c002,road,none,context,supported,0.96875,,,0.96875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000393,Draft,c001,building,add,changed,unverifiable,0.6468792919273615,0.4567373721959408,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000393,Draft,c002,road,none,context,supported,0.984375,,,0.984375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000393,Guided,c001,building,add,changed,unverifiable,0.6468792919273615,0.4567373721959408,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000393,Guided,c002,road,none,context,supported,0.984375,,,0.984375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000393,Change-Agent,c001,building,add,changed,unverifiable,0.6468792919273615,0.4567373721959408,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000393,Change-Agent,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.984375,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000395,Draft,c001,building,add,changed,unverifiable,0.7329013157894737,0.589078947368421,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000395,Draft,c002,road,none,context,supported,0.984375,,,0.984375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000395,Guided,c001,building,add,changed,unverifiable,0.7329013157894737,0.589078947368421,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000395,Guided,c002,road,none,context,supported,0.984375,,,0.984375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000395,Change-Agent,c001,building,add,changed,unverifiable,0.7329013157894737,0.589078947368421,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000395,Change-Agent,c002,road,none,context,supported,0.984375,,,0.984375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000402,Draft,c001,building,add,changed,contradicted,0.3760566441202632,0.09516877445182421,0.8977055449330784,0.984375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000402,Draft,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000402,Guided,c001,building,add,changed,contradicted,0.3760566441202632,0.09516877445182421,0.8977055449330784,0.984375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000402,Guided,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000402,Change-Agent,c001,building,add,changed,contradicted,0.3760566441202632,0.09516877445182421,0.8977055449330784,0.984375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000402,Change-Agent,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000412,Draft,c001,building,add,changed,unverifiable,0.6962616822429906,0.5327102803738317,1.0,0.91796875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000412,Draft,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000412,Guided,c001,building,add,changed,unverifiable,0.6962616822429906,0.5327102803738317,1.0,0.91796875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000412,Guided,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000412,Change-Agent,c001,building,add,changed,unverifiable,0.6962616822429906,0.5327102803738317,1.0,0.91796875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000413,Draft,c001,scene,none,no_change,contradicted,0.0,0.0,,1.0,The no-change assertion is evaluated directly against the change mask.
+levir-cc_test_000413,Guided,c001,scene,none,no_change,contradicted,0.0,0.0,,1.0,The no-change assertion is evaluated directly against the change mask.
+levir-cc_test_000413,Change-Agent,c001,building,add,changed,contradicted,0.46965073137126334,0.19950990402287114,0.9713408393039918,0.9453125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000413,Change-Agent,c002,road,none,context,unverifiable,,,,0.203125,Context entity could not be grounded.
+levir-cc_test_000416,Draft,c001,building,add,changed,unverifiable,0.7196784368028311,0.56873605661974,1.0,0.9765625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000416,Draft,c002,road,none,context,supported,0.9921875,,,0.9921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000416,Guided,c001,building,add,changed,unverifiable,0.7196784368028311,0.56873605661974,1.0,0.9765625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000416,Guided,c002,road,none,context,supported,0.9921875,,,0.9921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000416,Change-Agent,c001,building,add,changed,unverifiable,0.7196784368028311,0.56873605661974,1.0,0.9765625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000416,Change-Agent,c002,road,none,context,supported,0.9921875,,,0.9921875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000421,Draft,c001,building,add,changed,unverifiable,0.5282721644925934,0.2742648684501437,1.0,0.98828125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000421,Guided,c001,building,add,changed,unverifiable,0.5282721644925934,0.2742648684501437,1.0,0.98828125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000421,Change-Agent,c001,building,add,changed,unverifiable,0.5282721644925934,0.2742648684501437,1.0,0.98828125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000421,Change-Agent,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000436,Draft,c001,building,add,changed,supported,0.7471308883970913,0.6109705975339867,1.0,0.91015625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000436,Guided,c001,building,add,changed,supported,0.7471308883970913,0.6109705975339867,1.0,0.91015625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000436,Change-Agent,c001,road,add,changed,unverifiable,0.40975612269820305,0.436161449752883,0.3607176581680831,0.9921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000443,Draft,c001,building,add,changed,unverifiable,0.6394957983193277,0.44537815126050423,1.0,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000443,Guided,c001,building,add,changed,unverifiable,0.6394957983193277,0.44537815126050423,1.0,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000443,Change-Agent,c001,road,add,changed,contradicted,0.1571309774404096,0.12771829120211944,0.21175453759723417,0.9765625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000443,Change-Agent,c002,building,add,changed,unverifiable,0.6394957983193277,0.44537815126050423,1.0,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000454,Draft,c001,road,add,changed,supported,0.747357306624834,0.6113189332689755,1.0,0.98828125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000454,Draft,c002,building,add,changed,supported,0.7853699399929597,0.6714294929686492,0.9969736273238219,0.96484375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000454,Guided,c001,road,add,changed,supported,0.747357306624834,0.6113189332689755,1.0,0.98828125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000454,Guided,c002,building,add,changed,supported,0.7853699399929597,0.6714294929686492,0.9969736273238219,0.96484375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000454,Change-Agent,c001,road,add,changed,supported,0.747357306624834,0.6113189332689755,1.0,0.98828125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000454,Change-Agent,c002,building,add,changed,supported,0.7853699399929597,0.6714294929686492,0.9969736273238219,0.96484375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000459,Draft,c001,road,add,changed,supported,0.7547525634663554,0.7133405836505348,0.8316605259814509,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000459,Draft,c002,building,add,changed,supported,0.7809069814366424,0.6629338175948345,1.0,0.9765625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000459,Guided,c001,road,add,changed,supported,0.7547525634663554,0.7133405836505348,0.8316605259814509,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000459,Guided,c002,building,add,changed,supported,0.7809069814366424,0.6629338175948345,1.0,0.9765625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000459,Change-Agent,c001,road,add,changed,supported,0.7547525634663554,0.7133405836505348,0.8316605259814509,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000459,Change-Agent,c002,building,add,changed,supported,0.7809069814366424,0.6629338175948345,1.0,0.9765625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000466,Draft,c001,building,add,changed,contradicted,0.4713333333333333,0.18666666666666668,1.0,0.96484375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000466,Guided,c001,building,add,changed,contradicted,0.4713333333333333,0.18666666666666668,1.0,0.96484375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000475,Draft,c001,road,add,changed,supported,0.8010516016095167,0.6982905015283596,0.99189364461738,0.95703125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000475,Draft,c002,building,add,changed,unverifiable,0.5707965160313052,0.3396869477404696,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000475,Guided,c001,road,add,changed,supported,0.8010516016095167,0.6982905015283596,0.99189364461738,0.95703125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000475,Guided,c002,building,add,changed,unverifiable,0.5707965160313052,0.3396869477404696,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000475,Change-Agent,c001,road,add,changed,supported,0.8010516016095167,0.6982905015283596,0.99189364461738,0.95703125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000475,Change-Agent,c002,building,add,changed,unverifiable,0.5707965160313052,0.3396869477404696,1.0,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000487,Draft,c001,building,add,changed,contradicted,0.44079727652097517,0.1396881177245772,1.0,0.92578125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000487,Guided,c001,building,add,changed,contradicted,0.44079727652097517,0.1396881177245772,1.0,0.92578125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000487,Change-Agent,c001,building,add,changed,contradicted,0.44079727652097517,0.1396881177245772,1.0,0.92578125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000488,Draft,c001,building,add,changed,unverifiable,0.6142641346568839,0.40656020716443675,1.0,0.953125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000488,Guided,c001,building,add,changed,unverifiable,0.6142641346568839,0.40656020716443675,1.0,0.953125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000488,Change-Agent,c001,building,add,changed,unverifiable,0.6142641346568839,0.40656020716443675,1.0,0.953125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000489,Draft,c001,scene,none,no_change,contradicted,0.0,0.0,,1.0,The no-change assertion is evaluated directly against the change mask.
+levir-cc_test_000489,Guided,c001,building,add,changed,unverifiable,0.5179507337526206,0.2583857442348008,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000489,Change-Agent,c001,building,add,changed,unverifiable,0.5179507337526206,0.2583857442348008,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000500,Draft,c001,building,add,changed,unverifiable,0.5609481915933529,0.32453567937438904,1.0,0.94140625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000500,Guided,c001,building,add,changed,unverifiable,0.5609481915933529,0.32453567937438904,1.0,0.94140625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000500,Change-Agent,c001,building,add,changed,unverifiable,0.5609481915933529,0.32453567937438904,1.0,0.94140625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000528,Draft,c001,building,add,changed,unverifiable,0.7145813510941961,0.5608943862987631,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000528,Draft,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000528,Guided,c001,building,add,changed,unverifiable,0.7145813510941961,0.5608943862987631,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000528,Guided,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000528,Change-Agent,c001,building,add,changed,unverifiable,0.7145813510941961,0.5608943862987631,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000528,Change-Agent,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000552,Draft,c001,road,add,changed,contradicted,0.4055484484072045,0.6011230866769315,0.042338405906282905,0.97265625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000552,Draft,c002,building,add,changed,unverifiable,0.6757452329230027,0.5011465121892349,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000552,Guided,c001,road,add,changed,contradicted,0.4055484484072045,0.6011230866769315,0.042338405906282905,0.97265625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000552,Guided,c002,building,add,changed,unverifiable,0.6757452329230027,0.5011465121892349,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000552,Change-Agent,c001,building,add,changed,unverifiable,0.6757452329230027,0.5011465121892349,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000552,Change-Agent,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000558,Draft,c001,road,add,changed,unverifiable,0.5610355595849703,0.32467009166918503,1.0,0.9921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000558,Draft,c002,building,add,changed,unverifiable,0.6042361226691171,0.3992427616926503,0.9849380787682696,0.984375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000558,Guided,c001,road,add,changed,unverifiable,0.5610355595849703,0.32467009166918503,1.0,0.9921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000558,Guided,c002,building,add,changed,unverifiable,0.6042361226691171,0.3992427616926503,0.9849380787682696,0.984375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000558,Change-Agent,c001,road,add,changed,unverifiable,0.5610355595849703,0.32467009166918503,1.0,0.9921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000558,Change-Agent,c002,building,add,changed,unverifiable,0.6042361226691171,0.3992427616926503,0.9849380787682696,0.984375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000564,Draft,c001,building,add,changed,contradicted,0.0,0.0,0.0,0.10498046875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000564,Guided,c001,building,add,changed,contradicted,0.0,0.0,0.0,0.10498046875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000564,Change-Agent,c001,building,add,changed,contradicted,0.0,0.0,0.0,0.10498046875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000613,Draft,c001,road,add,changed,contradicted,0.44289096648858667,0.1429091792132103,1.0,0.91015625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000613,Guided,c001,road,add,changed,contradicted,0.44289096648858667,0.1429091792132103,1.0,0.91015625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000613,Change-Agent,c001,road,add,changed,contradicted,0.44289096648858667,0.1429091792132103,1.0,0.91015625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000622,Draft,c001,building,modify,changed,unverifiable,0.6805544116133018,0.5085452486358488,1.0,0.85546875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000622,Draft,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000622,Guided,c001,building,modify,changed,unverifiable,0.6805544116133018,0.5085452486358488,1.0,0.85546875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000622,Guided,c002,road,none,context,supported,0.98046875,,,0.98046875,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000622,Change-Agent,c001,road,add,changed,supported,0.9190487710470292,0.8754596477646603,1.0,0.98046875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000622,Change-Agent,c002,building,add,changed,unverifiable,0.6805544116133018,0.5085452486358488,1.0,0.85546875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000623,Change-Agent,c001,road,add,changed,unverifiable,0.6512203425339129,0.46341591159063533,1.0,0.96875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000623,Change-Agent,c002,building,add,changed,unverifiable,0.6575210084033614,0.473109243697479,1.0,0.76171875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000647,Draft,c001,road,add,changed,supported,0.8164424065821049,0.7176037024340075,1.0,0.9453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000647,Draft,c002,building,add,changed,unverifiable,0.7174829711320143,0.5653584171261758,1.0,0.8125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000647,Draft,c003,road,none,context,supported,0.9453125,,,0.9453125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000647,Guided,c001,road,add,changed,supported,0.8164424065821049,0.7176037024340075,1.0,0.9453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000647,Guided,c002,building,add,changed,unverifiable,0.7174829711320143,0.5653584171261758,1.0,0.8125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000647,Guided,c003,road,none,context,supported,0.9453125,,,0.9453125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000647,Change-Agent,c001,road,add,changed,supported,0.8164424065821049,0.7176037024340075,1.0,0.9453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000652,Draft,c001,building,add,changed,unverifiable,0.6795794561933535,0.5070453172205438,1.0,0.65234375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000652,Draft,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000652,Guided,c001,building,add,changed,unverifiable,0.6795794561933535,0.5070453172205438,1.0,0.65234375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000652,Guided,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000652,Change-Agent,c001,building,add,changed,unverifiable,0.6795794561933535,0.5070453172205438,1.0,0.65234375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000652,Change-Agent,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000657,Change-Agent,c001,building,add,changed,contradicted,0.37806086341118184,0.043170559094125975,1.0,0.8984375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000665,Draft,c001,building,add,changed,unverifiable,0.5255255511878312,0.2700393095197402,1.0,0.953125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000665,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9765625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000665,Guided,c001,building,add,changed,unverifiable,0.5255255511878312,0.2700393095197402,1.0,0.953125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000665,Guided,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9765625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000665,Change-Agent,c001,building,add,changed,unverifiable,0.5255255511878312,0.2700393095197402,1.0,0.953125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000665,Change-Agent,c002,road,none,context,supported,0.9765625,,,0.9765625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000668,Draft,c001,building,add,changed,supported,0.7624740937707739,0.6345755288781136,1.0,0.89453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000668,Draft,c002,road,none,context,supported,0.96484375,,,0.96484375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000668,Guided,c001,building,add,changed,supported,0.7624740937707739,0.6345755288781136,1.0,0.89453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000668,Guided,c002,road,add,changed,unverifiable,0.7128703359365316,0.5582620552869716,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000668,Change-Agent,c001,building,add,changed,supported,0.7624740937707739,0.6345755288781136,1.0,0.89453125,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000668,Change-Agent,c002,road,none,context,supported,0.96484375,,,0.96484375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000673,Draft,c001,building,add,changed,contradicted,0.4024800536609475,0.08073854409376545,1.0,0.89453125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000673,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9609375,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000673,Change-Agent,c001,building,add,changed,contradicted,0.4024800536609475,0.08073854409376545,1.0,0.89453125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000673,Change-Agent,c002,road,none,context,supported,0.9609375,,,0.9609375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000706,Draft,c001,building,add,changed,unverifiable,0.6225557387823722,0.445380084667771,0.9515962392809174,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000706,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.96484375,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000706,Guided,c001,building,add,changed,unverifiable,0.6225557387823722,0.445380084667771,0.9515962392809174,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000706,Guided,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.96484375,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000706,Change-Agent,c001,building,add,changed,unverifiable,0.6225557387823722,0.445380084667771,0.9515962392809174,0.921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000706,Change-Agent,c002,road,none,context,supported,0.96484375,,,0.96484375,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000721,Draft,c001,road,add,changed,supported,0.7780955031364906,0.6936065573770491,0.9350035452611676,0.96875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000721,Draft,c002,building,add,changed,supported,0.7780147284443081,0.6584841976066278,1.0,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000721,Guided,c001,road,add,changed,supported,0.7780955031364906,0.6936065573770491,0.9350035452611676,0.96875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000721,Guided,c002,building,add,changed,supported,0.7780147284443081,0.6584841976066278,1.0,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000721,Change-Agent,c001,building,add,changed,supported,0.7780147284443081,0.6584841976066278,1.0,0.9609375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000721,Change-Agent,c002,road,add,changed,supported,0.7780955031364906,0.6936065573770491,0.9350035452611676,0.96875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000727,Draft,c001,building,add,changed,unverifiable,0.7052173913043478,0.5464882943143813,1.0,0.53515625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000727,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.95703125,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000727,Guided,c001,building,add,changed,unverifiable,0.7052173913043478,0.5464882943143813,1.0,0.53515625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000727,Guided,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.95703125,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000727,Change-Agent,c001,building,add,changed,unverifiable,0.7052173913043478,0.5464882943143813,1.0,0.53515625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000727,Change-Agent,c002,road,none,context,supported,0.95703125,,,0.95703125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000730,Draft,c001,building,add,changed,contradicted,0.32008938445180624,0.19241860350479384,0.5571922633534008,0.9765625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000730,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.98828125,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000730,Guided,c001,building,add,changed,contradicted,0.32008938445180624,0.19241860350479384,0.5571922633534008,0.9765625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000730,Guided,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.98828125,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000730,Change-Agent,c001,building,add,changed,contradicted,0.32008938445180624,0.19241860350479384,0.5571922633534008,0.9765625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000730,Change-Agent,c002,road,none,context,supported,0.98828125,,,0.98828125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000748,Draft,c001,building,add,changed,unverifiable,0.5957476726767237,0.3830043090490029,0.9908424908424909,0.490234375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000748,Draft,c002,road,add,changed,unverifiable,0.5568402664922626,0.5630075609073089,0.5453867197214624,0.9453125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000748,Guided,c001,building,add,changed,unverifiable,0.5957476726767237,0.3830043090490029,0.9908424908424909,0.490234375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000748,Guided,c002,road,add,changed,unverifiable,0.5568402664922626,0.5630075609073089,0.5453867197214624,0.9453125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000748,Change-Agent,c001,building,add,changed,unverifiable,0.5957476726767237,0.3830043090490029,0.9908424908424909,0.490234375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000748,Change-Agent,c002,road,none,context,supported,0.9453125,,,0.9453125,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000749,Draft,c001,building,add,changed,contradicted,0.0,0.0,0.0,0.94140625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000772,Draft,c001,road,add,changed,contradicted,0.4449777874092534,0.6845812113988514,0.0,0.97265625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000772,Draft,c002,building,add,changed,unverifiable,0.7092606357395829,0.5527086703685891,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000772,Guided,c001,road,add,changed,contradicted,0.4449777874092534,0.6845812113988514,0.0,0.97265625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000772,Guided,c002,building,add,changed,unverifiable,0.7092606357395829,0.5527086703685891,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000772,Change-Agent,c001,building,add,changed,unverifiable,0.7092606357395829,0.5527086703685891,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000772,Change-Agent,c002,road,add,changed,contradicted,0.4449777874092534,0.6845812113988514,0.0,0.97265625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000775,Draft,c001,building,add,changed,supported,0.8050121905476368,0.7000187546886721,1.0,0.93359375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000775,Guided,c001,building,add,changed,supported,0.8050121905476368,0.7000187546886721,1.0,0.93359375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000775,Guided,c002,road,add,changed,contradicted,0.40217986850344395,0.6187382592360676,0.0,0.95703125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000775,Change-Agent,c001,road,add,changed,contradicted,0.40217986850344395,0.6187382592360676,0.0,0.95703125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000775,Change-Agent,c002,building,add,changed,supported,0.8050121905476368,0.7000187546886721,1.0,0.93359375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000792,Draft,c001,road,add,changed,contradicted,0.053947899838449116,0.08299676898222941,0.0,0.91796875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000792,Draft,c002,building,add,changed,unverifiable,0.6854,0.516,1.0,0.58203125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000792,Guided,c001,road,add,changed,contradicted,0.053947899838449116,0.08299676898222941,0.0,0.91796875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000792,Guided,c002,building,add,changed,unverifiable,0.6854,0.516,1.0,0.58203125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000793,Draft,c001,road,add,changed,contradicted,0.30334120746831417,0.46667878072048335,0.0,0.95703125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000793,Draft,c002,building,add,changed,supported,0.7429480088495575,0.6045353982300885,1.0,0.85546875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000793,Guided,c001,road,add,changed,contradicted,0.30334120746831417,0.46667878072048335,0.0,0.95703125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000793,Guided,c002,building,add,changed,supported,0.7429480088495575,0.6045353982300885,1.0,0.85546875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000793,Change-Agent,c001,building,add,changed,supported,0.7429480088495575,0.6045353982300885,1.0,0.85546875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000795,Draft,c001,building,add,changed,unverifiable,0.7047546788062722,0.5457764289327264,1.0,0.6484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000795,Guided,c001,building,add,changed,unverifiable,0.7047546788062722,0.5457764289327264,1.0,0.6484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000795,Change-Agent,c001,building,add,changed,unverifiable,0.7047546788062722,0.5457764289327264,1.0,0.6484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000796,Draft,c001,road,add,changed,contradicted,0.3208043694141013,0.49354518371400197,0.0,0.9609375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000796,Draft,c002,building,add,changed,supported,0.7402134965661391,0.6003284562555987,1.0,0.91015625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000796,Guided,c001,road,add,changed,contradicted,0.3208043694141013,0.49354518371400197,0.0,0.9609375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000796,Guided,c002,building,add,changed,supported,0.7402134965661391,0.6003284562555987,1.0,0.91015625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000796,Change-Agent,c001,road,add,changed,contradicted,0.3208043694141013,0.49354518371400197,0.0,0.9609375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000796,Change-Agent,c002,building,add,changed,supported,0.7402134965661391,0.6003284562555987,1.0,0.91015625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000810,Draft,c001,road,add,changed,unverifiable,0.5282555780933063,0.2742393509127789,1.0,0.89453125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000810,Guided,c001,road,add,changed,unverifiable,0.5282555780933063,0.2742393509127789,1.0,0.89453125,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000812,Draft,c001,road,add,changed,supported,0.8629795158286778,0.7891992551210428,1.0,0.93359375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000812,Guided,c001,road,add,changed,supported,0.8629795158286778,0.7891992551210428,1.0,0.93359375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000812,Change-Agent,c001,road,add,changed,supported,0.8629795158286778,0.7891992551210428,1.0,0.93359375,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000825,Draft,c001,building,add,changed,unverifiable,0.6872755417956656,0.5188854489164086,1.0,0.90625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000825,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.97265625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000825,Guided,c001,building,add,changed,unverifiable,0.6872755417956656,0.5188854489164086,1.0,0.90625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000825,Guided,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.97265625,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000825,Change-Agent,c001,building,add,changed,unverifiable,0.6872755417956656,0.5188854489164086,1.0,0.90625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000825,Change-Agent,c002,road,none,context,supported,0.97265625,,,0.97265625,Context existence is supported; change-mask overlap is not penalized.
+levir-cc_test_000851,Draft,c001,building,add,changed,unverifiable,0.7321570859419465,0.5879339783722254,1.0,0.5,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000851,Draft,c002,road,add,changed,contradicted,0.511188486536676,0.78644382544104,0.0,0.9140625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000851,Guided,c001,building,add,changed,unverifiable,0.7321570859419465,0.5879339783722254,1.0,0.5,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000851,Guided,c002,road,add,changed,contradicted,0.511188486536676,0.78644382544104,0.0,0.9140625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000851,Change-Agent,c001,building,add,changed,unverifiable,0.7321570859419465,0.5879339783722254,1.0,0.5,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000851,Change-Agent,c002,road,add,changed,contradicted,0.511188486536676,0.78644382544104,0.0,0.9140625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000861,Draft,c001,road,add,changed,contradicted,0.1737643812448539,0.26732981729977523,0.0,0.84765625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000861,Draft,c002,building,add,changed,unverifiable,0.6267443620402604,0.4257605569850159,1.0,0.74609375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000861,Guided,c001,road,add,changed,contradicted,0.1737643812448539,0.26732981729977523,0.0,0.84765625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000861,Guided,c002,building,add,changed,unverifiable,0.6267443620402604,0.4257605569850159,1.0,0.74609375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000861,Change-Agent,c001,building,add,changed,unverifiable,0.6267443620402604,0.4257605569850159,1.0,0.74609375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000879,Draft,c001,building,add,changed,unverifiable,0.6463819108821498,0.4559721705879229,1.0,0.96875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000879,Draft,c002,road,add,changed,contradicted,0.4100371936291434,0.6299555390885513,0.0016174092045287969,0.9921875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000879,Guided,c001,building,add,changed,unverifiable,0.6463819108821498,0.4559721705879229,1.0,0.96875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000879,Guided,c002,road,add,changed,contradicted,0.4100371936291434,0.6299555390885513,0.0016174092045287969,0.9921875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000879,Change-Agent,c001,road,add,changed,contradicted,0.4100371936291434,0.6299555390885513,0.0016174092045287969,0.9921875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000879,Change-Agent,c002,building,add,changed,unverifiable,0.6463819108821498,0.4559721705879229,1.0,0.96875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000891,Draft,c001,building,add,changed,unverifiable,0.5641163611905162,0.329409786446948,1.0,0.90625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000891,Guided,c001,building,add,changed,unverifiable,0.5641163611905162,0.329409786446948,1.0,0.90625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000891,Change-Agent,c001,building,add,changed,unverifiable,0.5641163611905162,0.329409786446948,1.0,0.90625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000905,Guided,c001,building,add,changed,unverifiable,,,,0.01031494140625,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000913,Draft,c001,building,add,changed,unverifiable,0.5676086956521739,0.3347826086956522,1.0,0.5625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000913,Guided,c001,building,add,changed,unverifiable,0.5676086956521739,0.3347826086956522,1.0,0.5625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000933,Guided,c001,building,add,changed,contradicted,0.0,0.0,0.0,0.98046875,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000943,Draft,c001,road,add,changed,unverifiable,0.5761470536118443,0.4021048811467973,0.8993682310469314,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000943,Guided,c001,road,add,changed,unverifiable,0.5761470536118443,0.4021048811467973,0.8993682310469314,0.98046875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_001000,Draft,c001,road,add,changed,contradicted,0.3358103315969812,0.41633136746954746,0.18627126497650093,0.91796875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_001000,Guided,c001,road,add,changed,contradicted,0.3358103315969812,0.41633136746954746,0.18627126497650093,0.91796875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_001000,Change-Agent,c001,road,add,changed,contradicted,0.3358103315969812,0.41633136746954746,0.18627126497650093,0.91796875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_001017,Draft,c001,road,add,changed,contradicted,0.2390605616040012,0.23218326358156952,0.2518326865028029,0.96484375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_001017,Guided,c001,road,add,changed,contradicted,0.2390605616040012,0.23218326358156952,0.2518326865028029,0.96484375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_001017,Change-Agent,c001,road,add,changed,contradicted,0.2390605616040012,0.23218326358156952,0.2518326865028029,0.96484375,The grounded entity is inconsistent with the change evidence.

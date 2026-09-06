@@ -1,0 +1,543 @@
+{
+  "archive_date": "2026-08-12",
+  "caption_generation": {
+    "cached_scene_count": 100,
+    "cached_scene_ids_sha256": "276cde9672017f0e10fe140e3083484fc17e8ffc2d367a91e7a88a6fc7eadd0d",
+    "cross_model_exact_caption_agreement_count": 488,
+    "cross_model_exact_caption_agreement_rate": 0.488,
+    "model_summaries": {
+      "Chg2Cap": {
+        "checkpoint": {
+          "checkpoint": "/root/autodl-tmp/caption-bench-20260808/incoming/LEVIR_CC_batchsize_32_resnet101.pth",
+          "checkpoint_sha256": "d737a92afa3cb76a07f672ee905afb59278211c77ccce517a37ae4637110194c",
+          "checkpoint_size": 1317159961,
+          "repository": "/root/autodl-tmp/caption-bench-20260808/repos/Chg2Cap",
+          "repository_commit": "7b8cda937002e614d51a6dab3d949aa7de77c176"
+        },
+        "count": 1000,
+        "exact_no_change_count": 502,
+        "exact_no_change_rate": 0.502,
+        "mean_tokens": 8.609,
+        "median_tokens": 7.0,
+        "mentions_building_or_house": 436,
+        "mentions_road": 373,
+        "mentions_tree_or_vegetation": 78,
+        "output_path": "/root/autodl-tmp/caption-bench-20260808/outputs/chg2cap_mga1000.jsonl",
+        "output_sha256": "d344c99636cdc54152df8ae9c5c1c95192f5fb25814366238477a02fa642f018",
+        "output_size": 547296,
+        "unique_caption_count": 157
+      },
+      "RSICCformer": {
+        "checkpoint": {
+          "checkpoint": "/root/autodl-tmp/caption-bench-20260808/BEST_checkpoint_resnet101_MCCFormers_diff_as_Q_trans.pth.tar",
+          "checkpoint_sha256": "caf3d36646f1f62f81a58965115fd02fc0222106ef2f299167c1d2fb6bff757d",
+          "checkpoint_size": 1131102595,
+          "repository": "/root/autodl-tmp/caption-bench-20260808/repos/RSICC",
+          "repository_commit": "d1505e514c450c3728782ca723e82761e70bafd3"
+        },
+        "count": 1000,
+        "exact_no_change_count": 465,
+        "exact_no_change_rate": 0.465,
+        "mean_tokens": 8.178,
+        "median_tokens": 7.0,
+        "mentions_building_or_house": 480,
+        "mentions_road": 368,
+        "mentions_tree_or_vegetation": 44,
+        "output_path": "/root/autodl-tmp/caption-bench-20260808/outputs/rsiccformer_mga1000.jsonl",
+        "output_sha256": "79dc9157d2b798a6c5f97e6641d4760ff6e628539a34b04d9e2b7379f4da16ca",
+        "output_size": 568150,
+        "unique_caption_count": 239
+      }
+    },
+    "raw_manifest": "/root/autodl-tmp/caption-bench-20260808/mga-eval/caption_models_mga1000_raw.jsonl",
+    "raw_manifest_rows": 2000,
+    "raw_manifest_sha256": "17d707cc299c93118c3f9c4e79227b8fe5253804f5a16fde81aa3cf3e2f77ba9",
+    "scope": "LEVIR-MCI 1000-scene caption generation; MGA scoring reuses the named 100-scene building/road cache"
+  },
+  "compatibility": {
+    "chg2cap": "Installed official requirement einops==0.4.1 in the MGA environment. A PyTorch warning about mixed attention-mask dtypes is non-fatal.",
+    "rsiccformer": "Official custom Mesh_TransformerDecoderLayer predates PyTorch causal-hint kwargs. The project runner now drops tgt_is_causal and memory_is_causal only; numerical model operations are unchanged."
+  },
+  "environment": {
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "einops": "0.4.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "python": "3.11.15",
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130"
+  },
+  "integrity": {
+    "chg2cap_container_crc": "pass (unzip -tq: no errors)",
+    "key_files": [
+      {
+        "bytes": 1131102595,
+        "path": "/root/autodl-tmp/caption-bench-20260808/BEST_checkpoint_resnet101_MCCFormers_diff_as_Q_trans.pth.tar",
+        "sha256": "caf3d36646f1f62f81a58965115fd02fc0222106ef2f299167c1d2fb6bff757d"
+      },
+      {
+        "bytes": 1317159961,
+        "path": "/root/autodl-tmp/caption-bench-20260808/incoming/LEVIR_CC_batchsize_32_resnet101.pth",
+        "sha256": "d737a92afa3cb76a07f672ee905afb59278211c77ccce517a37ae4637110194c"
+      },
+      {
+        "bytes": 568150,
+        "path": "/root/autodl-tmp/caption-bench-20260808/outputs/rsiccformer_mga1000.jsonl",
+        "sha256": "79dc9157d2b798a6c5f97e6641d4760ff6e628539a34b04d9e2b7379f4da16ca"
+      },
+      {
+        "bytes": 547296,
+        "path": "/root/autodl-tmp/caption-bench-20260808/outputs/chg2cap_mga1000.jsonl",
+        "sha256": "d344c99636cdc54152df8ae9c5c1c95192f5fb25814366238477a02fa642f018"
+      },
+      {
+        "bytes": 426467,
+        "path": "/root/autodl-tmp/caption-bench-20260808/mga-eval/caption_models_cached100_claims.jsonl",
+        "sha256": "6300cedd0c0691c8e87c916d94571381a0e1200a7f75c31d21387a0079ccd164"
+      },
+      {
+        "bytes": 11645,
+        "path": "/root/autodl-tmp/caption-bench-20260808/mga-eval/evidence-modes-cached100-v1/summary.json",
+        "sha256": "e07ae66bd7eac0a670f3a90d6bf6edf23e30142d4dc8eee81b8b00ee9ef5cbf8"
+      },
+      {
+        "bytes": 2858,
+        "path": "/root/autodl-tmp/caption-bench-20260808/mga-eval/evidence-modes-cached100-v1/report.zh-CN.md",
+        "sha256": "fe7cdb01fcb02775dc20d9c87bfb5b897e1fedf9c9f29c15ca7ba9ed9096ce3a"
+      },
+      {
+        "bytes": 34609,
+        "path": "/root/autodl-tmp/caption-bench-20260808/deploy_or_run_caption_models.py",
+        "sha256": "b82d3188b610642cb16450d7abdc68aee79222efd0503940ab128a329dc7b06e"
+      }
+    ],
+    "rsiccformer_container_crc": "pass (unzip -tq: no errors)"
+  },
+  "interpretation_limits": [
+    "MGA values are image-evidence support diagnostics, not model accuracy against human factual labels.",
+    "LEVIR-MCI class-mask analysis is limited to road and building; tree/vegetation mentions are not scored as labeled classes in this run.",
+    "The 100-scene MGA subset reuses a previously named cache and is suitable as a fixed pilot/external-output analysis, not a replacement for an independent blinded human test.",
+    "MaskLabelOnly lacks temporal-direction verification; its larger Overall value must not be interpreted as a superior evaluator.",
+    "GT-ROI gated is an oracle-style comparison and not an annotation-free deployment result."
+  ],
+  "mga_cached100": {
+    "captions": 200,
+    "pairwise_delta_vs_full_target": {
+      "gt_roi_gated": {
+        "Chg2Cap": {
+          "coverage": -0.027789682539682545,
+          "faithfulness": 0.3056854693396572,
+          "overall": 0.16117958750189082,
+          "temporal": 0.0,
+          "unverifiable_rate": -0.3266666666666667
+        },
+        "RSICCformer": {
+          "coverage": -0.025789682539682543,
+          "faithfulness": 0.31088769837551566,
+          "overall": 0.16454081347161303,
+          "temporal": 0.0,
+          "unverifiable_rate": -0.3633333333333333
+        }
+      },
+      "hybrid_mask_temporal": {
+        "Chg2Cap": {
+          "coverage": -0.010611800780918428,
+          "faithfulness": 0.3056854693396572,
+          "overall": 0.16547405794158185,
+          "temporal": 0.0,
+          "unverifiable_rate": -0.3266666666666667
+        },
+        "RSICCformer": {
+          "coverage": -0.00761180078091843,
+          "faithfulness": 0.31088769837551566,
+          "overall": 0.16908528391130406,
+          "temporal": 0.0,
+          "unverifiable_rate": -0.3633333333333333
+        }
+      },
+      "mask_label_only": {
+        "Chg2Cap": {
+          "coverage": -0.010611800780918428,
+          "faithfulness": 0.3317038927912468,
+          "overall": 0.19038748045706075,
+          "temporal": null,
+          "unverifiable_rate": -0.135
+        },
+        "RSICCformer": {
+          "coverage": -0.00761180078091843,
+          "faithfulness": 0.3430351567021946,
+          "overall": 0.20107390551817175,
+          "temporal": null,
+          "unverifiable_rate": -0.19
+        }
+      },
+      "temporal_delta": {
+        "Chg2Cap": {
+          "coverage": -0.03487305472305472,
+          "faithfulness": 0.022627438332789428,
+          "overall": 0.0037268274022705084,
+          "temporal": 0.0,
+          "unverifiable_rate": 0.011666666666666667
+        },
+        "RSICCformer": {
+          "coverage": -0.03276615236615237,
+          "faithfulness": 0.01451440844853,
+          "overall": -0.00020861344484659428,
+          "temporal": 0.0,
+          "unverifiable_rate": -0.0033333333333333327
+        }
+      }
+    },
+    "results": {
+      "full_target": {
+        "by_entity": {
+          "building": {
+            "claims": 167,
+            "faithfulness": 0.6449326899748711,
+            "spatial_support": 0.4784028565389577,
+            "statuses": {
+              "contradicted": 21,
+              "supported": 48,
+              "unverifiable": 98
+            },
+            "temporal_support": 0.9542023806415662
+          },
+          "road": {
+            "claims": 140,
+            "faithfulness": 0.7949973680602465,
+            "spatial_support": 0.45504892748556336,
+            "statuses": {
+              "contradicted": 25,
+              "supported": 100,
+              "unverifiable": 15
+            },
+            "temporal_support": 0.6127682763857779
+          },
+          "scene": {
+            "claims": 17,
+            "faithfulness": 0.0,
+            "spatial_support": 0.0,
+            "statuses": {
+              "contradicted": 17
+            },
+            "temporal_support": null
+          }
+        },
+        "by_model": {
+          "Chg2Cap": {
+            "captions": 100,
+            "coverage": 0.8373817059543462,
+            "faithfulness": 0.5632961072087532,
+            "overall": 0.6832906149096355,
+            "temporal": 0.8920235296534489,
+            "unverifiable_rate": 0.3566666666666667
+          },
+          "RSICCformer": {
+            "captions": 100,
+            "coverage": 0.8326124942292522,
+            "faithfulness": 0.5469648432978054,
+            "overall": 0.6686138111844326,
+            "temporal": 0.8770880429303648,
+            "unverifiable_rate": 0.3783333333333333
+          }
+        },
+        "captions": 200,
+        "claim_statuses": {
+          "contradicted": 63,
+          "supported": 148,
+          "unverifiable": 113
+        },
+        "elapsed_seconds": 6.0259045250713825,
+        "scenes": 100
+      },
+      "gt_roi_gated": {
+        "by_entity": {
+          "building": {
+            "claims": 167,
+            "faithfulness": 0.972294186517961,
+            "spatial_support": 0.9820359281437125,
+            "statuses": {
+              "contradicted": 3,
+              "supported": 159,
+              "unverifiable": 5
+            },
+            "temporal_support": 0.9542023806415662
+          },
+          "road": {
+            "claims": 140,
+            "faithfulness": 0.9176958155263663,
+            "spatial_support": 0.9444444444444444,
+            "statuses": {
+              "contradicted": 19,
+              "supported": 119,
+              "unverifiable": 2
+            },
+            "temporal_support": 0.6127682763857779
+          },
+          "scene": {
+            "claims": 17,
+            "faithfulness": 0.0,
+            "spatial_support": 0.0,
+            "statuses": {
+              "contradicted": 17
+            },
+            "temporal_support": null
+          }
+        },
+        "by_model": {
+          "Chg2Cap": {
+            "captions": 100,
+            "coverage": 0.8095920234146639,
+            "faithfulness": 0.8689815765484109,
+            "overall": 0.844470202411526,
+            "temporal": 0.8920235296534489,
+            "unverifiable_rate": 0.03
+          },
+          "RSICCformer": {
+            "captions": 100,
+            "coverage": 0.8068228116895696,
+            "faithfulness": 0.8578525416733216,
+            "overall": 0.8331546246560451,
+            "temporal": 0.8770880429303648,
+            "unverifiable_rate": 0.015
+          }
+        },
+        "captions": 200,
+        "claim_statuses": {
+          "contradicted": 39,
+          "supported": 278,
+          "unverifiable": 7
+        },
+        "elapsed_seconds": 5.564657226204872,
+        "scenes": 100
+      },
+      "hybrid_mask_temporal": {
+        "by_entity": {
+          "building": {
+            "claims": 167,
+            "faithfulness": 0.972294186517961,
+            "spatial_support": 0.9820359281437125,
+            "statuses": {
+              "contradicted": 3,
+              "supported": 159,
+              "unverifiable": 5
+            },
+            "temporal_support": 0.9542023806415662
+          },
+          "road": {
+            "claims": 140,
+            "faithfulness": 0.9176958155263663,
+            "spatial_support": 0.9444444444444444,
+            "statuses": {
+              "contradicted": 19,
+              "supported": 119,
+              "unverifiable": 2
+            },
+            "temporal_support": 0.6127682763857779
+          },
+          "scene": {
+            "claims": 17,
+            "faithfulness": 0.0,
+            "spatial_support": 0.0,
+            "statuses": {
+              "contradicted": 17
+            },
+            "temporal_support": null
+          }
+        },
+        "by_model": {
+          "Chg2Cap": {
+            "captions": 100,
+            "coverage": 0.826769905173428,
+            "faithfulness": 0.8689815765484109,
+            "overall": 0.848764672851217,
+            "temporal": 0.8920235296534489,
+            "unverifiable_rate": 0.03
+          },
+          "RSICCformer": {
+            "captions": 100,
+            "coverage": 0.8250006934483338,
+            "faithfulness": 0.8578525416733216,
+            "overall": 0.8376990950957363,
+            "temporal": 0.8770880429303648,
+            "unverifiable_rate": 0.015
+          }
+        },
+        "captions": 200,
+        "claim_statuses": {
+          "contradicted": 39,
+          "supported": 278,
+          "unverifiable": 7
+        },
+        "elapsed_seconds": 5.577361661940813,
+        "scenes": 100
+      },
+      "mask_label_only": {
+        "by_entity": {
+          "building": {
+            "claims": 167,
+            "faithfulness": 0.9820359281437125,
+            "spatial_support": 0.9820359281437125,
+            "statuses": {
+              "contradicted": 3,
+              "supported": 164
+            },
+            "temporal_support": null
+          },
+          "road": {
+            "claims": 140,
+            "faithfulness": 0.9444444444444444,
+            "spatial_support": 0.9444444444444444,
+            "statuses": {
+              "contradicted": 3,
+              "supported": 51,
+              "unverifiable": 86
+            },
+            "temporal_support": null
+          },
+          "scene": {
+            "claims": 17,
+            "faithfulness": 0.0,
+            "spatial_support": 0.0,
+            "statuses": {
+              "contradicted": 17
+            },
+            "temporal_support": null
+          }
+        },
+        "by_model": {
+          "Chg2Cap": {
+            "captions": 100,
+            "coverage": 0.826769905173428,
+            "faithfulness": 0.895,
+            "overall": 0.8736780953666964,
+            "temporal": null,
+            "unverifiable_rate": 0.22166666666666665
+          },
+          "RSICCformer": {
+            "captions": 100,
+            "coverage": 0.8250006934483338,
+            "faithfulness": 0.89,
+            "overall": 0.8696877167026045,
+            "temporal": null,
+            "unverifiable_rate": 0.18833333333333332
+          }
+        },
+        "captions": 200,
+        "claim_statuses": {
+          "contradicted": 23,
+          "supported": 215,
+          "unverifiable": 86
+        },
+        "elapsed_seconds": 5.47920036315918,
+        "scenes": 100
+      },
+      "temporal_delta": {
+        "by_entity": {
+          "building": {
+            "claims": 167,
+            "faithfulness": 0.6734675089833497,
+            "spatial_support": 0.5223025780904634,
+            "statuses": {
+              "contradicted": 9,
+              "supported": 60,
+              "unverifiable": 98
+            },
+            "temporal_support": 0.9542023806415662
+          },
+          "road": {
+            "claims": 140,
+            "faithfulness": 0.77820281279727,
+            "spatial_support": 0.3880620973768262,
+            "statuses": {
+              "contradicted": 24,
+              "supported": 103,
+              "unverifiable": 13
+            },
+            "temporal_support": 0.6127682763857779
+          },
+          "scene": {
+            "claims": 17,
+            "faithfulness": 0.0,
+            "spatial_support": 0.0,
+            "statuses": {
+              "contradicted": 17
+            },
+            "temporal_support": null
+          }
+        },
+        "by_model": {
+          "Chg2Cap": {
+            "captions": 100,
+            "coverage": 0.8025086512312916,
+            "faithfulness": 0.5859235455415426,
+            "overall": 0.6870174423119062,
+            "temporal": 0.8920235296534489,
+            "unverifiable_rate": 0.36833333333333335
+          },
+          "RSICCformer": {
+            "captions": 100,
+            "coverage": 0.7998463418630999,
+            "faithfulness": 0.5614792517463354,
+            "overall": 0.6684051977395857,
+            "temporal": 0.8770880429303648,
+            "unverifiable_rate": 0.375
+          }
+        },
+        "captions": 200,
+        "claim_statuses": {
+          "contradicted": 50,
+          "supported": 163,
+          "unverifiable": 111
+        },
+        "elapsed_seconds": 5.833437118679285,
+        "scenes": 100
+      }
+    },
+    "scenes": 100,
+    "scope": "100 named LEVIR-MCI scenes selected before the new model runs; building/road only; cached SegEarth-OV-3 masks reused"
+  },
+  "output_validation": {
+    "Chg2Cap": {
+      "counts_by_model": {
+        "chg2cap": 1000
+      },
+      "duplicate_count": 0,
+      "duplicates": [],
+      "empty_caption_count": 0,
+      "empty_caption_ids": [],
+      "input": "/root/autodl-tmp/caption-bench-20260808/outputs/chg2cap_mga1000.jsonl",
+      "missing_expected_count": 0,
+      "missing_expected_ids": [],
+      "row_count": 1000,
+      "unexpected_count": 0,
+      "unexpected_ids": [],
+      "valid": true
+    },
+    "RSICCformer": {
+      "counts_by_model": {
+        "rsiccformer": 1000
+      },
+      "duplicate_count": 0,
+      "duplicates": [],
+      "empty_caption_count": 0,
+      "empty_caption_ids": [],
+      "input": "/root/autodl-tmp/caption-bench-20260808/outputs/rsiccformer_mga1000.jsonl",
+      "missing_expected_count": 0,
+      "missing_expected_ids": [],
+      "row_count": 1000,
+      "unexpected_count": 0,
+      "unexpected_ids": [],
+      "valid": true
+    }
+  },
+  "parser_and_alignment_audit": {
+    "eligible_scenes": 100,
+    "excluded_scenes": 0,
+    "input_records": 2000,
+    "input_scenes": 100,
+    "selected_records": 200,
+    "selected_scenes": 100
+  },
+  "status": "complete"
+}

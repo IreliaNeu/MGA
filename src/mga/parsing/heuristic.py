@@ -8,19 +8,26 @@ from dataclasses import dataclass
 from mga.models import AtomicClaim, ChangeType, ClaimRole
 
 DEFAULT_ENTITIES = (
+    "residential areas",
+    "residential area",
+    "residential buildings",
+    "residential building",
+    "structures",
+    "structure",
     "building",
     "buildings",
     "house",
     "houses",
+    "villa",
+    "villas",
+    "paved roads",
+    "paved road",
     "road",
     "roads",
-    "tree",
-    "trees",
-    "vegetation",
-    "forest",
-    "water",
-    "parking lot",
-    "playground",
+    "street",
+    "streets",
+    "roadway",
+    "roadways",
 )
 
 NO_CHANGE_PATTERNS = (
@@ -29,12 +36,46 @@ NO_CHANGE_PATTERNS = (
     "unchanged",
     "identical",
     "same scene",
+    "same as before",
+    "remains the same",
+    "no difference",
+    "no differences",
 )
 
-ADD_CUES = ("add", "appear", "build", "construct", "emerge", "new", "erect")
-REMOVE_CUES = ("remove", "demolish", "disappear", "destroy", "clear", "vanish")
-MODIFY_CUES = ("change", "modify", "reconstruct", "replace", "expand", "convert")
-CONTEXT_CUES = ("near", "beside", "along", "next to", "surrounded by", "among")
+CHANGE_PATTERNS = {
+    ChangeType.ADD: (
+        r"\badd(?:ed|s|ing)?\b",
+        r"\bappear(?:s|ed|ing)?\b",
+        r"\bbuilt\b",
+        r"\bbuilds?\b",
+        r"\bconstruct(?:ed|s|ing|ion)?\b",
+        r"\bemerg(?:e|es|ed|ing)\b",
+        r"\bnew\b",
+        r"\berect(?:ed|s|ing)?\b",
+    ),
+    ChangeType.REMOVE: (
+        r"\bremov(?:e|es|ed|ing)\b",
+        r"\bdemolish(?:es|ed|ing)?\b",
+        r"\bdisappear(?:s|ed|ing)?\b",
+        r"\bdestroy(?:s|ed|ing)?\b",
+        r"\bclear(?:s|ed|ing)?\b",
+        r"\bvanish(?:es|ed|ing)?\b",
+    ),
+    ChangeType.MODIFY: (
+        r"\bchang(?:e|es|ed|ing)\b",
+        r"\bmodif(?:y|ies|ied|ying)\b",
+        r"\breconstruct(?:s|ed|ing|ion)?\b",
+        r"\breplac(?:e|es|ed|ing)\b",
+        r"\bexpand(?:s|ed|ing|ion)?\b",
+        r"\bconvert(?:s|ed|ing)?\b",
+    ),
+}
+CONTEXT_PREFIX = re.compile(
+    r"(?:near|beside|along|around|among|next\s+to|surrounded\s+by|"
+    r"(?:on\s+)?(?:both\s+)?sides?\s+of|"
+    r"(?:on\s+the\s+)?(?:left|right)(?:\s+side)?\s+of)\s+(?:(?:the|a|an)\s+)?$"
+)
+CLAUSE_BOUNDARY = re.compile(r"[.;,]|\b(?:and|while|but|whereas|then)\b")
 LOCATIONS = (
     "upper-left",
     "upper-right",
@@ -66,41 +107,109 @@ class HeuristicClaimParser:
                 ),
             )
 
-        change_type = _change_type(normalized)
         location = next((item for item in LOCATIONS if item in normalized), None)
-        found = [entity for entity in self.entities if _contains(normalized, entity)]
+        mentions = _entity_mentions(normalized, self.entities)
         claims: list[AtomicClaim] = []
-        for index, entity in enumerate(found, start=1):
-            role = ClaimRole.CHANGED
-            if any(f"{cue} {entity}" in normalized for cue in CONTEXT_CUES):
-                role = ClaimRole.CONTEXT
+        seen: set[tuple[str, ClaimRole, ChangeType]] = set()
+        for mention in mentions:
+            entity = _canonical(mention.group())
+            role = (
+                ClaimRole.CONTEXT
+                if _is_context_mention(normalized, mention.start())
+                else ClaimRole.CHANGED
+            )
+            change_type = (
+                ChangeType.NONE
+                if role == ClaimRole.CONTEXT
+                else _change_type_near(normalized, mention.start(), mention.end())
+            )
+            key = (entity, role, change_type)
+            if key in seen:
+                continue
+            seen.add(key)
+            index = len(claims) + 1
             claims.append(
                 AtomicClaim(
                     claim_id=f"c{index:03d}",
                     text=caption,
-                    entity=_singular(entity),
+                    entity=entity,
                     role=role,
-                    change_type=change_type if role == ClaimRole.CHANGED else ChangeType.NONE,
+                    change_type=change_type,
                     location=location,
+                    target_labels=(_target_label(entity),),
                 )
             )
         return tuple(claims)
 
 
-def _change_type(text: str) -> ChangeType:
-    if any(cue in text for cue in REMOVE_CUES):
-        return ChangeType.REMOVE
-    if any(cue in text for cue in ADD_CUES):
-        return ChangeType.ADD
-    if any(cue in text for cue in MODIFY_CUES):
-        return ChangeType.MODIFY
-    return ChangeType.UNKNOWN
+def _entity_mentions(text: str, entities: tuple[str, ...]) -> list[re.Match[str]]:
+    candidates = []
+    occupied: list[tuple[int, int]] = []
+    for entity in sorted(set(entities), key=len, reverse=True):
+        for match in re.finditer(rf"(?<!\w){re.escape(entity)}(?!\w)", text):
+            if any(match.start() < end and match.end() > start for start, end in occupied):
+                continue
+            candidates.append(match)
+            occupied.append(match.span())
+    return sorted(candidates, key=lambda match: match.start())
 
 
-def _contains(text: str, phrase: str) -> bool:
-    return re.search(rf"(?<!\w){re.escape(phrase)}(?!\w)", text) is not None
+def _change_type_near(text: str, start: int, end: int) -> ChangeType:
+    cues = _cue_matches(text)
+    if not cues:
+        return ChangeType.UNKNOWN
+    clause_start = max(
+        (match.end() for match in CLAUSE_BOUNDARY.finditer(text, 0, start)), default=0
+    )
+    next_boundary = CLAUSE_BOUNDARY.search(text, end)
+    clause_end = next_boundary.start() if next_boundary else len(text)
+    local = [cue for cue in cues if clause_start <= cue[1] and cue[2] <= clause_end]
+    candidates = local or cues
+    return min(candidates, key=lambda cue: _span_distance(start, end, cue[1], cue[2]))[0]
 
 
-def _singular(entity: str) -> str:
-    mapping = {"buildings": "building", "houses": "house", "roads": "road", "trees": "tree"}
-    return mapping.get(entity, entity)
+def _cue_matches(text: str) -> list[tuple[ChangeType, int, int]]:
+    matches = []
+    for change_type, patterns in CHANGE_PATTERNS.items():
+        for pattern in patterns:
+            matches.extend(
+                (change_type, match.start(), match.end())
+                for match in re.finditer(pattern, text)
+            )
+    return matches
+
+
+def _span_distance(left_start: int, left_end: int, right_start: int, right_end: int) -> int:
+    if right_end <= left_start:
+        return left_start - right_end
+    if left_end <= right_start:
+        return right_start - left_end
+    return 0
+
+
+def _is_context_mention(text: str, start: int) -> bool:
+    return CONTEXT_PREFIX.search(text[max(0, start - 45) : start]) is not None
+
+
+def _canonical(entity: str) -> str:
+    normalized = entity.strip().lower()
+    if normalized in {
+        "building",
+        "buildings",
+        "house",
+        "houses",
+        "villa",
+        "villas",
+        "residential building",
+        "residential buildings",
+        "residential area",
+        "residential areas",
+        "structure",
+        "structures",
+    }:
+        return "building"
+    return "road"
+
+
+def _target_label(entity: str) -> int:
+    return 2 if entity == "building" else 1

@@ -1,0 +1,266 @@
+{
+  "captions": 30,
+  "manifest": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/manifests/human_eval_50x3_claims_v4.jsonl",
+  "mode_descriptions": {
+    "full_target": "当前实现：Add 使用 post，Remove 使用 pre，Modify 使用 pre ∪ post。",
+    "hybrid_mask_temporal": "Spatial/Coverage 使用 Parser 直接匹配真实类别标签；Temporal 仅使用 SegEarth 的双时相证据。",
+    "mask_label_only": "不使用 SegEarth；Parser 的 target_labels 直接匹配真实标签 road=1、building=2，不能判断时相方向和静态上下文。"
+  },
+  "modes": [
+    "full_target",
+    "mask_label_only",
+    "hybrid_mask_temporal"
+  ],
+  "output_dir": "/root/autodl-tmp/mga-artifacts/ablations/hybrid-human-10x3-v1",
+  "pairwise_delta_vs_full_target": {
+    "hybrid_mask_temporal": {
+      "Change-Agent": {
+        "coverage": 0.0,
+        "faithfulness": 0.16094236425407635,
+        "overall": 0.0796664703057678,
+        "temporal": 0.0,
+        "unverifiable_rate": 0.0
+      },
+      "Draft": {
+        "coverage": 0.0,
+        "faithfulness": 0.16094236425407635,
+        "overall": 0.0796664703057678,
+        "temporal": 0.0,
+        "unverifiable_rate": 0.0
+      },
+      "Guided": {
+        "coverage": 0.0,
+        "faithfulness": 0.09551421693057695,
+        "overall": 0.04727953738063558,
+        "temporal": 0.0,
+        "unverifiable_rate": 0.0
+      }
+    },
+    "mask_label_only": {
+      "Change-Agent": {
+        "coverage": 0.0,
+        "faithfulness": 0.16128753190693632,
+        "overall": 0.08001484308683288,
+        "temporal": null,
+        "unverifiable_rate": 0.0
+      },
+      "Draft": {
+        "coverage": 0.0,
+        "faithfulness": 0.16128753190693632,
+        "overall": 0.08001484308683288,
+        "temporal": null,
+        "unverifiable_rate": 0.0
+      },
+      "Guided": {
+        "coverage": 0.0,
+        "faithfulness": 0.09551421693057695,
+        "overall": 0.04727953738063558,
+        "temporal": null,
+        "unverifiable_rate": 0.05
+      }
+    }
+  },
+  "results": {
+    "full_target": {
+      "by_entity": {
+        "building": {
+          "claims": 13,
+          "faithfulness": 0.3259381902538427,
+          "spatial_support": 0.1708176912486904,
+          "statuses": {
+            "contradicted": 10,
+            "supported": 3
+          },
+          "temporal_support": 0.6140191169776968
+        },
+        "road": {
+          "claims": 1,
+          "faithfulness": 0.94140625,
+          "spatial_support": null,
+          "statuses": {
+            "supported": 1
+          },
+          "temporal_support": null
+        },
+        "scene": {
+          "claims": 14,
+          "faithfulness": 0.9285714285714286,
+          "spatial_support": 0.9285714285714286,
+          "statuses": {
+            "contradicted": 1,
+            "supported": 13
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Change-Agent": {
+          "captions": 10,
+          "coverage": 0.9,
+          "faithfulness": 0.8387124680930637,
+          "overall": 0.8199851569131672,
+          "temporal": 0.9970414201183432,
+          "unverifiable_rate": 0.1
+        },
+        "Draft": {
+          "captions": 10,
+          "coverage": 0.7,
+          "faithfulness": 0.6164902458708414,
+          "overall": 0.6199851569131672,
+          "temporal": 0.598224852071006,
+          "unverifiable_rate": 0.1
+        },
+        "Guided": {
+          "captions": 10,
+          "coverage": 0.5,
+          "faithfulness": 0.4600413386249786,
+          "overall": 0.4527204626193645,
+          "temporal": 0.4,
+          "unverifiable_rate": 0.1
+        }
+      },
+      "captions": 30,
+      "claim_statuses": {
+        "contradicted": 11,
+        "supported": 17
+      },
+      "elapsed_seconds": 0.03489195927977562,
+      "scenes": 10
+    },
+    "hybrid_mask_temporal": {
+      "by_entity": {
+        "building": {
+          "claims": 13,
+          "faithfulness": 0.6149066909421939,
+          "spatial_support": 0.6153846153846154,
+          "statuses": {
+            "contradicted": 5,
+            "supported": 8
+          },
+          "temporal_support": 0.6140191169776968
+        },
+        "road": {
+          "claims": 1,
+          "faithfulness": 0.94140625,
+          "spatial_support": null,
+          "statuses": {
+            "supported": 1
+          },
+          "temporal_support": null
+        },
+        "scene": {
+          "claims": 14,
+          "faithfulness": 0.9285714285714286,
+          "spatial_support": 0.9285714285714286,
+          "statuses": {
+            "contradicted": 1,
+            "supported": 13
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Change-Agent": {
+          "captions": 10,
+          "coverage": 0.9,
+          "faithfulness": 0.9996548323471401,
+          "overall": 0.899651627218935,
+          "temporal": 0.9970414201183432,
+          "unverifiable_rate": 0.1
+        },
+        "Draft": {
+          "captions": 10,
+          "coverage": 0.7,
+          "faithfulness": 0.7774326101249178,
+          "overall": 0.6996516272189349,
+          "temporal": 0.598224852071006,
+          "unverifiable_rate": 0.1
+        },
+        "Guided": {
+          "captions": 10,
+          "coverage": 0.5,
+          "faithfulness": 0.5555555555555556,
+          "overall": 0.5,
+          "temporal": 0.4,
+          "unverifiable_rate": 0.1
+        }
+      },
+      "captions": 30,
+      "claim_statuses": {
+        "contradicted": 6,
+        "supported": 22
+      },
+      "elapsed_seconds": 0.030454315710812807,
+      "scenes": 10
+    },
+    "mask_label_only": {
+      "by_entity": {
+        "building": {
+          "claims": 13,
+          "faithfulness": 0.6153846153846154,
+          "spatial_support": 0.6153846153846154,
+          "statuses": {
+            "contradicted": 5,
+            "supported": 8
+          },
+          "temporal_support": null
+        },
+        "road": {
+          "claims": 1,
+          "faithfulness": null,
+          "spatial_support": null,
+          "statuses": {
+            "unverifiable": 1
+          },
+          "temporal_support": null
+        },
+        "scene": {
+          "claims": 14,
+          "faithfulness": 0.9285714285714286,
+          "spatial_support": 0.9285714285714286,
+          "statuses": {
+            "contradicted": 1,
+            "supported": 13
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Change-Agent": {
+          "captions": 10,
+          "coverage": 0.9,
+          "faithfulness": 1.0,
+          "overall": 0.9,
+          "temporal": null,
+          "unverifiable_rate": 0.1
+        },
+        "Draft": {
+          "captions": 10,
+          "coverage": 0.7,
+          "faithfulness": 0.7777777777777778,
+          "overall": 0.7,
+          "temporal": null,
+          "unverifiable_rate": 0.1
+        },
+        "Guided": {
+          "captions": 10,
+          "coverage": 0.5,
+          "faithfulness": 0.5555555555555556,
+          "overall": 0.5,
+          "temporal": null,
+          "unverifiable_rate": 0.15
+        }
+      },
+      "captions": 30,
+      "claim_statuses": {
+        "contradicted": 6,
+        "supported": 21,
+        "unverifiable": 1
+      },
+      "elapsed_seconds": 0.02920550713315606,
+      "scenes": 10
+    }
+  },
+  "scenes": 10,
+  "segmentation_run_dir": "/root/autodl-tmp/mga-artifacts/segearth-ov3/human-eval-50x3-v1"
+}

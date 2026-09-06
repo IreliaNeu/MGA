@@ -1,0 +1,13 @@
+{
+  "model": "/root/autodl-tmp/models/Qwen3-VL-2B-Instruct",
+  "qa_scene_count": 40,
+  "rewrite_count": 50,
+  "rewrite_models": [
+    "Draft",
+    "Change-Agent"
+  ],
+  "seed": 20260727,
+  "runtime_seconds": 44.62372654303908,
+  "qa_outputs": "/root/autodl-tmp/mga-artifacts/qwen3-vl-supplement-v1/run-40qa-50rewrite-v1/qa_outputs.jsonl",
+  "rewrite_outputs": "/root/autodl-tmp/mga-artifacts/qwen3-vl-supplement-v1/run-40qa-50rewrite-v1/rewrite_outputs.jsonl"
+}

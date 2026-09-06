@@ -1,0 +1,22 @@
+{
+  "interpretation": "pre/post image-text cosine similarities are averaged; this is a transparent single-image aggregation baseline and does not explicitly encode temporal direction",
+  "model": "ViT-B-32",
+  "models": {
+    "Draft": {
+      "BiTemporal-CLIP-max": 0.2456037810444832,
+      "BiTemporal-CLIP-mean": 0.23888675359636546,
+      "CLIPScore-post": 0.24226580891013144,
+      "CLIPScore-pre": 0.23550769828259946,
+      "count": 1000
+    },
+    "Refined": {
+      "BiTemporal-CLIP-max": 0.24933082543313503,
+      "BiTemporal-CLIP-mean": 0.24249681812524795,
+      "CLIPScore-post": 0.2458081851452589,
+      "CLIPScore-pre": 0.239185451105237,
+      "count": 1000
+    }
+  },
+  "pretrained": "openai",
+  "protocol": "single-image-CLIP-aggregation-v1"
+}

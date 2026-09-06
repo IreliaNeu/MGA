@@ -1,0 +1,127 @@
+{
+  "backend": "segearth-ov3-native:sam3.pt:confidence=0.1:logit=0.1:expansion=remote-sensing",
+  "by_entity": {
+    "building": {
+      "claims": 254,
+      "faithfulness": 0.6348810757696065,
+      "grounding_confidence": 0.8879762183962845,
+      "spatial_support": 0.470461247606065,
+      "statuses": {
+        "contradicted": 36,
+        "supported": 71,
+        "unverifiable": 147
+      },
+      "temporal_support": 0.9402321852161838
+    },
+    "road": {
+      "claims": 187,
+      "faithfulness": 0.7549565283542662,
+      "grounding_confidence": 0.9573236965240641,
+      "spatial_support": 0.4683736569270901,
+      "statuses": {
+        "contradicted": 41,
+        "supported": 126,
+        "unverifiable": 20
+      },
+      "temporal_support": 0.5563999784607703
+    },
+    "scene": {
+      "claims": 20,
+      "faithfulness": 0.0,
+      "grounding_confidence": 1.0,
+      "spatial_support": 0.0,
+      "statuses": {
+        "contradicted": 20
+      },
+      "temporal_support": null
+    }
+  },
+  "by_model": {
+    "Change-Agent": {
+      "captions": 100,
+      "coverage": 0.8039281659459678,
+      "faithfulness": 0.5484527502474178,
+      "overall": 0.6570161559718894,
+      "temporal": 0.884278606604936,
+      "unverifiable_rate": 0.375
+    },
+    "Draft": {
+      "captions": 100,
+      "coverage": 0.8564529685124512,
+      "faithfulness": 0.5613881324068127,
+      "overall": 0.6811971544919296,
+      "temporal": 0.8585535865335492,
+      "unverifiable_rate": 0.39166666666666666
+    },
+    "Guided": {
+      "captions": 100,
+      "coverage": 0.8477863018457845,
+      "faithfulness": 0.5624290785428998,
+      "overall": 0.6725450194996124,
+      "temporal": 0.8465009177609849,
+      "unverifiable_rate": 0.41833333333333333
+    }
+  },
+  "captions": 300,
+  "claim_statuses": {
+    "contradicted": 97,
+    "supported": 197,
+    "unverifiable": 167
+  },
+  "elapsed_seconds": 119.54715086519718,
+  "lowest_overall": [
+    {
+      "model": "Guided",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000049"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000096"
+    },
+    {
+      "model": "Draft",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000124"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000236"
+    },
+    {
+      "model": "Draft",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000248"
+    },
+    {
+      "model": "Guided",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000248"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000248"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000333"
+    },
+    {
+      "model": "Guided",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000390"
+    },
+    {
+      "model": "Draft",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000413"
+    }
+  ],
+  "manifest": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/manifests/building_road_100x3_claims_v4.jsonl",
+  "peak_gpu_memory_mib": 5408.5107421875,
+  "scenes": 100
+}

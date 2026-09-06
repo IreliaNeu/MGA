@@ -29,6 +29,7 @@ from mga.models import (
     ClaimRole,
     ClaimScore,
     ClaimStatus,
+    EvidenceMode,
     GroundingEvidence,
     LegacyCaptionScore,
     SampleRecord,
@@ -37,6 +38,7 @@ from mga.models import (
 
 @dataclass(frozen=True)
 class MGAV2Config:
+    evidence_mode: EvidenceMode = EvidenceMode.FULL_TARGET
     min_grounding_confidence: float = 0.25
     supported_threshold: float = 0.60
     contradicted_threshold: float = 0.25
@@ -49,6 +51,14 @@ class MGAV2Config:
     min_component_area: int = 4
 
     def __post_init__(self) -> None:
+        try:
+            evidence_mode = EvidenceMode(self.evidence_mode)
+        except ValueError as exc:
+            valid = ", ".join(mode.value for mode in EvidenceMode)
+            raise ValueError(
+                f"Unknown evidence_mode {self.evidence_mode!r}; choose {valid}"
+            ) from exc
+        object.__setattr__(self, "evidence_mode", evidence_mode)
         probabilities = (
             self.min_grounding_confidence,
             self.supported_threshold,
@@ -75,17 +85,20 @@ class MGAV2Scorer:
         change_mask: np.ndarray,
         evidence_by_claim: Mapping[str, GroundingEvidence],
     ) -> CaptionScore:
-        change_mask = np.asarray(change_mask, dtype=bool)
-        if change_mask.ndim != 2:
-            raise ValueError(f"Expected a 2D change mask, got {change_mask.shape}")
+        label_mask = np.asarray(change_mask)
+        if label_mask.ndim != 2:
+            raise ValueError(f"Expected a 2D change mask, got {label_mask.shape}")
+        mask_labels = tuple(int(value) for value in record.metadata.get("mask_labels", ()))
+        coverage_change_mask = _select_labels(label_mask, mask_labels)
 
         claim_scores: list[ClaimScore] = []
-        coverage_support = np.zeros_like(change_mask, dtype=bool)
+        coverage_support = np.zeros_like(coverage_change_mask, dtype=bool)
         context_values: list[float] = []
 
         for claim in record.claims:
             evidence = evidence_by_claim.get(claim.claim_id, GroundingEvidence())
-            score, coverage_mask = self.score_claim(claim, evidence, change_mask)
+            claim_change_mask = _select_labels(label_mask, claim.target_labels)
+            score, coverage_mask = self.score_claim(claim, evidence, claim_change_mask)
             claim_scores.append(score)
             if coverage_mask is not None:
                 coverage_support |= coverage_mask
@@ -105,7 +118,9 @@ class MGAV2Scorer:
         faithfulness = _mean(changed_scores)
         temporal = _mean(temporal_scores)
         context_support = _mean(context_values)
-        coverage = self._coverage(record.claims, change_mask, coverage_support, claim_scores)
+        coverage = self._coverage(
+            record.claims, coverage_change_mask, coverage_support, claim_scores
+        )
         unverifiable_rate = (
             sum(item.status == ClaimStatus.UNVERIFIABLE for item in claim_scores)
             / len(claim_scores)
@@ -124,7 +139,12 @@ class MGAV2Scorer:
             unverifiable_rate=float(unverifiable_rate),
             overall=overall,
             claim_scores=tuple(claim_scores),
-            metadata={"metric": "mga_v2", "num_claims": len(claim_scores)},
+            metadata={
+                "metric": "mga_v2",
+                "evidence_mode": self.config.evidence_mode.value,
+                "num_claims": len(claim_scores),
+                "mask_labels": list(mask_labels),
+            },
         )
 
     def score_claim(
@@ -155,6 +175,9 @@ class MGAV2Scorer:
                 ),
                 None,
             )
+
+        if self.config.evidence_mode == EvidenceMode.MASK_LABEL_ONLY:
+            return self._score_mask_label_only(claim, change_mask)
 
         if claim.role == ClaimRole.CONTEXT:
             if max_confidence < self.config.min_grounding_confidence or not (
@@ -198,10 +221,43 @@ class MGAV2Scorer:
                 None,
             )
 
+        temporal_pre = pre
+        temporal_post = post
+        if self.config.evidence_mode == EvidenceMode.GT_ROI_GATED:
+            temporal_pre = np.logical_and(pre, change_mask)
+            temporal_post = np.logical_and(post, change_mask)
+
         target, other, target_confidence = self._temporal_masks(
-            claim.change_type, pre, post, evidence
+            claim.change_type, temporal_pre, temporal_post, evidence
         )
         if target_confidence < self.config.min_grounding_confidence or not target.any():
+            if self.config.evidence_mode == EvidenceMode.HYBRID_MASK_TEMPORAL:
+                if not claim.target_labels:
+                    return (
+                        self._unknown(
+                            claim,
+                            target_confidence,
+                            "Hybrid mode requires parser-provided target_labels.",
+                        ),
+                        None,
+                    )
+                return (
+                    ClaimScore(
+                        claim_id=claim.claim_id,
+                        role=claim.role,
+                        change_type=claim.change_type,
+                        status=ClaimStatus.UNVERIFIABLE,
+                        faithfulness=None,
+                        spatial_support=1.0,
+                        temporal_support=None,
+                        grounding_confidence=target_confidence,
+                        reason=(
+                            "The GT class supports entity presence, but SegEarth "
+                            "cannot verify the temporal direction."
+                        ),
+                    ),
+                    change_mask.copy(),
+                )
             return (
                 self._unknown(
                     claim,
@@ -211,12 +267,29 @@ class MGAV2Scorer:
                 None,
             )
 
-        spatial = support_precision(target, change_mask)
+        support = target
+        if self.config.evidence_mode == EvidenceMode.HYBRID_MASK_TEMPORAL:
+            if not claim.target_labels:
+                return (
+                    self._unknown(
+                        claim,
+                        target_confidence,
+                        "Hybrid mode requires parser-provided target_labels.",
+                    ),
+                    None,
+                )
+            support = change_mask.copy()
+        elif self.config.evidence_mode == EvidenceMode.TEMPORAL_DELTA:
+            support = self._delta_mask(claim.change_type, pre, post)
+
+        spatial = support_precision(support, change_mask)
         temporal_value: float | None
         if claim.change_type in {ChangeType.ADD, ChangeType.REMOVE}:
             temporal_value = temporal_novelty(target, other, change_mask)
         elif claim.change_type == ChangeType.MODIFY:
-            temporal_value = temporal_difference(pre, post, change_mask)
+            temporal_value = temporal_difference(
+                temporal_pre, temporal_post, change_mask
+            )
         else:
             temporal_value = None
 
@@ -225,15 +298,32 @@ class MGAV2Scorer:
             (temporal_value, self.config.temporal_weight),
         )
         status = self._joint_status(spatial, temporal_value)
-        reason = {
-            ClaimStatus.SUPPORTED: (
-                "Spatial and temporal evidence support the changed-entity claim."
-            ),
-            ClaimStatus.CONTRADICTED: (
-                "The grounded entity is inconsistent with the change evidence."
-            ),
-            ClaimStatus.UNVERIFIABLE: "Evidence is ambiguous under the configured thresholds.",
-        }[status]
+        if self.config.evidence_mode == EvidenceMode.HYBRID_MASK_TEMPORAL:
+            reason = {
+                ClaimStatus.SUPPORTED: (
+                    "The GT class supports entity presence and SegEarth supports "
+                    "the temporal direction."
+                ),
+                ClaimStatus.CONTRADICTED: (
+                    "The GT class is present, but SegEarth contradicts the claimed "
+                    "temporal direction."
+                ),
+                ClaimStatus.UNVERIFIABLE: (
+                    "The GT class is present, but temporal evidence is ambiguous."
+                ),
+            }[status]
+        else:
+            reason = {
+                ClaimStatus.SUPPORTED: (
+                    "Spatial and temporal evidence support the changed-entity claim."
+                ),
+                ClaimStatus.CONTRADICTED: (
+                    "The grounded entity is inconsistent with the change evidence."
+                ),
+                ClaimStatus.UNVERIFIABLE: (
+                    "Evidence is ambiguous under the configured thresholds."
+                ),
+            }[status]
         return (
             ClaimScore(
                 claim_id=claim.claim_id,
@@ -246,7 +336,57 @@ class MGAV2Scorer:
                 grounding_confidence=target_confidence,
                 reason=reason,
             ),
-            target,
+            support,
+        )
+
+    def _score_mask_label_only(
+        self,
+        claim: AtomicClaim,
+        change_mask: np.ndarray,
+    ) -> tuple[ClaimScore, np.ndarray | None]:
+        if claim.role == ClaimRole.CONTEXT:
+            return (
+                self._unknown(
+                    claim,
+                    0.0,
+                    "MaskLabelOnly cannot verify static context because the label mask "
+                    "contains changed classes only.",
+                ),
+                None,
+            )
+        if claim.role != ClaimRole.CHANGED:
+            return self._unknown(claim, 0.0, "Unsupported claim role."), None
+        if not claim.target_labels:
+            return (
+                self._unknown(
+                    claim,
+                    0.0,
+                    "MaskLabelOnly requires parser-provided target_labels.",
+                ),
+                None,
+            )
+
+        value = float(change_mask.any())
+        status = ClaimStatus.SUPPORTED if value == 1.0 else ClaimStatus.CONTRADICTED
+        reason = (
+            "Parser target_labels match a non-empty ground-truth change class; "
+            "no SegEarth evidence is used."
+            if value == 1.0
+            else "The parser-mapped ground-truth change class is absent."
+        )
+        return (
+            ClaimScore(
+                claim_id=claim.claim_id,
+                role=claim.role,
+                change_type=claim.change_type,
+                status=status,
+                faithfulness=value,
+                spatial_support=value,
+                temporal_support=None,
+                grounding_confidence=1.0,
+                reason=reason,
+            ),
+            change_mask.copy() if value == 1.0 else None,
         )
 
     def _coverage(
@@ -335,6 +475,18 @@ class MGAV2Scorer:
             float(max(evidence.pre_confidence, evidence.post_confidence)),
         )
 
+    @staticmethod
+    def _delta_mask(
+        change_type: ChangeType,
+        pre: np.ndarray,
+        post: np.ndarray,
+    ) -> np.ndarray:
+        if change_type == ChangeType.ADD:
+            return np.logical_and(post, np.logical_not(pre))
+        if change_type == ChangeType.REMOVE:
+            return np.logical_and(pre, np.logical_not(post))
+        return np.logical_xor(pre, post)
+
 
 @dataclass(frozen=True)
 class LegacyMGAConfig:
@@ -394,6 +546,13 @@ def _mean(values: Iterable[float | None]) -> float | None:
     if not concrete:
         return None
     return float(sum(concrete) / len(concrete))
+
+
+def _select_labels(mask: np.ndarray, labels: Iterable[int]) -> np.ndarray:
+    selected_labels = tuple(int(value) for value in labels)
+    if selected_labels and mask.dtype != np.bool_:
+        return np.isin(mask, selected_labels)
+    return np.asarray(mask, dtype=bool)
 
 
 def _weighted_available(*items: tuple[float | None, float]) -> float | None:

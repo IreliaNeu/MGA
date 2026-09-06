@@ -1,0 +1,3344 @@
+{
+  "counts": {
+    "eligible_scenes": 521,
+    "excluded_scenes": 479,
+    "input_records": 3000,
+    "input_scenes": 1000,
+    "selected_records": 300,
+    "selected_scenes": 100
+  },
+  "excluded": [
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000001"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000002"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000003"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000005"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000006"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000007"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000008"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000009"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000010"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000011"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000012"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000013"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000014"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000015"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000016"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000021"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000022"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000023"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000024"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000025"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000026"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000029"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000031"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000033"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000034"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000035"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000036"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000041"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000042"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000043"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000052"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000053"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000054"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000055"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000056"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000057"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000058"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000059"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000060"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000061"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000065"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000066"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000067"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000069"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000070"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000071"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000072"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000073"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000074"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000077"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000078"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000081"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000083"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000084"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000086"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000087"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000089"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000090"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000092"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000093"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000094"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000095"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000100"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000111"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000114"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000117"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000118"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000119"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000120"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000130"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000131"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000132"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000134"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000135"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000136"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000138"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000139"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000140"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000142"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000143"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000144"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000145"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000146"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000147"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000148"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000151"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000152"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000161"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000162"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000163"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000164"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000165"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000166"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000167"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000168"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000169"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000170"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000173"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000177"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000178"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000179"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000180"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000183"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000184"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000197"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000202"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000206"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000212"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000216"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000220"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000224"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000225"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000227"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000229"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000230"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000231"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000232"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000233"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000234"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000235"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000238"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000251"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000252"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000254"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000255"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000256"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000257"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000258"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000259"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000260"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000261"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000264"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000268"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000274"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000277"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000278"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000283"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000291"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000292"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000294"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000295"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000296"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000299"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000315"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000337"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000338"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000339"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000340"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000341"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000342"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000343"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000344"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000346"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000355"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000356"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000360"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000364"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000367"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000368"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000369"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000370"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000381"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000386"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000387"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000400"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000406"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000407"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000410"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000414"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000423"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000424"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000428"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000431"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000432"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000433"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000434"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000435"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000438"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000439"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000440"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000444"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000449"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000450"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000465"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000467"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000468"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000471"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000472"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000483"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000497"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000498"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000502"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000504"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000509"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000510"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000511"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000514"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000515"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000516"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000517"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000518"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000521"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000527"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000532"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000545"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000546"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000549"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000550"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000553"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000557"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000561"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000562"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000563"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000565"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000566"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000567"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000569"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000570"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000571"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000572"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000573"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000574"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000580"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000584"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000586"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000587"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000588"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000589"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000590"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000591"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000592"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000605"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000606"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000609"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000610"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000611"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000612"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000615"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000616"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000620"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000624"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000630"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000631"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000632"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000633"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000634"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000635"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000636"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000637"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000638"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000639"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000640"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000641"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000642"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000649"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000658"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000659"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000660"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000663"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000669"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000677"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000678"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000679"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000681"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000682"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000683"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000685"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000689"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000690"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000691"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000693"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000694"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000695"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000697"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000698"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000701"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000702"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000703"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000724"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000728"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000731"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000734"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000735"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000737"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000739"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000741"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000746"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000753"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000757"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000758"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000759"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000760"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000761"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000763"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000764"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000765"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000767"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000768"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000773"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000781"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000782"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000786"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000787"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000788"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000790"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000791"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000802"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000803"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000804"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000805"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000806"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000807"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000809"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000815"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000816"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000817"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000818"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000819"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000820"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000821"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000822"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000823"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000827"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000828"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000831"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000832"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000833"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000834"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000835"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000837"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000839"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000841"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000843"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000844"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000852"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000855"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000856"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000859"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000860"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000862"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000863"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000864"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000865"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000868"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000871"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000876"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000881"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000882"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000883"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000885"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000886"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000887"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000888"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000889"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000892"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000893"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000895"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000900"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000901"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000902"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000903"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000904"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000907"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000908"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000912"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000914"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000915"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000916"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000917"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000918"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000919"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000920"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000921"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000922"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000923"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000925"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000926"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000927"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000928"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000929"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000930"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000931"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000932"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000934"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000940"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000941"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000942"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000945"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000946"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000947"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000948"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000949"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000950"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000951"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000952"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000953"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000954"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000955"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000956"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000957"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000958"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000959"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000960"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000961"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000962"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000963"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000964"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000965"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000966"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000967"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000968"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000969"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000970"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000971"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000972"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000974"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000975"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000976"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000977"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000978"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000979"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000980"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000981"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000982"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000983"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000985"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_000986"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000987"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000988"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000989"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000990"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000991"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000992"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000996"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000997"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_000998"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001001"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001002"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001003"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_001004"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001005"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001007"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_001008"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001009"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001010"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001011"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001012"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001014"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001015"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_001016"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001019"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001020"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001021"
+    },
+    {
+      "issues": [
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001024"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001026"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001027"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001028"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001030"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001031"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_001032"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001034"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_001035"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001036"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_001038"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_001039"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001040"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001041"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001042"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001043"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001044"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001045"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001046"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001047"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001048"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change"
+      ],
+      "sample_id": "levir-cc_test_001049"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001050"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001051"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001052"
+    },
+    {
+      "issues": [
+        "no_building_or_road_change",
+        "no_target_change_claim_in_any_caption"
+      ],
+      "sample_id": "levir-cc_test_001053"
+    }
+  ],
+  "issue_counts": {
+    "no_building_or_road_change": 461,
+    "no_target_change_claim_in_any_caption": 344
+  },
+  "mask_scene_counts_before_selection": {
+    "building": 501,
+    "road": 298
+  },
+  "output_manifest": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/manifests/building_road_100x3_claims_v2.jsonl",
+  "parser_changed_claim_counts_before_selection": {
+    "building:add": 1372,
+    "building:modify": 76,
+    "building:remove": 13,
+    "building:unknown": 3,
+    "road:add": 617,
+    "road:modify": 42,
+    "road:remove": 16,
+    "road:unknown": 6
+  },
+  "required_models": [
+    "Draft",
+    "Guided",
+    "Change-Agent"
+  ],
+  "seed": 20260718,
+  "selected_sample_ids": [
+    "levir-cc_test_000004",
+    "levir-cc_test_000018",
+    "levir-cc_test_000019",
+    "levir-cc_test_000048",
+    "levir-cc_test_000049",
+    "levir-cc_test_000064",
+    "levir-cc_test_000068",
+    "levir-cc_test_000096",
+    "levir-cc_test_000101",
+    "levir-cc_test_000124",
+    "levir-cc_test_000133",
+    "levir-cc_test_000153",
+    "levir-cc_test_000158",
+    "levir-cc_test_000172",
+    "levir-cc_test_000192",
+    "levir-cc_test_000200",
+    "levir-cc_test_000205",
+    "levir-cc_test_000210",
+    "levir-cc_test_000228",
+    "levir-cc_test_000236",
+    "levir-cc_test_000241",
+    "levir-cc_test_000248",
+    "levir-cc_test_000276",
+    "levir-cc_test_000285",
+    "levir-cc_test_000287",
+    "levir-cc_test_000298",
+    "levir-cc_test_000300",
+    "levir-cc_test_000308",
+    "levir-cc_test_000314",
+    "levir-cc_test_000321",
+    "levir-cc_test_000322",
+    "levir-cc_test_000331",
+    "levir-cc_test_000333",
+    "levir-cc_test_000334",
+    "levir-cc_test_000345",
+    "levir-cc_test_000349",
+    "levir-cc_test_000362",
+    "levir-cc_test_000363",
+    "levir-cc_test_000366",
+    "levir-cc_test_000374",
+    "levir-cc_test_000376",
+    "levir-cc_test_000379",
+    "levir-cc_test_000385",
+    "levir-cc_test_000389",
+    "levir-cc_test_000390",
+    "levir-cc_test_000393",
+    "levir-cc_test_000395",
+    "levir-cc_test_000402",
+    "levir-cc_test_000412",
+    "levir-cc_test_000413",
+    "levir-cc_test_000416",
+    "levir-cc_test_000421",
+    "levir-cc_test_000436",
+    "levir-cc_test_000443",
+    "levir-cc_test_000454",
+    "levir-cc_test_000459",
+    "levir-cc_test_000466",
+    "levir-cc_test_000475",
+    "levir-cc_test_000487",
+    "levir-cc_test_000488",
+    "levir-cc_test_000489",
+    "levir-cc_test_000500",
+    "levir-cc_test_000528",
+    "levir-cc_test_000552",
+    "levir-cc_test_000558",
+    "levir-cc_test_000564",
+    "levir-cc_test_000613",
+    "levir-cc_test_000622",
+    "levir-cc_test_000623",
+    "levir-cc_test_000647",
+    "levir-cc_test_000652",
+    "levir-cc_test_000657",
+    "levir-cc_test_000665",
+    "levir-cc_test_000668",
+    "levir-cc_test_000673",
+    "levir-cc_test_000706",
+    "levir-cc_test_000721",
+    "levir-cc_test_000727",
+    "levir-cc_test_000730",
+    "levir-cc_test_000748",
+    "levir-cc_test_000749",
+    "levir-cc_test_000772",
+    "levir-cc_test_000775",
+    "levir-cc_test_000792",
+    "levir-cc_test_000793",
+    "levir-cc_test_000795",
+    "levir-cc_test_000796",
+    "levir-cc_test_000810",
+    "levir-cc_test_000812",
+    "levir-cc_test_000825",
+    "levir-cc_test_000851",
+    "levir-cc_test_000861",
+    "levir-cc_test_000879",
+    "levir-cc_test_000891",
+    "levir-cc_test_000905",
+    "levir-cc_test_000913",
+    "levir-cc_test_000933",
+    "levir-cc_test_000943",
+    "levir-cc_test_001000",
+    "levir-cc_test_001017"
+  ],
+  "source_manifest": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/manifests/all_models_manifest.jsonl",
+  "target_entities": {
+    "building": 2,
+    "road": 1
+  }
+}

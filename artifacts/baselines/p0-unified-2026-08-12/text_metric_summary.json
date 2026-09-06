@@ -1,0 +1,26 @@
+{
+  "implementation": "/root/autodl-tmp/caption-bench-20260808/repos/RSICC",
+  "models": {
+    "Draft": {
+      "BLEU-1": 0.8161015186185961,
+      "BLEU-2": 0.6984432189091997,
+      "BLEU-3": 0.6094975455214123,
+      "BLEU-4": 0.5377665561977042,
+      "CIDEr": 1.2161275448317619,
+      "METEOR": 0.3738759376020085,
+      "ROUGE-L": 0.7254361416068581,
+      "count": 1000
+    },
+    "Refined": {
+      "BLEU-1": 0.7271909663235008,
+      "BLEU-2": 0.5926233848250212,
+      "BLEU-3": 0.4986599813407547,
+      "BLEU-4": 0.42702377252385443,
+      "CIDEr": 0.9620014724845846,
+      "METEOR": 0.325562101236726,
+      "ROUGE-L": 0.6380826281261534,
+      "count": 1000
+    }
+  },
+  "scope": "project-recomputed Draft/Refined on the aligned 1000-scene LEVIR-MCI subset"
+}

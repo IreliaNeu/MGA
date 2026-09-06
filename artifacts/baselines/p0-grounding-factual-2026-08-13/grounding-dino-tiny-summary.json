@@ -1,0 +1,62 @@
+{
+  "backend": "hf-dino-box:/root/autodl-tmp/mga-artifacts/hf-cache/hub/models--IDEA-Research--grounding-dino-tiny/snapshots/a2bb814dd30d776dcf7e30523b00659f4f141c71:box=0.3:text=0.25:query-expansion=remote-sensing",
+  "captions": 2500,
+  "claim_statuses": {
+    "contradicted": 1765,
+    "supported": 823,
+    "unverifiable": 825
+  },
+  "detections": {
+    "entity_rows": 1000,
+    "mean_post_mask_fraction": 0.6479811096191406,
+    "mean_pre_mask_fraction": 0.8563200531005859,
+    "zero_post_boxes": 138,
+    "zero_pre_boxes": 63
+  },
+  "elapsed_seconds": 196.75749834626913,
+  "models": {
+    "Change-Agent": {
+      "captions": 500,
+      "coverage": 0.7788803098768539,
+      "faithfulness": 0.48187740564783116,
+      "overall": 0.5231186611834778,
+      "temporal": 0.07824397949998757,
+      "unverifiable_rate": 0.19233333333333336
+    },
+    "Chg2Cap": {
+      "captions": 500,
+      "coverage": 0.7546911069916755,
+      "faithfulness": 0.46933160828508774,
+      "overall": 0.5089133377321391,
+      "temporal": 0.06977454890791562,
+      "unverifiable_rate": 0.22299999999999995
+    },
+    "Draft": {
+      "captions": 500,
+      "coverage": 0.7683616846424388,
+      "faithfulness": 0.4417529527835441,
+      "overall": 0.497462019605952,
+      "temporal": 0.08186085922700678,
+      "unverifiable_rate": 0.15833333333333333
+    },
+    "RSICCformer": {
+      "captions": 500,
+      "coverage": 0.7288466952286882,
+      "faithfulness": 0.43556397740914543,
+      "overall": 0.4766560061356828,
+      "temporal": 0.05595326878542883,
+      "unverifiable_rate": 0.18933333333333333
+    },
+    "Refined": {
+      "captions": 500,
+      "coverage": 0.6709648592456137,
+      "faithfulness": 0.352274753381206,
+      "overall": 0.4034421385628513,
+      "temporal": 0.06768676087389512,
+      "unverifiable_rate": 0.17299999999999996
+    }
+  },
+  "peak_gpu_memory_mib": 1487.490234375,
+  "scenes": 500,
+  "threshold_policy": "predeclared defaults; no test-set tuning"
+}

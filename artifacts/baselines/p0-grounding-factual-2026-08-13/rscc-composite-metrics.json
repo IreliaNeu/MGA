@@ -1,0 +1,32 @@
+{
+  "S*m_definition": "(BLEU-4 + METEOR + ROUGE-L + CIDEr-D) / 4, following RSICCformer/CCExpert reporting",
+  "SPIDEr_definition": "(SPICE + CIDEr-D) / 2",
+  "interpretation": "Both remain reference-based composites and do not add image or bi-temporal verification.",
+  "models": {
+    "Draft": {
+      "S*m": 0.7133015450595832,
+      "SPIDEr": 0.7623193717516236,
+      "components": {
+        "BLEU-4": 0.5377665561977042,
+        "CIDEr": 1.2161275448317619,
+        "METEOR": 0.3738759376020085,
+        "ROUGE-L": 0.7254361416068581,
+        "SPICE": 0.3085111986714852
+      },
+      "count": 1000
+    },
+    "Refined": {
+      "S*m": 0.5881674935928296,
+      "SPIDEr": 0.6093940822193011,
+      "components": {
+        "BLEU-4": 0.42702377252385443,
+        "CIDEr": 0.9620014724845846,
+        "METEOR": 0.325562101236726,
+        "ROUGE-L": 0.6380826281261534,
+        "SPICE": 0.25678669195401777
+      },
+      "count": 1000
+    }
+  },
+  "scope": "Draft/Refined, aligned 1000-scene LEVIR-MCI subset"
+}

@@ -1,0 +1,70 @@
+{
+  "qa_adaptation": {
+    "n": 40,
+    "parser_success_rate": 0.0,
+    "exact_transition_accuracy": 0.0,
+    "hybrid_score_coverage": 0.0,
+    "hybrid_auc_for_model_answers": null,
+    "hybrid_mean_exact": NaN,
+    "hybrid_mean_inexact": NaN
+  },
+  "language_invariance": {
+    "overall": {
+      "n": 50,
+      "claim_preservation_rate": 0.72,
+      "mga_status_agreement_on_accepted": 1.0,
+      "mean_absolute_mga_delta_on_accepted": 0.0,
+      "original_bleu1_to_reference": 0.3386972377517936,
+      "rewrite_bleu1_to_reference": 0.32933908614945423,
+      "rewrite_bleu1_to_original": 0.8867812122336651,
+      "original_bleu4_to_reference": 0.18180650648342714,
+      "rewrite_bleu4_to_reference": 0.17889813861821804,
+      "rewrite_bleu4_to_original": 0.6748400344249306,
+      "original_rouge_l_to_reference": 0.3252086351294409,
+      "rewrite_rouge_l_to_reference": 0.3134520868446475,
+      "rewrite_rouge_l_to_original": 0.8688616798439849,
+      "original_token_f1_to_reference": 0.3460079732972002,
+      "rewrite_token_f1_to_reference": 0.33235989062087234,
+      "rewrite_token_f1_to_original": 0.8803650551404636
+    },
+    "by_model": {
+      "Change-Agent": {
+        "n": 25,
+        "claim_preservation_rate": 0.84,
+        "mga_status_agreement_on_accepted": 1.0,
+        "mean_absolute_mga_delta_on_accepted": 0.0,
+        "original_bleu1_to_reference": 0.33940346080658457,
+        "rewrite_bleu1_to_reference": 0.3294429821190323,
+        "rewrite_bleu1_to_original": 0.8873737373737373,
+        "original_bleu4_to_reference": 0.17381020918806708,
+        "rewrite_bleu4_to_reference": 0.1780028904055666,
+        "rewrite_bleu4_to_original": 0.6601769966187736,
+        "original_rouge_l_to_reference": 0.3345558411516145,
+        "rewrite_rouge_l_to_reference": 0.32445875375321753,
+        "rewrite_rouge_l_to_original": 0.8747354497354497,
+        "original_token_f1_to_reference": 0.3424923490881224,
+        "rewrite_token_f1_to_reference": 0.3289939011455078,
+        "rewrite_token_f1_to_original": 0.8747354497354497
+      },
+      "Draft": {
+        "n": 25,
+        "claim_preservation_rate": 0.6,
+        "mga_status_agreement_on_accepted": 1.0,
+        "mean_absolute_mga_delta_on_accepted": 0.0,
+        "original_bleu1_to_reference": 0.3377085254750863,
+        "rewrite_bleu1_to_reference": 0.329193631792045,
+        "rewrite_bleu1_to_original": 0.885951677037564,
+        "original_bleu4_to_reference": 0.19300132269693104,
+        "rewrite_bleu4_to_reference": 0.18015148611593013,
+        "rewrite_bleu4_to_original": 0.6953682873535502,
+        "original_rouge_l_to_reference": 0.31212254669839806,
+        "rewrite_rouge_l_to_reference": 0.2980427531726495,
+        "rewrite_rouge_l_to_original": 0.8606384019959337,
+        "original_token_f1_to_reference": 0.3509298471899091,
+        "rewrite_token_f1_to_reference": 0.33707227588638283,
+        "rewrite_token_f1_to_original": 0.8882465027074827
+      }
+    },
+    "interpretation": "MGA equality is asserted only after exact canonical claim-set matching; rejected rewrites are reported as semantic drift rather than counted as invariant."
+  }
+}

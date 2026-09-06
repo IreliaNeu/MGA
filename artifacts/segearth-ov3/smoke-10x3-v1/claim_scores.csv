@@ -1,0 +1,49 @@
+﻿sample_id,model,claim_id,entity,change_type,role,status,faithfulness,spatial_support,temporal_support,grounding_confidence,reason
+levir-cc_test_000004,Draft,c001,road,modify,changed,supported,0.7912086477583584,0.693053613053613,0.9734965693528858,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000004,Draft,c002,tree,modify,changed,unverifiable,0.5349335326934247,0.3130742696663512,0.9469578783151326,0.94140625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000004,Guided,c001,road,modify,changed,supported,0.7912086477583584,0.693053613053613,0.9734965693528858,0.97265625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000004,Guided,c002,tree,modify,changed,unverifiable,0.5349335326934247,0.3130742696663512,0.9469578783151326,0.94140625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000004,Change-Agent,c001,road,remove,changed,unverifiable,,,,0.1845703125,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000004,Change-Agent,c002,vegetation,remove,changed,unverifiable,0.5349812801725451,0.3131103515625,0.9470272904483431,0.77734375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000017,Draft,c001,house,remove,changed,unverifiable,,,,0.05419921875,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000017,Draft,c002,road,remove,changed,unverifiable,,,,0.10693359375,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000017,Draft,c003,tree,remove,changed,unverifiable,0.5567233405644334,0.34056535235453406,0.9581596043828178,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000017,Guided,c001,house,remove,changed,unverifiable,,,,0.05419921875,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000017,Guided,c002,road,remove,changed,unverifiable,,,,0.10693359375,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000017,Guided,c003,tree,remove,changed,unverifiable,0.5567233405644334,0.34056535235453406,0.9581596043828178,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000017,Change-Agent,c001,house,remove,changed,unverifiable,,,,0.05419921875,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000017,Change-Agent,c002,road,remove,changed,unverifiable,,,,0.10693359375,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000017,Change-Agent,c003,vegetation,remove,changed,unverifiable,0.555672293620599,0.33876530168396196,0.9584995643600679,0.94921875,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000018,Draft,c001,house,add,changed,supported,0.8044147007293321,0.699099539583588,1.0,0.9296875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000018,Guided,c001,house,add,changed,supported,0.8044147007293321,0.699099539583588,1.0,0.9296875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000018,Change-Agent,c001,house,remove,changed,unverifiable,,,,0.027587890625,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000018,Change-Agent,c002,road,remove,changed,contradicted,0.4352896077106474,0.6299008562415502,0.07386871758182789,0.369140625,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000018,Change-Agent,c003,vegetation,remove,changed,unverifiable,0.5785842451963998,0.3731824776957985,0.9600446705546594,0.8515625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000019,Draft,c001,house,modify,changed,supported,0.7422436819395931,0.6034518183686048,1.0,0.96875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000019,Draft,c002,road,modify,changed,contradicted,0.34891914800609514,0.49238048420793906,0.08249095220267066,0.94921875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000019,Guided,c001,house,modify,changed,supported,0.7422436819395931,0.6034518183686048,1.0,0.96875,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000019,Guided,c002,road,modify,changed,contradicted,0.34891914800609514,0.49238048420793906,0.08249095220267066,0.94921875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000019,Change-Agent,c001,house,remove,changed,unverifiable,,,,0.01495361328125,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000019,Change-Agent,c002,road,remove,changed,contradicted,0.3374158665506389,0.493168177755076,0.04816157431382706,0.61328125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000019,Change-Agent,c003,vegetation,remove,changed,unverifiable,0.4987528264234354,0.253415174450803,0.9543798943726097,0.8359375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000020,Draft,c001,house,add,changed,unverifiable,0.6040249966402365,0.3908076871388254,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000020,Guided,c001,house,add,changed,unverifiable,0.6040249966402365,0.3908076871388254,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000020,Change-Agent,c001,house,add,changed,unverifiable,0.6040249966402365,0.3908076871388254,1.0,0.96484375,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000031,Draft,c001,tree,remove,changed,contradicted,0.0,0.0,0.0,0.9375,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000031,Guided,c001,tree,remove,changed,contradicted,0.0,0.0,0.0,0.9375,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000031,Change-Agent,c001,vegetation,remove,changed,contradicted,0.0,0.0,0.0,0.9375,A changed-entity claim contradicts an empty ground-truth change mask.
+levir-cc_test_000032,Draft,c001,building,add,changed,supported,0.7408113730929264,0.6012482662968099,1.0,0.94140625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000032,Guided,c001,building,add,changed,supported,0.7408113730929264,0.6012482662968099,1.0,0.94140625,Spatial and temporal evidence support the changed-entity claim.
+levir-cc_test_000032,Change-Agent,c001,house,remove,changed,unverifiable,,,,0.010009765625,Target-time entity support is missing or below the grounding threshold.
+levir-cc_test_000032,Change-Agent,c002,tree,remove,changed,contradicted,0.35156455459225744,0.002407007065011478,1.0,0.828125,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000044,Draft,c001,house,add,changed,unverifiable,0.5840836012861736,0.36012861736334406,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000044,Draft,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9921875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000044,Guided,c001,house,add,changed,unverifiable,0.5840836012861736,0.36012861736334406,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000044,Guided,c002,road,add,changed,contradicted,0.0,0.0,0.0,0.9921875,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000044,Change-Agent,c001,building,add,changed,unverifiable,0.5840836012861736,0.36012861736334406,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000045,Draft,c001,building,add,changed,contradicted,0.3910614803024274,0.06317150815758057,1.0,0.96484375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000045,Guided,c001,building,add,changed,contradicted,0.3910614803024274,0.06317150815758057,1.0,0.96484375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000045,Change-Agent,c001,house,unknown,changed,contradicted,0.05216891225764048,0.05216891225764048,,0.96484375,The grounded entity is inconsistent with the change evidence.
+levir-cc_test_000047,Draft,c001,building,add,changed,unverifiable,0.7271444856084355,0.5802222855514392,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000047,Guided,c001,building,add,changed,unverifiable,0.7271444856084355,0.5802222855514392,1.0,0.87890625,Evidence is ambiguous under the configured thresholds.
+levir-cc_test_000047,Change-Agent,c001,road,unknown,changed,contradicted,0.0,0.0,,0.9921875,The grounded entity is inconsistent with the change evidence.

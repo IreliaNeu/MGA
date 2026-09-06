@@ -1,0 +1,8 @@
+{
+  "low vegetation": "short green cover",
+  "tree": "wooded parcels",
+  "non-vegetated ground": "bare terrain",
+  "water": "aquatic zones",
+  "playground": "recreation grounds",
+  "building": "urban fabric"
+}

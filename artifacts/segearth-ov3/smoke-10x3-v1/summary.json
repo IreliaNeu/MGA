@@ -1,0 +1,151 @@
+{
+  "backend": "segearth-ov3-native:sam3.pt:confidence=0.1:logit=0.1:expansion=remote-sensing",
+  "by_entity": {
+    "building": {
+      "claims": 7,
+      "faithfulness": 0.6145883256133933,
+      "grounding_confidence": 0.9213169642857143,
+      "spatial_support": 0.40705896248214335,
+      "statuses": {
+        "contradicted": 2,
+        "supported": 2,
+        "unverifiable": 3
+      },
+      "temporal_support": 1.0
+    },
+    "house": {
+      "claims": 16,
+      "faithfulness": 0.6125727870088548,
+      "grounding_confidence": 0.6018257141113281,
+      "spatial_support": 0.45499519243051906,
+      "statuses": {
+        "contradicted": 1,
+        "supported": 4,
+        "unverifiable": 11
+      },
+      "temporal_support": 1.0
+    },
+    "road": {
+      "claims": 13,
+      "faithfulness": 0.3392178961989104,
+      "grounding_confidence": 0.6390850360576923,
+      "spatial_support": 0.3882152476133034,
+      "statuses": {
+        "contradicted": 7,
+        "supported": 2,
+        "unverifiable": 4
+      },
+      "temporal_support": 0.279250666875846
+    },
+    "tree": {
+      "claims": 7,
+      "faithfulness": 0.3621254715868534,
+      "grounding_confidence": 0.9263392857142857,
+      "spatial_support": 0.18709803587239743,
+      "statuses": {
+        "contradicted": 3,
+        "unverifiable": 4
+      },
+      "temporal_support": 0.6871764236279858
+    },
+    "vegetation": {
+      "claims": 5,
+      "faithfulness": 0.4335981290825958,
+      "grounding_confidence": 0.8703125,
+      "spatial_support": 0.2556946610786127,
+      "statuses": {
+        "contradicted": 1,
+        "unverifiable": 4
+      },
+      "temporal_support": 0.763990283947136
+    }
+  },
+  "by_model": {
+    "Change-Agent": {
+      "captions": 10,
+      "coverage": 0.7,
+      "faithfulness": 0.36075169115100125,
+      "overall": 0.4988558383409908,
+      "temporal": 0.7404692854024841,
+      "unverifiable_rate": 0.5833333333333333
+    },
+    "Draft": {
+      "captions": 10,
+      "coverage": 0.8894736842105264,
+      "faithfulness": 0.5324874682779613,
+      "overall": 0.6744291746918736,
+      "temporal": 0.7959632304318163,
+      "unverifiable_rate": 0.4
+    },
+    "Guided": {
+      "captions": 10,
+      "coverage": 0.8894736842105264,
+      "faithfulness": 0.5324874682779613,
+      "overall": 0.6744291746918736,
+      "temporal": 0.7959632304318163,
+      "unverifiable_rate": 0.4
+    }
+  },
+  "captions": 30,
+  "claim_statuses": {
+    "contradicted": 14,
+    "supported": 8,
+    "unverifiable": 26
+  },
+  "elapsed_seconds": 37.78132696822286,
+  "lowest_overall": [
+    {
+      "model": "Draft",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000031"
+    },
+    {
+      "model": "Guided",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000031"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000031"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.0,
+      "sample_id": "levir-cc_test_000047"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.3483661271771278,
+      "sample_id": "levir-cc_test_000045"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.3933605050257416,
+      "sample_id": "levir-cc_test_000032"
+    },
+    {
+      "model": "Draft",
+      "overall": 0.5106229903536977,
+      "sample_id": "levir-cc_test_000044"
+    },
+    {
+      "model": "Guided",
+      "overall": 0.5106229903536977,
+      "sample_id": "levir-cc_test_000044"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.5802005374365141,
+      "sample_id": "levir-cc_test_000019"
+    },
+    {
+      "model": "Change-Agent",
+      "overall": 0.6322066483630867,
+      "sample_id": "levir-cc_test_000018"
+    }
+  ],
+  "manifest": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/manifests/smoke_10x3_claims_heuristic.jsonl",
+  "peak_gpu_memory_mib": 5410.5107421875,
+  "scenes": 10
+}

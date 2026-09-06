@@ -1,0 +1,20 @@
+{
+  "interpretation": "internal text-only control; depends on reference captions, has no image evidence, and is not presented as a published factuality baseline",
+  "models": {
+    "Draft": {
+      "Reference-Claim-F1": 0.8836666666666664,
+      "Reference-Claim-Location-F1": 0.8096666666666666,
+      "count": 1000,
+      "mean_candidate_claim_count": 1.304
+    },
+    "Refined": {
+      "Reference-Claim-F1": 0.7992666666666666,
+      "Reference-Claim-Location-F1": 0.7252333333333336,
+      "count": 1000,
+      "mean_candidate_claim_count": 1.243
+    }
+  },
+  "parser": "MGA HeuristicClaimParser (same version as candidate scoring)",
+  "protocol": "reference-canonical-claim-f1-v1",
+  "reference_aggregation": "maximum F1 over the five official references"
+}

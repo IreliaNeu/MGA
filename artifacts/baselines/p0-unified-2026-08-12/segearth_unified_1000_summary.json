@@ -1,0 +1,261 @@
+{
+  "backend": "segearth-ov3-native:sam3.pt:confidence=0.1:logit=0.1:expansion=remote-sensing",
+  "captions": 5000,
+  "elapsed_seconds": 1035.4130123481154,
+  "manifest": "/root/autodl-tmp/mga-artifacts/p0-1-unified-baselines-20260812/full-claims/model_outputs_claims.jsonl",
+  "peak_gpu_memory_mib": 5408.51123046875,
+  "protocol": "compact-segearth-five-model-unified-eval-v1",
+  "results": {
+    "full_target": {
+      "captions": 5000,
+      "claim_statuses": {
+        "contradicted": 1178,
+        "supported": 3951,
+        "unverifiable": 1459
+      },
+      "models": {
+        "Change-Agent": {
+          "captions": 1000,
+          "coverage": 0.8898256598363935,
+          "faithfulness": 0.7450968083853237,
+          "overall": 0.8014179945916423,
+          "temporal": 0.8873951974953793,
+          "unverifiable_rate": 0.191
+        },
+        "Chg2Cap": {
+          "captions": 1000,
+          "coverage": 0.8749363409093157,
+          "faithfulness": 0.7407315211062293,
+          "overall": 0.7988360408944849,
+          "temporal": 0.8819828632907574,
+          "unverifiable_rate": 0.17133333333333334
+        },
+        "Draft": {
+          "captions": 1000,
+          "coverage": 0.8655067284184801,
+          "faithfulness": 0.709367085923706,
+          "overall": 0.7650356433110768,
+          "temporal": 0.8027801276929372,
+          "unverifiable_rate": 0.21016666666666667
+        },
+        "RSICCformer": {
+          "captions": 1000,
+          "coverage": 0.8677138981359441,
+          "faithfulness": 0.7155311117510494,
+          "overall": 0.7778015082530703,
+          "temporal": 0.8233255104062281,
+          "unverifiable_rate": 0.17916666666666667
+        },
+        "Refined": {
+          "captions": 1000,
+          "coverage": 0.739455754392506,
+          "faithfulness": 0.6219141430065351,
+          "overall": 0.6434505930325083,
+          "temporal": 0.6962097955271704,
+          "unverifiable_rate": 0.2576666666666667
+        }
+      }
+    },
+    "gt_roi_gated": {
+      "captions": 5000,
+      "claim_statuses": {
+        "contradicted": 724,
+        "supported": 5748,
+        "unverifiable": 116
+      },
+      "models": {
+        "Change-Agent": {
+          "captions": 1000,
+          "coverage": 0.8828304738619505,
+          "faithfulness": 0.9142383212748398,
+          "overall": 0.8910960841336848,
+          "temporal": 0.8892324546330509,
+          "unverifiable_rate": 0.025666666666666667
+        },
+        "Chg2Cap": {
+          "captions": 1000,
+          "coverage": 0.8671408191595369,
+          "faithfulness": 0.9060863595735313,
+          "overall": 0.8868549872461208,
+          "temporal": 0.8837828283178814,
+          "unverifiable_rate": 0.017166666666666667
+        },
+        "Draft": {
+          "captions": 1000,
+          "coverage": 0.8594644918581708,
+          "faithfulness": 0.8844840942065083,
+          "overall": 0.8573303710290607,
+          "temporal": 0.8042695156849463,
+          "unverifiable_rate": 0.03783333333333334
+        },
+        "RSICCformer": {
+          "captions": 1000,
+          "coverage": 0.861851083956373,
+          "faithfulness": 0.8848769139198611,
+          "overall": 0.8685277953810089,
+          "temporal": 0.8248997465637927,
+          "unverifiable_rate": 0.01616666666666667
+        },
+        "Refined": {
+          "captions": 1000,
+          "coverage": 0.7337135178321967,
+          "faithfulness": 0.7990848088170647,
+          "overall": 0.7309114869257202,
+          "temporal": 0.700913915767219,
+          "unverifiable_rate": 0.08683333333333333
+        }
+      }
+    },
+    "hybrid_mask_temporal": {
+      "captions": 5000,
+      "claim_statuses": {
+        "contradicted": 732,
+        "supported": 5748,
+        "unverifiable": 108
+      },
+      "models": {
+        "Change-Agent": {
+          "captions": 1000,
+          "coverage": 0.8933078783673044,
+          "faithfulness": 0.9139703310909911,
+          "overall": 0.8962888443509325,
+          "temporal": 0.8873951974953793,
+          "unverifiable_rate": 0.024666666666666667
+        },
+        "Chg2Cap": {
+          "captions": 1000,
+          "coverage": 0.8756920026636699,
+          "faithfulness": 0.9058287274210429,
+          "overall": 0.8915661922130631,
+          "temporal": 0.8819828632907574,
+          "unverifiable_rate": 0.01616666666666667
+        },
+        "Draft": {
+          "captions": 1000,
+          "coverage": 0.867269246790875,
+          "faithfulness": 0.8842445803206999,
+          "overall": 0.8611390597622368,
+          "temporal": 0.8027801276929372,
+          "unverifiable_rate": 0.036833333333333336
+        },
+        "RSICCformer": {
+          "captions": 1000,
+          "coverage": 0.8720058388890772,
+          "faithfulness": 0.8846403812774444,
+          "overall": 0.8743982265384274,
+          "temporal": 0.8233255104062281,
+          "unverifiable_rate": 0.015166666666666667
+        },
+        "Refined": {
+          "captions": 1000,
+          "coverage": 0.7442682727649012,
+          "faithfulness": 0.7984422018825084,
+          "overall": 0.7364801756588963,
+          "temporal": 0.6962097955271704,
+          "unverifiable_rate": 0.08283333333333333
+        }
+      }
+    },
+    "mask_label_only": {
+      "captions": 5000,
+      "claim_statuses": {
+        "contradicted": 541,
+        "supported": 4932,
+        "unverifiable": 1115
+      },
+      "models": {
+        "Change-Agent": {
+          "captions": 1000,
+          "coverage": 0.8933078783673044,
+          "faithfulness": 0.9282103134479271,
+          "overall": 0.9102837119897826,
+          "temporal": null,
+          "unverifiable_rate": 0.12233333333333332
+        },
+        "Chg2Cap": {
+          "captions": 1000,
+          "coverage": 0.8756920026636699,
+          "faithfulness": 0.9192577733199598,
+          "overall": 0.9037475008323969,
+          "temporal": null,
+          "unverifiable_rate": 0.13983333333333334
+        },
+        "Draft": {
+          "captions": 1000,
+          "coverage": 0.867269246790875,
+          "faithfulness": 0.9021406727828746,
+          "overall": 0.8794591396221484,
+          "temporal": null,
+          "unverifiable_rate": 0.10966666666666668
+        },
+        "RSICCformer": {
+          "captions": 1000,
+          "coverage": 0.8720058388890772,
+          "faithfulness": 0.8996990972918756,
+          "overall": 0.8891893246528367,
+          "temporal": null,
+          "unverifiable_rate": 0.11866666666666667
+        },
+        "Refined": {
+          "captions": 1000,
+          "coverage": 0.7442682727649012,
+          "faithfulness": 0.8182795698924731,
+          "overall": 0.7557713352390316,
+          "temporal": null,
+          "unverifiable_rate": 0.15116666666666664
+        }
+      }
+    },
+    "temporal_delta": {
+      "captions": 5000,
+      "claim_statuses": {
+        "contradicted": 1004,
+        "supported": 4055,
+        "unverifiable": 1529
+      },
+      "models": {
+        "Change-Agent": {
+          "captions": 1000,
+          "coverage": 0.8751873446210503,
+          "faithfulness": 0.7563013727162411,
+          "overall": 0.8038375703300875,
+          "temporal": 0.8873951974953793,
+          "unverifiable_rate": 0.2045
+        },
+        "Chg2Cap": {
+          "captions": 1000,
+          "coverage": 0.8592880762436981,
+          "faithfulness": 0.7510742928266201,
+          "overall": 0.8005783680276183,
+          "temporal": 0.8819828632907574,
+          "unverifiable_rate": 0.18616666666666665
+        },
+        "Draft": {
+          "captions": 1000,
+          "coverage": 0.8474198943259608,
+          "faithfulness": 0.7191943050622213,
+          "overall": 0.7658054009330805,
+          "temporal": 0.8027801276929372,
+          "unverifiable_rate": 0.22283333333333336
+        },
+        "RSICCformer": {
+          "captions": 1000,
+          "coverage": 0.8516146069140368,
+          "faithfulness": 0.7262404799149352,
+          "overall": 0.7796525356555905,
+          "temporal": 0.8233255104062281,
+          "unverifiable_rate": 0.19183333333333336
+        },
+        "Refined": {
+          "captions": 1000,
+          "coverage": 0.7218679101989766,
+          "faithfulness": 0.629899725579087,
+          "overall": 0.6430536223262722,
+          "temporal": 0.6962097955271704,
+          "unverifiable_rate": 0.26516666666666666
+        }
+      }
+    }
+  },
+  "scenes": 1000
+}

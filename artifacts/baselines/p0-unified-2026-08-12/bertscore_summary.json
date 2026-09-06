@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "BERTScore": {
+      "idf": false,
+      "model_type": "roberta-large",
+      "num_layers": 17,
+      "rescale_with_baseline": false
+    },
+    "SPICE": "pycocoevalcap 1.2 official Java implementation"
+  },
+  "models": {
+    "Draft": {
+      "BERTScore-F1": 0.9611966640353203,
+      "BERTScore-P": 0.9620803199410438,
+      "BERTScore-R": 0.9627633146643638,
+      "count": 1000
+    },
+    "Refined": {
+      "BERTScore-F1": 0.9479945442676544,
+      "BERTScore-P": 0.9478426729440689,
+      "BERTScore-R": 0.9508540684580803,
+      "count": 1000
+    }
+  },
+  "scope": "project-recomputed Draft/Refined on the aligned 1000-scene LEVIR-MCI subset"
+}

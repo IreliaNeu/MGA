@@ -1,0 +1,164 @@
+{
+  "box_threshold": 0.3,
+  "images": [
+    {
+      "combined_visualization_path": "/root/autodl-tmp/mga-artifacts/grounding-visualizations/levir-cc_test_000004/punctuated/a_test_000004__punctuated__combined_boxes.png",
+      "entities": [
+        {
+          "box_count": 1,
+          "boxes": [
+            [
+              0.0463714599609375,
+              0.06536865234375,
+              256.04638671875,
+              256.06536865234375
+            ]
+          ],
+          "entity": "building",
+          "labels": [
+            "building"
+          ],
+          "prompt": "building.",
+          "scores": [
+            0.6406676173210144
+          ],
+          "visualization_path": "/root/autodl-tmp/mga-artifacts/grounding-visualizations/levir-cc_test_000004/punctuated/a_test_000004__building__punctuated__boxes.png"
+        },
+        {
+          "box_count": 1,
+          "boxes": [
+            [
+              0.0211334228515625,
+              0.0550537109375,
+              256.0211181640625,
+              256.0550537109375
+            ]
+          ],
+          "entity": "road",
+          "labels": [
+            "road"
+          ],
+          "prompt": "road.",
+          "scores": [
+            0.6627935171127319
+          ],
+          "visualization_path": "/root/autodl-tmp/mga-artifacts/grounding-visualizations/levir-cc_test_000004/punctuated/a_test_000004__road__punctuated__boxes.png"
+        },
+        {
+          "box_count": 1,
+          "boxes": [
+            [
+              0.0132598876953125,
+              0.0438079833984375,
+              256.01324462890625,
+              256.0438232421875
+            ]
+          ],
+          "entity": "tree",
+          "labels": [
+            "tree"
+          ],
+          "prompt": "tree.",
+          "scores": [
+            0.7888160943984985
+          ],
+          "visualization_path": "/root/autodl-tmp/mga-artifacts/grounding-visualizations/levir-cc_test_000004/punctuated/a_test_000004__tree__punctuated__boxes.png"
+        }
+      ],
+      "image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/A/test_000004.png"
+    },
+    {
+      "combined_visualization_path": "/root/autodl-tmp/mga-artifacts/grounding-visualizations/levir-cc_test_000004/punctuated/b_test_000004__punctuated__combined_boxes.png",
+      "entities": [
+        {
+          "box_count": 3,
+          "boxes": [
+            [
+              184.34576416015625,
+              186.8138885498047,
+              228.73663330078125,
+              244.59974670410156
+            ],
+            [
+              0.29290771484375,
+              0.04930877685546875,
+              255.62164306640625,
+              255.975830078125
+            ],
+            [
+              40.655364990234375,
+              0.2118072509765625,
+              99.4541015625,
+              34.21494674682617
+            ]
+          ],
+          "entity": "building",
+          "labels": [
+            "building",
+            "building",
+            "building"
+          ],
+          "prompt": "building.",
+          "scores": [
+            0.31361904740333557,
+            0.3681560456752777,
+            0.31279730796813965
+          ],
+          "visualization_path": "/root/autodl-tmp/mga-artifacts/grounding-visualizations/levir-cc_test_000004/punctuated/b_test_000004__building__punctuated__boxes.png"
+        },
+        {
+          "box_count": 2,
+          "boxes": [
+            [
+              98.68881225585938,
+              0.30361175537109375,
+              255.52059936523438,
+              195.96017456054688
+            ],
+            [
+              15.355499267578125,
+              0.41770172119140625,
+              255.33261108398438,
+              207.24203491210938
+            ]
+          ],
+          "entity": "road",
+          "labels": [
+            "road",
+            "road"
+          ],
+          "prompt": "road.",
+          "scores": [
+            0.41560879349708557,
+            0.3223104476928711
+          ],
+          "visualization_path": "/root/autodl-tmp/mga-artifacts/grounding-visualizations/levir-cc_test_000004/punctuated/b_test_000004__road__punctuated__boxes.png"
+        },
+        {
+          "box_count": 1,
+          "boxes": [
+            [
+              71.41040802001953,
+              137.0730438232422,
+              233.37539672851562,
+              255.51292419433594
+            ]
+          ],
+          "entity": "tree",
+          "labels": [
+            "tree"
+          ],
+          "prompt": "tree.",
+          "scores": [
+            0.34373927116394043
+          ],
+          "visualization_path": "/root/autodl-tmp/mga-artifacts/grounding-visualizations/levir-cc_test_000004/punctuated/b_test_000004__tree__punctuated__boxes.png"
+        }
+      ],
+      "image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/B/test_000004.png"
+    }
+  ],
+  "model": "/root/autodl-tmp/mga-artifacts/hf-cache/hub/models--IDEA-Research--grounding-dino-tiny/snapshots/a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "query_mode": "punctuated",
+  "text_threshold": 0.25
+}

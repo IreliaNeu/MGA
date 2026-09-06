@@ -1,0 +1,187 @@
+{
+  "experiment": "predicted_roi_ablation",
+  "scene_count": 50,
+  "item_count": 150,
+  "relation_eligible_item_count": 43,
+  "relation_skipped_item_count": 107,
+  "relation_eligibility": "at least two parsed claims",
+  "class_map": {
+    "1": "road",
+    "2": "building"
+  },
+  "hidden_entities": [],
+  "visible_entities": [
+    "building",
+    "road"
+  ],
+  "entity_evidence_modes": [
+    "open_vocab"
+  ],
+  "roi_modes": [
+    "oracle_gt_roi",
+    "predicted_cd_roi",
+    "feature_difference_roi",
+    "no_roi"
+  ],
+  "roi_protocol": {
+    "oracle_gt_roi": "semantic_pre != semantic_post",
+    "predicted_cd_roi": "independent external change-detector manifest",
+    "feature_difference_roi": "continuous robust RGB difference",
+    "no_roi": "constant all-one gate",
+    "score": "mean ROI gate value over source-remove/target-add relation",
+    "gate_floor": 0.1,
+    "threshold_method": "otsu",
+    "threshold_quantile": 0.9,
+    "fixed_threshold": 0.5,
+    "blur_radius": 1.0
+  },
+  "entity_cache": {
+    "format": "segmentations_jsonl",
+    "path": "/root/autodl-tmp/mga-artifacts/segearth-ov3/human-eval-50x3-v1/segmentations.jsonl"
+  },
+  "external_roi_manifest": null,
+  "external_prediction_matches": 50,
+  "changeformer": null,
+  "mci": {
+    "backend": "Change-Agent-MCI",
+    "training_dataset": "LEVIR-MCI",
+    "classes": [
+      "background",
+      "road",
+      "building"
+    ],
+    "repo": "/root/autodl-tmp/third_party/Change-Agent",
+    "repo_commit": "68cbaa7f388b36e4fc10872f7a2911482d26ae5b",
+    "checkpoint": "/root/autodl-tmp/models/change-agent/MCI_model.pth",
+    "checkpoint_sha256": "34c6926342c40fdd6d50b43d50257cb46cb6b61763448de9ee551828a64b3eb9",
+    "image_size": 256,
+    "device": "cuda",
+    "torch_version": "2.10.0+cu128"
+  },
+  "min_ov_confidence": 0.1,
+  "scores": {
+    "open_vocab": {
+      "oracle_gt_roi": {
+        "n": 43,
+        "n_labeled": 0,
+        "n_scored": 0,
+        "coverage": 0.0,
+        "conditional_auc": NaN,
+        "neutral_auc": NaN,
+        "balanced_accuracy": NaN,
+        "false_support_rate": NaN,
+        "supported_precision": NaN,
+        "positive_mean": NaN,
+        "negative_mean": NaN,
+        "unverifiable_rate": 1.0
+      },
+      "predicted_cd_roi": {
+        "n": 43,
+        "n_labeled": 0,
+        "n_scored": 0,
+        "coverage": 0.0,
+        "conditional_auc": NaN,
+        "neutral_auc": NaN,
+        "balanced_accuracy": NaN,
+        "false_support_rate": NaN,
+        "supported_precision": NaN,
+        "positive_mean": NaN,
+        "negative_mean": NaN,
+        "unverifiable_rate": 1.0
+      },
+      "feature_difference_roi": {
+        "n": 43,
+        "n_labeled": 0,
+        "n_scored": 0,
+        "coverage": 0.0,
+        "conditional_auc": NaN,
+        "neutral_auc": NaN,
+        "balanced_accuracy": NaN,
+        "false_support_rate": NaN,
+        "supported_precision": NaN,
+        "positive_mean": NaN,
+        "negative_mean": NaN,
+        "unverifiable_rate": 1.0
+      },
+      "no_roi": {
+        "n": 43,
+        "n_labeled": 0,
+        "n_scored": 0,
+        "coverage": 0.0,
+        "conditional_auc": NaN,
+        "neutral_auc": NaN,
+        "balanced_accuracy": NaN,
+        "false_support_rate": NaN,
+        "supported_precision": NaN,
+        "positive_mean": NaN,
+        "negative_mean": NaN,
+        "unverifiable_rate": 1.0
+      }
+    }
+  },
+  "roi_quality_against_oracle": {
+    "oracle_gt_roi": {
+      "scene_count": 50,
+      "macro_iou": 1.0,
+      "macro_precision": 0.58,
+      "macro_recall": 1.0,
+      "macro_f1": 0.58,
+      "macro_mae": 0.0,
+      "macro_predicted_fraction": 0.05896881103515625,
+      "macro_reference_fraction": 0.05896881103515625
+    },
+    "predicted_cd_roi": {
+      "scene_count": 50,
+      "macro_iou": 0.508621636146565,
+      "macro_precision": 0.5627927583001473,
+      "macro_recall": 0.5193890775614459,
+      "macro_f1": 0.4656325551252411,
+      "macro_mae": 0.10424516156315804,
+      "macro_predicted_fraction": 0.05012481689453125,
+      "macro_reference_fraction": 0.05896881103515625
+    },
+    "feature_difference_roi": {
+      "scene_count": 50,
+      "macro_iou": 0.03400371390603035,
+      "macro_precision": 0.0629942393940863,
+      "macro_recall": 0.14918449680325646,
+      "macro_f1": 0.06143086913687448,
+      "macro_mae": 0.3578702300786972,
+      "macro_predicted_fraction": 0.18478759765625,
+      "macro_reference_fraction": 0.05896881103515625
+    },
+    "no_roi": {
+      "scene_count": 50,
+      "macro_iou": 0.05896881103515625,
+      "macro_precision": 0.05896881103515625,
+      "macro_recall": 0.58,
+      "macro_f1": 0.09351933221431001,
+      "macro_mae": 0.9410311889648437,
+      "macro_predicted_fraction": 1.0,
+      "macro_reference_fraction": 0.05896881103515625
+    }
+  },
+  "roi_source_counts": {
+    "oracle_gt_roi": {
+      "reference_change": 50
+    },
+    "predicted_cd_roi": {
+      "external_change_detector": 50
+    },
+    "feature_difference_roi": {
+      "rgb_feature_difference": 50
+    },
+    "no_roi": {
+      "constant_one": 50
+    }
+  },
+  "metric_definition": {
+    "coverage": "fraction receiving a numeric score",
+    "neutral_auc": "ROC-AUC with unverifiable assigned 0.5",
+    "balanced_accuracy": "balanced accuracy at score threshold 0.5",
+    "false_support_rate": "contradicted items scored at least 0.5",
+    "supported_precision": "factual fraction among items scored at least 0.5",
+    "unverifiable_rate": "one minus score coverage"
+  },
+  "runtime_seconds": 4.746869061142206
+}

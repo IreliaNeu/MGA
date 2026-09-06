@@ -1,0 +1,63 @@
+{
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260813,
+    "unit": "scene"
+  },
+  "metrics": {
+    "ALOHa": {
+      "balanced_accuracy_oracle_threshold": 0.6596428571428572,
+      "oracle_threshold": 0.9999998807907104,
+      "roc_auc": 0.5781303571428572,
+      "roc_auc_scene_bootstrap_95ci": [
+        0.565970892857143,
+        0.5901398214285714
+      ]
+    },
+    "FMScore-Qwen": {
+      "balanced_accuracy_oracle_threshold": 0.8225,
+      "oracle_threshold": 1.0,
+      "roc_auc": 0.8225,
+      "roc_auc_scene_bootstrap_95ci": [
+        0.8117857142857142,
+        0.8325
+      ]
+    },
+    "MGA-Hybrid": {
+      "balanced_accuracy_oracle_threshold": 0.8089285714285714,
+      "oracle_threshold": 0.4375,
+      "roc_auc": 0.7895428571428571,
+      "roc_auc_scene_bootstrap_95ci": [
+        0.7564517857142858,
+        0.8212812053571428
+      ]
+    }
+  },
+  "mga_neutral_mapping": 0.5,
+  "mga_unverifiable_rows": 2,
+  "paired_auc_deltas": {
+    "FMScore-Qwen_minus_ALOHa": {
+      "point": 0.2443696428571428,
+      "scene_bootstrap_95ci": [
+        0.22853526785714295,
+        0.25900473214285696
+      ]
+    },
+    "MGA-Hybrid_minus_ALOHa": {
+      "point": 0.2114124999999999,
+      "scene_bootstrap_95ci": [
+        0.17376491071428565,
+        0.24822821428571418
+      ]
+    },
+    "MGA-Hybrid_minus_FMScore-Qwen": {
+      "point": -0.03295714285714291,
+      "scene_bootstrap_95ci": [
+        -0.06956169642857132,
+        0.0019221428571429128
+      ]
+    }
+  },
+  "rows": 1600,
+  "scenes": 200
+}

@@ -12,9 +12,13 @@ This repository contains:
 - controlled perturbations for metric monotonicity experiments;
 - local CPU tests and an optional AutoDL GPU workflow.
 
-> Status: research scaffold. The Hugging Face Grounding DINO backend currently
-> rasterizes detection boxes. A SAM refinement backend and human meta-evaluation
-> analysis will be added after the first server-side validation.
+> Status (2026-09-06): working research implementation with 76 passing local tests.
+> Completed experiments include a unified 1,000-scene/5-system evaluation,
+> SECOND-CC fact-graph studies, seven controlled error types, label-availability and
+> selective-prediction analyses, ALOHa/FMScore protocol baselines, and a 50-scene
+> three-rater pilot. The main remaining validity requirement is an independent,
+> held-out human evaluation. See
+> [the GPT-6 Astra handoff](docs/project-progress-gpt6-astra-handoff-2026-09-06.zh-CN.md).
 
 ## Why MGA v2?
 
@@ -196,10 +200,12 @@ Detailed contracts are documented in [docs/data-format.md](docs/data-format.md).
 
 ## Roadmap
 
-- [ ] Grounded-SAM mask refinement backend.
-- [ ] Spatial relation verifier for left/right/near/along.
-- [ ] Count and attribute verification with explicit abstention.
-- [ ] Five-rater human-label importer and correlation statistics.
-- [ ] SECOND-CC semantic-map adapter.
-- [ ] Model- and dataset-level bootstrap confidence intervals.
+- [x] SECOND-CC semantic-map adapter and fact-graph benchmark.
+- [x] Spatial/location and source-to-target relation diagnostics.
+- [x] Scene-level bootstrap, error decomposition, and selective prediction.
+- [x] SegEarth-OV-3 and Grounding DINO Tiny/Base backend studies.
+- [ ] Freeze and commit the current experiment implementation; rerun CI.
+- [ ] Independent held-out human validity study and perturbation validation.
+- [ ] Independently annotated parser benchmark with LLM fallback ablation.
+- [ ] Count and attribute verification only after reliable fact labels exist.
 

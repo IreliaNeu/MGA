@@ -1,0 +1,16 @@
+{
+  "input": "/root/autodl-tmp/caption-bench-20260808/outputs/chg2cap_mga1000.jsonl",
+  "row_count": 1000,
+  "counts_by_model": {
+    "chg2cap": 1000
+  },
+  "duplicate_count": 0,
+  "duplicates": [],
+  "empty_caption_count": 0,
+  "empty_caption_ids": [],
+  "missing_expected_count": 0,
+  "missing_expected_ids": [],
+  "unexpected_count": 0,
+  "unexpected_ids": [],
+  "valid": true
+}

@@ -36,6 +36,16 @@ class ClaimStatus(StrEnum):
     UNVERIFIABLE = "unverifiable"
 
 
+class EvidenceMode(StrEnum):
+    """How bi-temporal or reference-mask evidence is constructed for MGA v2."""
+
+    FULL_TARGET = "full_target"
+    TEMPORAL_DELTA = "temporal_delta"
+    GT_ROI_GATED = "gt_roi_gated"
+    MASK_LABEL_ONLY = "mask_label_only"
+    HYBRID_MASK_TEMPORAL = "hybrid_mask_temporal"
+
+
 @dataclass(frozen=True)
 class AtomicClaim:
     """A spatially verifiable atomic assertion extracted from a caption."""
