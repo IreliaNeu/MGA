@@ -1,5 +1,7 @@
 # MGA 当前进度与 GPT-6 Astra 交接说明（2026-09-06）
 
+> 2026-09-07 续作已归档：[最新验收与后续清单](non-human-work-completion-2026-09-07.zh-CN.md)。本页保留历史背景；4.6 ROI 数字已按权威 JSON 校正。
+
 > 本文件是后续开发与论文写作的权威交接入口。旧的阶段归档、实验增量文档仍用于追溯，但若与本文件冲突，以本文件和对应 `artifacts/**/summary.json` 为准。
 
 ## 1. 审计结论
@@ -141,7 +143,7 @@ MGA-Hybrid 汇总：
 |---|---:|---:|---:|---:|
 | No-ROI | 0.968 | 0.748 | 0.746 | 0.309 |
 | RGB feature difference | 0.968 | 0.720 | 0.737 | 0.289 |
-| Predicted CD ROI | 0.968 | 0.689 | 0.710 | 0.258 |
+| Predicted CD ROI | 0.968 | 0.693 | 0.713 | 0.258 |
 | Oracle GT-ROI | 0.968 | 0.739 | 0.729 | 0.175 |
 
 结果说明不使用测试 GT 的版本已经实现，但预测 ROI 没有提高总体 AUC；Oracle ROI 主要降低 FSR。论文应将其作为边界/负结果，而不是声称 Predicted-ROI 已解决无 GT 部署。
@@ -151,6 +153,12 @@ MGA-Hybrid 汇总：
 MGA-Hybrid 在全部可评分样本上的准确率为 0.873、FSR 0.105、AURC 0.095；只保留最高视觉置信度的 19.3% 时，准确率提高到 0.961、FSR 降至 0.041。风险曲线不严格单调，最终阈值必须在独立 development 集固定。
 
 ### 4.8 Parser
+
+2026-09-07 补记：下列 0.667/0.770 属于早期基础本体设置。加入既定表面形式配置后，
+Ontology F1=1.000、Ontology+GLiNER F1=0.982，见
+[配置版汇总](../artifacts/semantic-change/second-cc-200-v1/parser_report_v3.json)。
+这衡量已配置表达集的覆盖，不能替代真实开放语言的独立准确率。本次 CPU 重验见
+[新汇总](../artifacts/revalidation/2026-09-07/configured-parser-cpu/summary.json)。
 
 - 1200 条受控 Parser 样本。
 - Ontology-only：Precision 1.000、Recall 0.500、F1 0.667。

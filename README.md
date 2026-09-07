@@ -12,13 +12,17 @@ This repository contains:
 - controlled perturbations for metric monotonicity experiments;
 - local CPU tests and an optional AutoDL GPU workflow.
 
-> Status (2026-09-06): working research implementation with 76 passing local tests.
+> Status (2026-09-07): working research implementation with 89 passing local tests.
 > Completed experiments include a unified 1,000-scene/5-system evaluation,
 > SECOND-CC fact-graph studies, seven controlled error types, label-availability and
 > selective-prediction analyses, ALOHa/FMScore protocol baselines, and a 50-scene
 > three-rater pilot. The main remaining validity requirement is an independent,
 > held-out human evaluation. See
 > [the GPT-6 Astra handoff](docs/project-progress-gpt6-astra-handoff-2026-09-06.zh-CN.md).
+
+Current work: [non-human completion and next steps](docs/non-human-work-completion-2026-09-07.zh-CN.md),
+[consolidated experiments](paper/sections/experiments.en.v2.md),
+[人工效度统计接入协议](docs/heldout-human-analysis-protocol-2026-09-07.zh-CN.md).
 
 ## Why MGA v2?
 
@@ -204,7 +208,9 @@ Detailed contracts are documented in [docs/data-format.md](docs/data-format.md).
 - [x] Spatial/location and source-to-target relation diagnostics.
 - [x] Scene-level bootstrap, error decomposition, and selective prediction.
 - [x] SegEarth-OV-3 and Grounding DINO Tiny/Base backend studies.
-- [ ] Freeze and commit the current experiment implementation; rerun CI.
+- [x] Freeze and locally validate the recovered experiment implementation.
+- [x] Prepare held-out statistics and merge experiments with JSON-backed tables.
+- [ ] Publish the final branch when authorized and verify remote CI.
 - [ ] Independent held-out human validity study and perturbation validation.
 - [ ] Independently annotated parser benchmark with LLM fallback ablation.
 - [ ] Count and attribute verification only after reliable fact labels exist.
