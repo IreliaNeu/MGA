@@ -34,3 +34,12 @@ SSH 连接断开是预期结果。再次使用时应从 AutoDL 控制台启动�
 - `docs/autodl-current-state-2026-09-06.zh-CN.md`
 - `docs/server-recovery-audit-2026-09-06.zh-CN.md`
 - `docs/project-progress-gpt6-astra-handoff-2026-09-06.zh-CN.md`
+
+## 执行结果
+
+- 2026-09-07 10:27（Asia/Shanghai）已执行 `shutdown -h now`；
+- 服务器主动关闭当前 SSH 连接；
+- 随后使用 8 秒连接超时进行一次探测，返回 `Connection refused`；
+- 可判定实例已停止接受 SSH，关机完成；
+- 关机前服务器 Git HEAD 为 `ed31af3557b2565e141d448706b8782a94b733c8`，
+  数据与恢复文档均已执行 `sync`。
