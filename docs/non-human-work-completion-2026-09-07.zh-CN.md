@@ -13,6 +13,11 @@ MGA-OV 是开放后端压力测试。独立人工评价仍未完成。
    一致，事实图/基础评价/Parser/扰动分别为 200/600/1200/1600 条，SECOND 测试数据的
    RGB A/B、语义 A/B 各 1227 张。检查解释器、editable 包路径、Git 状态、磁盘、GPU、
    测试、CLI 和 smoke 输入。证据：[同步前审计](../artifacts/server-audit/2026-09-07/before.json)。
+   实现提交 `a886936a5119187c8d581bc8d030d4bb62e1479b` 已通过校验 bundle 哈希及
+   `--ff-only` 同步到 MGA-current；[同步后审计](../artifacts/server-audit/2026-09-07/after.json)
+   记录服务器 89 项测试、核心 Ruff、论文表格一致性、CLI 和 smoke 全部通过，工作区干净。
+   CPU 复验汇总从服务器取回后，原始 SHA-256 双端一致：
+   `83841cdf9b289e2c17882ac7366fd1bfb5440660a3731e58db9f97fc85d3af9e`。
 2. **CPU Parser 复验。** 新增 `--skip-model`，允许不加载 GLiNER 的确定性配置本体检查，
    并支持 class-map 文件。恢复的 1200 条输入在既定配置上 exact match/F1=1.0。
    该数值只说明受控配置覆盖，不是开放语言人工效度；未下载或重跑大型 GPU 后端。
