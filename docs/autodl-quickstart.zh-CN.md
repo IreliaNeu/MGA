@@ -1,6 +1,9 @@
 # AutoDL 环境激活与单样例测试
 
-> 2026-09-06 更新：当前 43850 实例挂载的是较早数据盘快照。最新代码和8月实验汇总以本地工作区为准；服务器差异见 `docs/autodl-current-state-2026-09-06.zh-CN.md`。下文保留早期环境搭建记录，不再作为当前完整实验状态说明。
+> 2026-09-07 更新：43850 实例已恢复最新版框架到
+> `/root/autodl-tmp/MGA-current`。旧目录 `/root/autodl-tmp/MGA` 仅作历史保留，
+> 后续开发和测试均使用 `MGA-current`。完整恢复状态见
+> `docs/autodl-current-state-2026-09-06.zh-CN.md`。
 
 本文记录当前 MGA 项目在 AutoDL 服务器上的实际配置，用于从本地 Codex、
 VS Code Remote SSH 或普通终端快速恢复开发和测试。
@@ -24,7 +27,7 @@ AutoDL 实例重启或更换后，公网端口可能变化；如登录失败，�
 ```bash
 source /root/miniconda3/etc/profile.d/conda.sh
 conda activate /root/autodl-tmp/conda-envs/mga
-cd /root/autodl-tmp/MGA
+cd /root/autodl-tmp/MGA-current
 ```
 
 提示符前出现 Conda 环境标记后，可检查当前解释器：
@@ -54,16 +57,17 @@ python -c 'import torch; print(torch.__version__); print(torch.cuda.is_available
 ## 3. Git 与基础测试
 
 ```bash
-cd /root/autodl-tmp/MGA
+cd /root/autodl-tmp/MGA-current
 git status --short --branch
-git pull --ff-only
 pytest -q
-ruff check .
+ruff check src tests
 mga --help
 ```
 
-当前服务器项目位于 `agent/mga-v2-framework` 分支，已验证 9 项测试全部通过，
-ruff 无报错。运行实验前应确认工作区没有意外修改，并记录实际 commit：
+当前服务器项目位于 `agent/mga-v2-framework` 分支，已验证 76 项测试全部通过，
+核心源码与测试的 Ruff 检查无报错。历史一次性实验脚本尚未统一格式化，因此
+不要把 `ruff check .` 当作当前验收条件。运行实验前应确认工作区没有意外修改，
+并记录实际 commit：
 
 ```bash
 git rev-parse HEAD
@@ -115,7 +119,7 @@ source /etc/network_turbo
 先验证输入文件：
 
 ```bash
-cd /root/autodl-tmp/MGA
+cd /root/autodl-tmp/MGA-current
 mga validate \
   --manifest /root/autodl-tmp/mga-artifacts/smoke/manifest.jsonl
 ```
@@ -145,9 +149,9 @@ DINO 检测到 2 个猫框，最高置信度约为 0.814，峰值显存约为 1.
 
 ## 6. 切换到真实的 1 至 10 条样例
 
-目前服务器尚未放置正式遥感图像、变化掩码以及 Draft、Guided、Change-Agent
-结果，所以还不能直接运行真实小批量。准备数据时建议将其放在持久盘，而不是
-Git 仓库或系统盘：
+服务器持久盘已保留整理后的 LEVIR-MCI 1000 场景及其描述文件，并在本次恢复中
+补回 SECOND-CC 原始影像、双时相语义标签和确定性评价输入。新增或替换数据时仍
+应放在持久盘，而不是 Git 仓库或系统盘：
 
 ```text
 /root/autodl-tmp/datasets/                 # 图像和变化掩码

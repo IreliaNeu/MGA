@@ -139,7 +139,7 @@ manifests/smoke_1x3_claims_heuristic.jsonl
 ```bash
 source /root/miniconda3/etc/profile.d/conda.sh
 conda activate /root/autodl-tmp/conda-envs/mga
-cd /root/autodl-tmp/MGA
+cd /root/autodl-tmp/MGA-current
 
 HF_HUB_OFFLINE=1 mga score \
   --manifest /root/autodl-tmp/datasets/organized/mga_levir_mci_1000/manifests/smoke_10x3_claims_heuristic.jsonl \

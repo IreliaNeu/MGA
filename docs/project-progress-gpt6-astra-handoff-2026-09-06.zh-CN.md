@@ -24,21 +24,24 @@
 
 - 路径：`D:\Python_Practice\MGA`
 - 分支：`agent/mga-v2-framework`
-- 当前已提交 HEAD：`7b48834`
+- 当前恢复提交：`68f63354a25fa8b3bdcd01e12b3fe44f65a46cdd`
 - 远端 Draft PR：<https://github.com/IreliaNeu/MGA/pull/1>
-- PR 状态：OPEN / Draft；现有 CI 只覆盖 2026-07-18 已推送版本。
+- PR 状态：OPEN / Draft；恢复提交的公共推送须以最终恢复记录中的状态为准。
 - 本地回归测试：`76 passed`。
 - 静态检查：`ruff check src tests` 全部通过。
 - CLI：`prepare-feedback / attach-change-agent / validate / parse / perturb / score` 可用。
 
-### 2.2 重要版本风险
+### 2.2 版本冻结与剩余风险
 
-本地存在 9 个已跟踪修改文件和 180 个未跟踪文件，而仓库当前只跟踪 36 个文件。Git 仓库目前只提交了早期框架，7 月下旬至 8 月的主要方法、脚本、论文和实验汇总尚未形成可复现提交。因此：
+2026-09-06 已完成版本冻结：248 个代码、测试、配置、论文和紧凑实验归档文件进入提交 `68f6335`，共约 7.37 MiB；私钥、人工原始 XLSX、模型权重、原始数据、逐条 JSONL 和大批逐场景图均被排除。该提交已通过 76 项测试及 `ruff check src tests`，并已恢复到 AutoDL 的独立目录 `/root/autodl-tmp/MGA-current`。因此本地单点丢失风险已显著降低。
 
-1. **本地目录是当前唯一权威代码源，禁止从服务器反向覆盖本地。**
-2. 开始新方法修改前，应先审计 `.tmp/`、`tmp/`、缓存和真正需要版本化的文件，形成一次“实验冻结”提交。
-3. 不能以当前 GitHub CI 成功证明最新 76 测试版本已通过远端 CI。
-4. 当前多数高级功能由 `scripts/` 调用，尚未全部集成到 `mga` CLI；论文复现说明必须给出具体脚本和配置文件。
+仍需注意：
+
+1. 本地仍是论文数值和人工原始表的权威来源；服务器旧目录 `/root/autodl-tmp/MGA` 不能反向覆盖本地。
+2. GitHub Draft PR 是否已经包含恢复提交，必须查看本次恢复记录；未完成远端 CI 时不能把旧 CI 解释为最新版验证。
+3. 原始数据、权重和逐条输出不进入公开 Git，依靠服务器持久盘、哈希及紧凑汇总恢复。
+4. 多数高级功能由 `scripts/` 调用，尚未全部集成到 `mga` CLI；论文复现说明必须给出具体脚本和配置文件。
+5. 当前 Ruff 门槛是核心 `src tests`；历史一次性实验脚本尚未完成全仓库格式清理。
 
 ## 3. 已实现功能
 
@@ -219,7 +222,7 @@ MGA-Hybrid 在全部可评分样本上的准确率为 0.873、FSR 0.105、AURC 0
 
 ### P0：投稿前必须完成
 
-1. **冻结代码与实验版本。** 审计临时文件与大文件、更新 `.gitignore`、提交当前 76 测试且 Ruff 全通过的版本，并让远端 CI 覆盖新代码。
+1. **让远端 CI 覆盖冻结提交。** 本地与服务器版本冻结已完成；确认 GitHub Draft PR 包含最终恢复提交并检查 CI。
 2. **完成独立人工效度。** 新 held-out 场景，2–3 名评审；按实体正确性、方向、位置/关系、幻觉、遗漏、不可验证分别标注。
 3. **填写 140 条扰动有效性表。** 至少验证单因素性、事实错误性和语言自然性。
 4. **统一人工相关性统计。** 对传统指标、CLIP、ALOHa-local、FMScore-Qwen、MGA 分量报告 AUC、BAcc、Spearman/Kendall、pairwise accuracy、场景 bootstrap CI 和评审一致性。
@@ -243,40 +246,39 @@ MGA-Hybrid 在全部可评分样本上的准确率为 0.873、FSR 0.105、AURC 0
 
 三端文件级恢复审计及重建顺序见 `docs/server-recovery-audit-2026-09-06.zh-CN.md`。
 
-2026-09-06 已确认本机存在两套服务器入口：
+2026-09-07 已在 43850 实例完成最小必要恢复，并在数据稳定后关机：
 
-- `ssh -p 43850 root@connect.bjb1.seetacloud.com`：可登录，但它是旧数据快照，只保留到 7 月 24 日附近；服务器代码 36 tests，缺少 8 月统一基线、SECOND-CC、Caption Bench 和 Grounding DINO Base 500 场景完整目录。
-- `23183`：端口开放，但当前公钥无权限，疑似其他实例。
-- 旧端口 `46638`、SSH config 中的 `36247` 当前均拒绝连接。
+- 当前代码入口：`/root/autodl-tmp/MGA-current`；冻结基线 `68f6335`，恢复记录提交位于其后；
+- 旧 `/root/autodl-tmp/MGA` 未覆盖，仅作历史追溯；
+- MGA 环境：`/root/autodl-tmp/conda-envs/mga`，editable install 指向 `MGA-current`；
+- 76 tests、`ruff check src tests`、CLI 与 smoke manifest 均通过；
+- SECOND-CC 已恢复为 1,227 对测试影像/语义标签，并重建 200 个事实图、600 条基础样本、1,200 条 Parser 样本和 1,600 条最小错误样本；
+- RSICC 与 Chg2Cap 官方代码已恢复，但根据本地已有汇总与哈希，本轮未上传权重、未重跑生成模型；
+- 数据盘清理 ZIP 后约剩 21 GiB。
 
-因此，在确认新服务器 SSH 命令前：
+未恢复的是统一五模型和强事实基线的逐样本 JSONL、后期 SegEarth/DINO 缓存与大量逐场景图。其紧凑汇总已经进入 Git；除非新的人工相关性或显著性分析明确需要逐样本输入，否则不要重复大模型实验。
 
-1. 不从 43850 服务器同步代码回本地；
-2. 不把服务器不存在的逐样本明细误写成“实验未完成”；本地汇总和哈希归档仍有效；
-3. 若新实验需要 8 月逐样本数据，必须先确认新实例或外部持久盘是否保留 `/root/autodl-tmp/mga-artifacts/p0-1-unified-baselines-20260813/`；
-4. 当前 43850 的 RTX 4090 空闲，系统盘剩约 29 GB、数据盘剩约 26 GB，但不是最新工作副本。
-
-收到新的 SSH 命令后，应首先只读运行：
+再次启动后首先运行：
 
 ```bash
 hostname
 date
 nvidia-smi
 df -h / /root/autodl-tmp
-git -C /root/autodl-tmp/MGA rev-parse --short HEAD
-git -C /root/autodl-tmp/MGA status --short
+git -C /root/autodl-tmp/MGA-current rev-parse --short HEAD
+git -C /root/autodl-tmp/MGA-current status --short
 ls -ld \
   /root/autodl-tmp/mga-artifacts/semantic-eval/second-cc-200-v1 \
-  /root/autodl-tmp/mga-artifacts/p0-1-unified-baselines-20260813 \
+  /root/autodl-tmp/mga-artifacts/controlled-errors/second-cc-200-v1 \
   /root/autodl-tmp/caption-bench-20260808 \
-  /root/autodl-tmp/datasets/SECOND-CC
+  /root/autodl-tmp/datasets/SECOND-CC/extracted/SECOND-CC-AUG
 ```
 
 ## 9. GPT-6 Astra 建议起始提示
 
 将下列内容作为切换后的首条工作指令即可：
 
-> 请先完整阅读 `docs/project-progress-gpt6-astra-handoff-2026-09-06.zh-CN.md`，并以本地 `D:\Python_Practice\MGA` 为代码和实验汇总的权威来源。不要从服务器覆盖本地。先核对 Git 工作区、76 项测试、关键 artifacts 和当前服务器是否包含 8 月完整逐样本结果；然后完成 P0 的版本冻结与论文实验章节合并。论文主线限定为：MGA-Hybrid 通过双时相 Claim—Evidence 验证补充参考文本指标，MGA-GT 是理想上界，MGA-OV 是开放后端压力测试。不得宣称 MGA Overall 已全面优于人工或 FMScore，不得宣称完全无标注、开放 QA 或无参考遗漏检测已经解决。所有结论必须链接到对应汇总 JSON 或人工数据。
+> 请先完整阅读 `docs/project-progress-gpt6-astra-handoff-2026-09-06.zh-CN.md` 和 `docs/server-recovery-audit-2026-09-06.zh-CN.md`。以本地 `D:\Python_Practice\MGA` 为论文数值与人工原始表的权威来源；服务器开发入口是 `/root/autodl-tmp/MGA-current`，不要使用旧 `/root/autodl-tmp/MGA` 覆盖本地。代码冻结与 SECOND-CC 轻量复现输入已恢复，下一步直接完成独立人工效度与论文实验章节合并。论文主线限定为：MGA-Hybrid 通过双时相 Claim—Evidence 验证补充参考文本指标，MGA-GT 是理想上界，MGA-OV 是开放后端压力测试。不得宣称 MGA Overall 已全面优于人工或 FMScore，不得宣称完全无标注、开放 QA 或无参考遗漏检测已经解决。所有结论必须链接到对应汇总 JSON 或人工数据。
 
 ## 10. 最可能的审稿问题
 
@@ -299,6 +301,8 @@ ls -ld \
 - SECOND 事实图：`docs/second-cc-200-evidence-experiments-2026-07-26.zh-CN.md`
 - 人工 pilot：`docs/three-rater-hybrid-50-analysis-2026-07-24.zh-CN.md`
 - Predicted ROI / Selective Prediction：`docs/mga-server-experiments-2026-08-08.zh-CN.md`
+- 服务器恢复审计：`docs/server-recovery-audit-2026-09-06.zh-CN.md`
+- 最新关机记录：`docs/server-shutdown-record-2026-09-07.zh-CN.md`
 - 最新摘要：`paper/sections/abstract-bilingual-v4.md`
 - 中文实验主稿：`paper/sections/experiments.zh-CN.v1.md`
 - 本地实验汇总：`artifacts/`

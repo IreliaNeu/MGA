@@ -2,13 +2,13 @@
 
 ## 1. 结论
 
-当前项目没有整体丢失。本地 `D:\Python_Practice\MGA` 保留了最新版方法代码、实验脚本、论文文档、汇总 JSON、总览图和三份人工评价表，应被视为唯一权威工作区。当前 AutoDL 数据盘只保留到约 2026-07-24 的阶段；GitHub Draft PR 也只保存了 7 月早期框架。
+本轮恢复已经完成“保证框架完整性与论文可接续”的目标：本地最新版形成冻结提交 `68f6335`，服务器在不覆盖旧目录的前提下建立 `/root/autodl-tmp/MGA-current`，恢复 SECOND-CC 原始解压数据并确定性重建事实图、Parser 输入和最小错误清单，同时补回 RSICC/Chg2Cap 官方代码。76 项测试、核心 Ruff、CLI 和 smoke manifest 均通过。
 
-真正需要恢复或重建的是：**SECOND-CC 原始数据、RSICCformer/Chg2Cap 的输出与权重、统一 5000 条候选清单、SECOND-CC 逐样本事实图与错误样本、后期事实基线和 Grounding DINO Base 的逐样本结果。** 论文中的主要汇总数字仍在本地，因此不需要从零重新开展全部实验。
+根据用户决定，本轮没有重复下载两个变化描述模型的权重，也没有重跑 RSICCformer、Chg2Cap、SegEarth、ALOHa、FMScore 或 Grounding DINO Base。对应论文汇总、验证信息和原始输出哈希已进入 Git 冻结提交，足以继续论文写作；需要逐样本统计时再从备份恢复 JSONL，而不是默认重跑大模型。
 
-在任何服务器恢复操作前，应先冻结并备份本地版本。不要用当前服务器目录覆盖本地。
+以下第 2–8 节保留**恢复前审计与决策依据**，最终服务器状态和校验值以第 9 节为准。任何时候都不要用历史服务器目录覆盖本地权威工作区。
 
-## 2. 三端版本比较
+## 2. 恢复前三端版本比较
 
 | 项目 | 本地最新版 | 当前 AutoDL 43850 | GitHub Draft PR |
 |---|---:|---:|---:|
@@ -52,7 +52,7 @@ GitHub PR：<https://github.com/IreliaNeu/MGA/pull/1>。PR 当前仍为 Draft/Op
 
 这些内容不应删除，但也不能替代8月后期实验。
 
-## 4. 必须恢复或重建的内容
+## 4. 恢复前判定的必须恢复或重建内容
 
 ### P0-A：先保护本地最新版
 
@@ -160,3 +160,55 @@ predicted-ROI hybrid_scores.jsonl
 - **模型生成输出：高风险但恢复成本可控。** 两个关键 JSONL 很小；若找不到，可用已记录的仓库提交和权重哈希重跑。
 - **人工实验：低风险。** 三份已填表格在本地；独立 held-out 人工测试尚未完成，本来就需要新建。
 
+## 9. 恢复执行记录（2026-09-07）
+
+### 9.1 代码冻结与服务器工作区
+
+- `.gitignore` 已排除缓存、临时下载、人工原始 XLSX、模型权重、原始数据、逐条 JSONL 和大批逐场景图；小型 JSON/CSV/Markdown 汇总进入版本控制。
+- 冻结提交：`68f63354a25fa8b3bdcd01e12b3fe44f65a46cdd`，248 个文件，约 7.37 MiB。
+- 传输 bundle：`/root/autodl-tmp/mga-recovery/mga-68f6335.bundle`；SHA-256 为 `bf28c117b51ac87157bac51f4f4465611d423b9199c8cd342084cd24704ab3ed`。
+- 新工作区：`/root/autodl-tmp/MGA-current`；旧 `/root/autodl-tmp/MGA` 未覆盖、未删除。
+- `/root/autodl-tmp/conda-envs/mga` 的 editable install 已指向新工作区。
+- 本地与服务器均为 76 tests passed；`ruff check src tests` 通过；CLI 和一条 smoke manifest 验证通过。
+- `ruff check .` 会在历史一次性实验脚本中报告格式问题，不能误写为全仓库 Ruff clean。
+
+GitHub 是公开目的地。恢复提交的公共推送只在用户确认精确仓库、分支和排除项后执行；最终是否已推送应结合本任务交付信息和 PR #1 的 HEAD 核验，不能仅看旧 CI。
+
+### 9.2 SECOND-CC 数据恢复
+
+- 来源：官方 `SECOND-CC-AUG.zip`；
+- 字节数：`2539187782`；
+- MD5：`ca930ddb819d68a797938b940d1711f1`；
+- SHA-256：`2c6743084aa588bd9004b96aac3debe32382f2ce7993ade0f25de11b5414dd83`；
+- 本地下载完成后校验通过；上传服务器后再次校验，ZIP 全量完整性测试无错误；
+- 解压目录：`/root/autodl-tmp/datasets/SECOND-CC/extracted/SECOND-CC-AUG`，约 4.3 GiB；
+- `test/rgb/A`、`rgb/B`、`sem/A`、`sem/B` 各 1,227 张 PNG；
+- 前 600 对 RGB 语义标签已解码到 `/root/autodl-tmp/datasets/SECOND-CC/decoded-ids`；
+- 本地临时 ZIP、分段文件和下载脚本已删除；服务器上传 ZIP 在解压验收后删除。
+
+恢复后数据盘占用约 30/50 GiB，剩余约 21 GiB。
+
+### 9.3 确定性重建结果
+
+使用 `candidate_limit=600`、`limit=200`、`min_pixels=64`、`seed=20260726` 重建：
+
+| 文件 | 行数 | SHA-256 |
+|---|---:|---|
+| `semantic-eval/second-cc-200-v1/manifest.json` | — | `36ed910f1eff3506b02077fb8122a9f4682d2cd95c1c20cab7c2f9d58acd43c5` |
+| `semantic-eval/second-cc-200-v1/fact_graphs.jsonl` | 200 | `6698c00a81f2bef7b6e248f476b406653f39e8c78e0d1f3897e9deae22f38a42` |
+| `semantic-eval/second-cc-200-v1/evaluation_samples.jsonl` | 600 | `22c7eeb25e943f6c06d594acb0bd2752809371d31d0e30c6504b6ef4c420cfe9` |
+| `semantic-eval/second-cc-200-v1/parser_all_samples.jsonl` | 1200 | `7e3fc5925a307802bd45bb0a74b217d951613f6386e022069e695506a099104a` |
+| `controlled-errors/second-cc-200-v1/minimal_error_manifest.jsonl` | 1600 | `cde0a928ca7c8c522c82b7f5a07b3f9a7bc4e4a7b4a135488af5c4b8ba0d7d87` |
+
+benchmark manifest 与本地历史归档逐字节一致；20 种语义转移计数、三类样本各 200、拒绝候选 67 均与历史实验一致。最小错误清单满足 200 条原始事实加 7×200 条单因素错误，`strict_single_factor=true`。
+
+### 9.4 Caption 模型代码与取舍
+
+- Chg2Cap 官方代码：`/root/autodl-tmp/caption-bench-20260808/repos/Chg2Cap`，提交 `7b8cda937002e614d51a6dab3d949aa7de77c176`；
+- RSICC 官方代码：`/root/autodl-tmp/caption-bench-20260808/repos/RSICC`，提交 `d1505e514c450c3728782ca723e82761e70bafd3`；
+- 已建立 `incoming/`、`outputs/`、`mga-eval/`，总占用约 162 MiB；
+- 未上传权重、未重跑生成，避免约 2.3 GiB 权重及重复推理成本。
+
+### 9.5 关机条件
+
+关机前必须再次确认：新工作区与恢复文档同步、76 项测试和核心 Ruff 通过、SECOND-CC 四目录各 1,227 张、重建文件行数与哈希存在、ZIP 已清理、数据盘仍有余量。满足这些条件后执行 `sync` 和 `shutdown -h now`。再次启动时以 `docs/autodl-current-state-2026-09-06.zh-CN.md` 为入口。
