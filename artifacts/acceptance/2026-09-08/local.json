@@ -1,0 +1,45 @@
+{
+  "protocol": "mga-offline-acceptance-v1",
+  "utc": "2026-09-08T10:40:00.752836+00:00",
+  "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:12:53) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "D:\\miniconda3\\envs\\mga\\python.exe",
+  "root": "D:\\Python_Practice\\MGA",
+  "head": {
+    "returncode": 0,
+    "stdout": "4106e744c5a5f1de4e2087e5571d7097ecc73f67\n",
+    "stderr": ""
+  },
+  "git_status": {
+    "returncode": 0,
+    "stdout": "## agent/mga-v2-framework...origin/agent/mga-v2-framework [ahead 7]\n",
+    "stderr": ""
+  },
+  "checks": {
+    "ruff": {
+      "returncode": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    "pytest": {
+      "returncode": 0,
+      "stdout": "........................................................................ [ 77%]\n.....................                                                    [100%]\n93 passed in 1.37s\n",
+      "stderr": ""
+    },
+    "paper_sources": {
+      "returncode": 0,
+      "stdout": "Checked paper\\sections\\experiments.zh-CN.v2.md\nChecked paper\\sections\\experiments.en.v2.md\nChecked artifacts\\paper\\experiments-v2-source-ledger.json\n",
+      "stderr": ""
+    },
+    "cli": {
+      "returncode": 0,
+      "stdout": "usage: mga [-h]\n           {prepare-feedback,attach-change-agent,validate,parse,perturb,score}\n           ...\n\nMask-Guided Alignment toolkit\n\npositional arguments:\n  {prepare-feedback,attach-change-agent,validate,parse,perturb,score}\n    prepare-feedback    Convert Draft/Guided result JSONL\n    attach-change-agent\n                        Attach per-sample text outputs\n    validate            Validate a canonical manifest\n    parse               Extract and persist atomic claims\n    perturb             Create controlled caption corruptions\n    score               Run grounding and MGA scoring\n\noptions:\n  -h, --help            show this help message and exit\n",
+      "stderr": ""
+    },
+    "diff_whitespace": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "passed": true
+}

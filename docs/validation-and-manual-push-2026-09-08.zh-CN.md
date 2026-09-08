@@ -3,6 +3,12 @@
 本次仅准备 GitHub 命令，公开推送由用户手动执行。服务器使用最近确认的 43850 端口、
 `/root/autodl-tmp/MGA-current` 与已有 conda 环境。本地为论文汇总及人工原始表的权威来源。
 
+2026-09-08 已验收实现提交 `4106e744c5a5f1de4e2087e5571d7097ecc73f67`：
+[本地报告](../artifacts/acceptance/2026-09-08/local.json)与
+[服务器报告](../artifacts/acceptance/2026-09-08/server.json)均通过全部检查、93 项测试。
+服务器恢复审计嵌入 server.json，五份输入匹配恢复哈希，四个目录各 1227 PNG。
+报告生成后仅追加验收文档提交；没有更改被测实现。
+
 ## Windows 验收
 
 ```powershell

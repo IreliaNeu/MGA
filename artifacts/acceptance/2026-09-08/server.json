@@ -1,0 +1,50 @@
+{
+  "protocol": "mga-offline-acceptance-v1",
+  "utc": "2026-09-08T10:39:54.686622+00:00",
+  "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]",
+  "executable": "/root/autodl-tmp/conda-envs/mga/bin/python",
+  "root": "/root/autodl-tmp/MGA-current",
+  "head": {
+    "returncode": 0,
+    "stdout": "4106e744c5a5f1de4e2087e5571d7097ecc73f67\n",
+    "stderr": ""
+  },
+  "git_status": {
+    "returncode": 0,
+    "stdout": "## agent/mga-v2-framework...origin/agent/mga-v2-framework [ahead 6]\n",
+    "stderr": ""
+  },
+  "checks": {
+    "ruff": {
+      "returncode": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    "pytest": {
+      "returncode": 0,
+      "stdout": "........................................................................ [ 77%]\n.....................                                                    [100%]\n93 passed in 1.57s\n",
+      "stderr": ""
+    },
+    "paper_sources": {
+      "returncode": 0,
+      "stdout": "Checked paper/sections/experiments.zh-CN.v2.md\nChecked paper/sections/experiments.en.v2.md\nChecked artifacts/paper/experiments-v2-source-ledger.json\n",
+      "stderr": ""
+    },
+    "cli": {
+      "returncode": 0,
+      "stdout": "usage: mga [-h]\n           {prepare-feedback,attach-change-agent,validate,parse,perturb,score}\n           ...\n\nMask-Guided Alignment toolkit\n\npositional arguments:\n  {prepare-feedback,attach-change-agent,validate,parse,perturb,score}\n    prepare-feedback    Convert Draft/Guided result JSONL\n    attach-change-agent\n                        Attach per-sample text outputs\n    validate            Validate a canonical manifest\n    parse               Extract and persist atomic claims\n    perturb             Create controlled caption corruptions\n    score               Run grounding and MGA scoring\n\noptions:\n  -h, --help            show this help message and exit\n",
+      "stderr": ""
+    },
+    "diff_whitespace": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "server_recovery": {
+      "returncode": 0,
+      "stdout": "{\n  \"protocol\": \"mga-current-server-readonly-audit-v1\",\n  \"utc\": \"2026-09-08T10:39:57.113064+00:00\",\n  \"hostname\": \"autodl-container-c5b149a521-2578d934\",\n  \"python\": \"3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]\",\n  \"executable\": \"/root/autodl-tmp/conda-envs/mga/bin/python\",\n  \"project\": \"/root/autodl-tmp/MGA-current\",\n  \"head\": {\n    \"returncode\": 0,\n    \"stdout\": \"4106e744c5a5f1de4e2087e5571d7097ecc73f67\",\n    \"stderr\": \"\"\n  },\n  \"git_status\": {\n    \"returncode\": 0,\n    \"stdout\": \"## agent/mga-v2-framework...origin/agent/mga-v2-framework [ahead 6]\",\n    \"stderr\": \"\"\n  },\n  \"package\": {\n    \"returncode\": 0,\n    \"stdout\": \"/root/autodl-tmp/MGA-current/src/mga/__init__.py\",\n    \"stderr\": \"\"\n  },\n  \"gpu\": {\n    \"returncode\": 0,\n    \"stdout\": \"name, memory.total [MiB], memory.used [MiB], utilization.gpu [%]\\nNVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 0 %\",\n    \"stderr\": \"\"\n  },\n  \"disk\": {\n    \"total\": 53687091200,\n    \"used\": 31370526720,\n    \"free\": 22316564480\n  },\n  \"inputs\": {\n    \"semantic-eval/second-cc-200-v1/manifest.json\": {\n      \"exists\": true,\n      \"expected_sha256\": \"36ed910f1eff3506b02077fb8122a9f4682d2cd95c1c20cab7c2f9d58acd43c5\",\n      \"expected_rows\": null,\n      \"bytes\": 1419,\n      \"sha256\": \"36ed910f1eff3506b02077fb8122a9f4682d2cd95c1c20cab7c2f9d58acd43c5\",\n      \"rows\": null,\n      \"matches_recovery_record\": true\n    },\n    \"semantic-eval/second-cc-200-v1/fact_graphs.jsonl\": {\n      \"exists\": true,\n      \"expected_sha256\": \"6698c00a81f2bef7b6e248f476b406653f39e8c78e0d1f3897e9deae22f38a42\",\n      \"expected_rows\": 200,\n      \"bytes\": 294301,\n      \"sha256\": \"6698c00a81f2bef7b6e248f476b406653f39e8c78e0d1f3897e9deae22f38a42\",\n      \"rows\": 200,\n      \"matches_recovery_record\": true\n    },\n    \"semantic-eval/second-cc-200-v1/evaluation_samples.jsonl\": {\n      \"exists\": true,\n      \"expected_sha256\": \"22c7eeb25e943f6c06d594acb0bd2752809371d31d0e30c6504b6ef4c420cfe9\",\n      \"expected_rows\": 600,\n      \"bytes\": 717592,\n      \"sha256\": \"22c7eeb25e943f6c06d594acb0bd2752809371d31d0e30c6504b6ef4c420cfe9\",\n      \"rows\": 600,\n      \"matches_recovery_record\": true\n    },\n    \"semantic-eval/second-cc-200-v1/parser_all_samples.jsonl\": {\n      \"exists\": true,\n      \"expected_sha256\": \"7e3fc5925a307802bd45bb0a74b217d951613f6386e022069e695506a099104a\",\n      \"expected_rows\": 1200,\n      \"bytes\": 1521278,\n      \"sha256\": \"7e3fc5925a307802bd45bb0a74b217d951613f6386e022069e695506a099104a\",\n      \"rows\": 1200,\n      \"matches_recovery_record\": true\n    },\n    \"controlled-errors/second-cc-200-v1/minimal_error_manifest.jsonl\": {\n      \"exists\": true,\n      \"expected_sha256\": \"cde0a928ca7c8c522c82b7f5a07b3f9a7bc4e4a7b4a135488af5c4b8ba0d7d87\",\n      \"expected_rows\": 1600,\n      \"bytes\": 3276755,\n      \"sha256\": \"cde0a928ca7c8c522c82b7f5a07b3f9a7bc4e4a7b4a135488af5c4b8ba0d7d87\",\n      \"rows\": 1600,\n      \"matches_recovery_record\": true\n    }\n  },\n  \"dataset_counts\": {\n    \"rgb/A\": 1227,\n    \"rgb/B\": 1227,\n    \"sem/A\": 1227,\n    \"sem/B\": 1227\n  },\n  \"candidate_outputs\": [],\n  \"checks\": {\n    \"smoke\": {\n      \"returncode\": 0,\n      \"stdout\": \"Valid manifest: 1 records\",\n      \"stderr\": \"\"\n    }\n  },\n  \"cache_directories\": [\n    \"/root/autodl-tmp/mga-cache/segearth-ov3-human-eval-50\"\n  ],\n  \"third_party_directories\": [\n    \"/root/autodl-tmp/third_party/SegEarth-OV-3\"\n  ],\n  \"failures\": [],\n  \"passed\": true\n}\n",
+      "stderr": ""
+    }
+  },
+  "passed": true
+}
