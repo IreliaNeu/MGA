@@ -81,11 +81,14 @@ python -m pytest -q
 python -m ruff check src tests
 ```
 
-当前已接受基线为：89 项测试通过，`ruff check src tests` 通过（2026-09-07；恢复时为 76 项）。
+当前已接受基线为：93 项测试通过，`ruff check src tests` 通过（2026-09-08；恢复时为 76 项）。
 
 注意：2026-09-07 将 CI 的 Ruff 范围调整为 `src tests` 加本次四个分析/审计入口，
 并增加论文源表一致性检查。历史一次性脚本仍有格式问题，不能称全仓库 Ruff-clean。
 本地检查不代表远端 CI；发布后仍须检查对应提交的远端运行。
+
+2026-09-08 起优先使用 `python scripts/validate_project.py` 统一验收；服务器加 `--server`。
+CI 使用同一入口，维护脚本列表集中在该文件的 `ENTRYPOINTS` 中。
 
 ## 修改流程
 

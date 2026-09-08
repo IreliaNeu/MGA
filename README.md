@@ -12,7 +12,7 @@ This repository contains:
 - controlled perturbations for metric monotonicity experiments;
 - local CPU tests and an optional AutoDL GPU workflow.
 
-> Status (2026-09-07): working research implementation with 89 passing local tests.
+> Status (2026-09-08): working research implementation with 93 passing local tests.
 > Completed experiments include a unified 1,000-scene/5-system evaluation,
 > SECOND-CC fact-graph studies, seven controlled error types, label-availability and
 > selective-prediction analyses, ALOHa/FMScore protocol baselines, and a 50-scene
@@ -58,17 +58,45 @@ python -m pip install -e ".[dev]"
 pytest
 ```
 
-AutoDL/GPU:
+Existing recovered AutoDL instance:
 
 ```bash
-git clone https://github.com/IreliaNeu/MGA.git
-cd MGA
-bash scripts/setup_autodl.sh
-source .venv/bin/activate
+source /root/miniconda3/etc/profile.d/conda.sh
+conda activate /root/autodl-tmp/conda-envs/mga
+cd /root/autodl-tmp/MGA-current
+python scripts/validate_project.py --server --output /root/autodl-tmp/mga-artifacts/acceptance/run-01.json
 ```
 
-See [docs/autodl.md](docs/autodl.md) for the VS Code Remote workflow and persistent
-artifact recommendations.
+Use a fresh report filename for each run. The old `/root/autodl-tmp/MGA` is historical;
+the authoritative paper summaries and original human workbooks remain local.
+For a new installation, see [docs/autodl.md](docs/autodl.md). Do not reinstall or download
+large models to run the CPU acceptance checks on the recovered instance.
+
+## Unified acceptance and preservation
+
+After installing `.[dev]`, run the same offline checks used in CI:
+
+```bash
+python scripts/validate_project.py --output outputs/acceptance-run-01.json
+```
+
+The runner checks the core package, tests and maintained analysis entrypoints with Ruff,
+runs the full test suite, validates generated paper tables against source JSON, checks CLI
+loading and Git whitespace, and writes a report even when a check fails. Any failed or
+timed-out check yields a nonzero exit code. Existing reports are never overwritten.
+`--server` additionally checks the recovered input hashes, dataset counts, editable package
+location and smoke manifest. Missing optional model outputs or an unavailable GPU are
+reported without failing this CPU gate. Passing does not establish human validity or
+reproduce archived GPU inference.
+
+CI runs this entrypoint on Python 3.10, 3.11 and 3.12 and uploads the acceptance report.
+Local success does not imply that remote CI has run. Historical one-off scripts outside
+the maintained entrypoint list are not covered by the Ruff gate.
+
+The repository contains the framework, tests, configurations, manuscript drafts and compact
+results. Raw workbooks, datasets, weights and private per-item outputs require separate
+storage. See [验收、备份与手动推送](docs/validation-and-manual-push-2026-09-08.zh-CN.md)
+for Windows commands, local Git backup and the exact GitHub push sequence.
 
 ## 1. Convert existing Draft/Guided results
 
@@ -115,7 +143,7 @@ mga parse \
   --output data/claims_heuristic.jsonl \
   --parser heuristic
 
-# Recommended experiment parser: any OpenAI-compatible endpoint
+# Optional API parser; use only under a separately frozen experiment protocol
 export OPENAI_API_KEY=...
 export OPENAI_BASE_URL=...
 mga parse \
@@ -125,8 +153,10 @@ mga parse \
   --model YOUR_MODEL_ID
 ```
 
-The heuristic parser is for tests and ablations, not the final paper results.
-LLM-derived claims are persisted so scoring never needs to repeat API calls.
+The heuristic parser is for smoke tests. Archived experiments use the Parser settings
+recorded in their source summaries; this optional API example does not redefine them.
+Persist LLM-derived claims to avoid repeating API calls. Configured ontology CPU validation
+is also available through `scripts/evaluate_semantic_parser_v2.py --skip-model`.
 
 ## 4. Score with cached Grounding DINO evidence
 

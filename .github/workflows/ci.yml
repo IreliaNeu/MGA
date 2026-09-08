@@ -17,8 +17,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -e ".[dev]"
-      # Match the accepted core gate; archived one-off scripts are not Ruff-clean.
-      - run: ruff check src tests
-      - run: ruff check scripts/analyze_heldout_human_validity.py scripts/audit_server_recovery.py scripts/build_paper_experiments.py scripts/evaluate_semantic_parser_v2.py
-      - run: pytest
-      - run: python scripts/build_paper_experiments.py --check
+      - run: python scripts/validate_project.py --output outputs/acceptance.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: acceptance-python-${{ matrix.python-version }}
+          path: outputs/acceptance.json
+          if-no-files-found: warn

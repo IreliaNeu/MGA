@@ -111,6 +111,17 @@ def main():
             ]
     report["cache_directories"] = [str(path) for path in (disk / "mga-cache").glob("*")]
     report["third_party_directories"] = [str(path) for path in (disk / "third_party").glob("*")]
+    report["checks"]["smoke"] = command(
+        [
+            sys.executable,
+            "-m",
+            "mga.cli",
+            "validate",
+            "--manifest",
+            str(artifact / "smoke/manifest.jsonl"),
+        ],
+        root,
+    )
     if args.run_checks:
         for name, cmd in {
             "pytest": [sys.executable, "-m", "pytest", "-q"],
@@ -127,8 +138,32 @@ def main():
             ],
         }.items():
             report["checks"][name] = command(cmd, root)
+    report["failures"] = audit_failures(report, root)
+    report["passed"] = not report["failures"]
     print(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False))
+    return 0 if report["passed"] else 1
+
+
+def audit_failures(report, root):
+    """Essential inputs fail the gate; absent optional outputs/GPU are informational."""
+    failures = []
+    for name in ("head", "git_status", "package"):
+        if report[name]["returncode"] != 0:
+            failures.append(name)
+    package_path = report["package"].get("stdout", "")
+    if not package_path.startswith(str(root / "src" / "mga") + "/"):
+        failures.append("package_outside_current_project")
+    for name, entry in report["inputs"].items():
+        if not entry.get("matches_recovery_record", False):
+            failures.append("input:" + name)
+    for name, count in report["dataset_counts"].items():
+        if count != 1227:
+            failures.append("dataset_count:" + name)
+    for name, result in report["checks"].items():
+        if result["returncode"] != 0:
+            failures.append("check:" + name)
+    return failures
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
