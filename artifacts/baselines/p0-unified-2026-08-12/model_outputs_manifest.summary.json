@@ -1,0 +1,65 @@
+{
+  "files": {
+    "manifest": "/root/autodl-tmp/mga-artifacts/p0-1-unified-baselines-20260812/model_outputs_manifest.jsonl",
+    "manifest_sha256": "4a61643fa0dc5325d2f1fa4eb3cecbc53815fca471bac6dd920d3413eb57f275",
+    "parser_manifest": "/root/autodl-tmp/mga-artifacts/p0-1-unified-baselines-20260812/model_outputs_cached_scenes_claims.jsonl",
+    "parser_manifest_sha256": "f056f80dc2d9ca6eb29fc3eb6746fbbcd38f9ecdfbc0562841b91156d8e69255"
+  },
+  "models": {
+    "Change-Agent": 1000,
+    "Chg2Cap": 1000,
+    "Draft": 1000,
+    "RSICCformer": 1000,
+    "Refined": 1000
+  },
+  "parser": {
+    "Change-Agent": {
+      "building_claim": 453,
+      "captions": 1000,
+      "claims": 1329,
+      "no_change": 500,
+      "no_claim": 11,
+      "road_claim": 354
+    },
+    "Chg2Cap": {
+      "building_claim": 441,
+      "captions": 1000,
+      "claims": 1363,
+      "no_change": 502,
+      "no_claim": 3,
+      "road_claim": 373
+    },
+    "Draft": {
+      "building_claim": 501,
+      "captions": 1000,
+      "claims": 1304,
+      "no_change": 439,
+      "no_claim": 19,
+      "road_claim": 347
+    },
+    "RSICCformer": {
+      "building_claim": 480,
+      "captions": 1000,
+      "claims": 1349,
+      "no_change": 467,
+      "no_claim": 3,
+      "road_claim": 367
+    },
+    "Refined": {
+      "building_claim": 528,
+      "captions": 1000,
+      "claims": 1243,
+      "no_change": 330,
+      "no_claim": 65,
+      "road_claim": 377
+    }
+  },
+  "reference_scene_count": 1929,
+  "references_per_scene": [
+    5
+  ],
+  "rows": 5000,
+  "scenes": 1000,
+  "selected_parser_rows": 500,
+  "selected_scene_count": 100
+}

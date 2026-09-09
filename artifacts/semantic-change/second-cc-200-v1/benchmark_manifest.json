@@ -1,0 +1,47 @@
+{
+  "dataset": "SECOND-CC",
+  "split": "test",
+  "requested_scene_count": 200,
+  "selected_scene_count": 200,
+  "evaluation_item_count": 600,
+  "class_map": {
+    "1": "low vegetation",
+    "2": "tree",
+    "3": "non-vegetated ground",
+    "4": "water",
+    "5": "playground",
+    "6": "building"
+  },
+  "min_pixels": 64,
+  "seed": 20260726,
+  "transition_counts": {
+    "building->low vegetation": 9,
+    "building->non-vegetated ground": 16,
+    "building->playground": 1,
+    "building->tree": 16,
+    "low vegetation->building": 10,
+    "low vegetation->non-vegetated ground": 17,
+    "low vegetation->tree": 14,
+    "non-vegetated ground->building": 16,
+    "non-vegetated ground->low vegetation": 16,
+    "non-vegetated ground->playground": 4,
+    "non-vegetated ground->tree": 16,
+    "non-vegetated ground->water": 2,
+    "playground->building": 1,
+    "playground->non-vegetated ground": 3,
+    "tree->building": 16,
+    "tree->low vegetation": 16,
+    "tree->non-vegetated ground": 16,
+    "tree->water": 5,
+    "water->non-vegetated ground": 1,
+    "water->tree": 5
+  },
+  "sample_type_counts": {
+    "contradiction": 200,
+    "factual": 200,
+    "paraphrase": 200
+  },
+  "rejected_count": 67,
+  "fact_graphs": "/root/autodl-tmp/mga-artifacts/semantic-eval/second-cc-200-v1/fact_graphs.jsonl",
+  "evaluation_samples": "/root/autodl-tmp/mga-artifacts/semantic-eval/second-cc-200-v1/evaluation_samples.jsonl"
+}

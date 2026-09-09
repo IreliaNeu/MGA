@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-08-12T01:55:00+08:00",
+  "server_root": "/root/autodl-tmp/caption-bench-20260808",
+  "status": "incomplete_uploads_no_inference_run",
+  "files": {
+    "models_checkpoint.zip": {
+      "uploaded_bytes": 228589568,
+      "sha256": "e9852fe95f9ae112634a92d56415e98d101908f0dd5ac39625c6525be20b21c8",
+      "zip_eocd_present": false,
+      "first_payload": "Pretrained_models/Dubai_CC_batchsize_32_resnet101.pth",
+      "first_payload_declared_compressed_bytes": 1204099751,
+      "verdict": "truncated_before_first_payload_completed"
+    },
+    "BEST_checkpoint_resnet101_MCCFormers_diff_as_Q_trans.pth.tar": {
+      "uploaded_bytes": 209715200,
+      "sha256": "f647866e589b8b3e41d2d62cad64ddcc1f631b26cde46bb15be5de91f9ec66d3",
+      "zip_eocd_present": false,
+      "verdict": "truncated_pytorch_zip_checkpoint"
+    },
+    "data.zip": {
+      "uploaded_bytes": 210763776,
+      "sha256": "4f88734c034a5f392764b2379629a6d38e1cbb9466548b7bfbc5d4f97708f2d6",
+      "zip_eocd_present": false,
+      "first_payload": "TEST_IMAGES_LEVIR_CC_5_cap_per_img_5_min_word_freq.hdf5",
+      "first_payload_declared_compressed_bytes": 637716480,
+      "verdict": "truncated_before_first_payload_completed"
+    }
+  },
+  "resource_snapshot": {
+    "gpu": "NVIDIA GeForce RTX 4090 24564 MiB",
+    "gpu_free_mib": 24081,
+    "disk_available_gb": 9.53,
+    "server_manifest": "/root/autodl-tmp/caption-bench-20260808/.claude_resources.json"
+  },
+  "next_action": "reupload all three files and compare server byte size plus sha256 with local originals before loading checkpoints"
+}

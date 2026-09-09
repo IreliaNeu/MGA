@@ -1,0 +1,39 @@
+{
+  "requested_scene_count": 200,
+  "rendered_scene_count": 200,
+  "missing_cache_count": 0,
+  "per_scene_dir": "/root/autodl-tmp/mga-artifacts/semantic-eval/second-cc-200-v1/evidence-v3/visualizations/per_scene",
+  "overview": "/root/autodl-tmp/mga-artifacts/semantic-eval/second-cc-200-v1/evidence-v3/visualizations/overview.png",
+  "class_colors": {
+    "low vegetation": [
+      238,
+      180,
+      34
+    ],
+    "tree": [
+      218,
+      70,
+      70
+    ],
+    "non-vegetated ground": [
+      56,
+      168,
+      87
+    ],
+    "water": [
+      60,
+      116,
+      210
+    ],
+    "playground": [
+      160,
+      92,
+      200
+    ],
+    "building": [
+      35,
+      174,
+      174
+    ]
+  }
+}

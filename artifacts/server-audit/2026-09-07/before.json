@@ -1,0 +1,115 @@
+{
+  "protocol": "mga-current-server-readonly-audit-v1",
+  "utc": "2026-09-07T07:04:15.907479+00:00",
+  "hostname": "autodl-container-c5b149a521-2578d934",
+  "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]",
+  "executable": "/root/autodl-tmp/conda-envs/mga/bin/python",
+  "project": "/root/autodl-tmp/MGA-current",
+  "head": {
+    "returncode": 0,
+    "stdout": "ed31af3557b2565e141d448706b8782a94b733c8",
+    "stderr": ""
+  },
+  "git_status": {
+    "returncode": 0,
+    "stdout": "## agent/mga-v2-framework...origin/agent/mga-v2-framework [ahead 1]",
+    "stderr": ""
+  },
+  "package": {
+    "returncode": 0,
+    "stdout": "/root/autodl-tmp/MGA-current/src/mga/__init__.py",
+    "stderr": ""
+  },
+  "gpu": {
+    "returncode": 0,
+    "stdout": "name, memory.total [MiB], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 0 %",
+    "stderr": ""
+  },
+  "disk": {
+    "total": 53687091200,
+    "used": 31369428992,
+    "free": 22317662208
+  },
+  "inputs": {
+    "semantic-eval/second-cc-200-v1/manifest.json": {
+      "exists": true,
+      "expected_sha256": "36ed910f1eff3506b02077fb8122a9f4682d2cd95c1c20cab7c2f9d58acd43c5",
+      "expected_rows": null,
+      "bytes": 1419,
+      "sha256": "36ed910f1eff3506b02077fb8122a9f4682d2cd95c1c20cab7c2f9d58acd43c5",
+      "rows": null,
+      "matches_recovery_record": true
+    },
+    "semantic-eval/second-cc-200-v1/fact_graphs.jsonl": {
+      "exists": true,
+      "expected_sha256": "6698c00a81f2bef7b6e248f476b406653f39e8c78e0d1f3897e9deae22f38a42",
+      "expected_rows": 200,
+      "bytes": 294301,
+      "sha256": "6698c00a81f2bef7b6e248f476b406653f39e8c78e0d1f3897e9deae22f38a42",
+      "rows": 200,
+      "matches_recovery_record": true
+    },
+    "semantic-eval/second-cc-200-v1/evaluation_samples.jsonl": {
+      "exists": true,
+      "expected_sha256": "22c7eeb25e943f6c06d594acb0bd2752809371d31d0e30c6504b6ef4c420cfe9",
+      "expected_rows": 600,
+      "bytes": 717592,
+      "sha256": "22c7eeb25e943f6c06d594acb0bd2752809371d31d0e30c6504b6ef4c420cfe9",
+      "rows": 600,
+      "matches_recovery_record": true
+    },
+    "semantic-eval/second-cc-200-v1/parser_all_samples.jsonl": {
+      "exists": true,
+      "expected_sha256": "7e3fc5925a307802bd45bb0a74b217d951613f6386e022069e695506a099104a",
+      "expected_rows": 1200,
+      "bytes": 1521278,
+      "sha256": "7e3fc5925a307802bd45bb0a74b217d951613f6386e022069e695506a099104a",
+      "rows": 1200,
+      "matches_recovery_record": true
+    },
+    "controlled-errors/second-cc-200-v1/minimal_error_manifest.jsonl": {
+      "exists": true,
+      "expected_sha256": "cde0a928ca7c8c522c82b7f5a07b3f9a7bc4e4a7b4a135488af5c4b8ba0d7d87",
+      "expected_rows": 1600,
+      "bytes": 3276755,
+      "sha256": "cde0a928ca7c8c522c82b7f5a07b3f9a7bc4e4a7b4a135488af5c4b8ba0d7d87",
+      "rows": 1600,
+      "matches_recovery_record": true
+    }
+  },
+  "dataset_counts": {
+    "rgb/A": 1227,
+    "rgb/B": 1227,
+    "sem/A": 1227,
+    "sem/B": 1227
+  },
+  "candidate_outputs": [],
+  "checks": {
+    "pytest": {
+      "returncode": 0,
+      "stdout": "........................................................................ [ 94%]\n....                                                                     [100%]\n76 passed in 0.44s",
+      "stderr": ""
+    },
+    "ruff_core": {
+      "returncode": 0,
+      "stdout": "All checks passed!",
+      "stderr": ""
+    },
+    "cli": {
+      "returncode": 0,
+      "stdout": "usage: mga [-h]\n           {prepare-feedback,attach-change-agent,validate,parse,perturb,score}\n           ...\n\nMask-Guided Alignment toolkit\n\npositional arguments:\n  {prepare-feedback,attach-change-agent,validate,parse,perturb,score}\n    prepare-feedback    Convert Draft/Guided result JSONL\n    attach-change-agent\n                        Attach per-sample text outputs\n    validate            Validate a canonical manifest\n    parse               Extract and persist atomic claims\n    perturb             Create controlled caption corruptions\n    score               Run grounding and MGA scoring\n\noptions:\n  -h, --help            show this help message and exit",
+      "stderr": ""
+    },
+    "smoke": {
+      "returncode": 0,
+      "stdout": "Valid manifest: 1 records",
+      "stderr": ""
+    }
+  },
+  "cache_directories": [
+    "/root/autodl-tmp/mga-cache/segearth-ov3-human-eval-50"
+  ],
+  "third_party_directories": [
+    "/root/autodl-tmp/third_party/SegEarth-OV-3"
+  ]
+}

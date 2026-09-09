@@ -1,0 +1,61 @@
+{
+  "backend": "hf-dino-box:IDEA-Research/grounding-dino-tiny:box=0.3:text=0.25:query-expansion=remote-sensing",
+  "captions": 500,
+  "claim_statuses": {
+    "contradicted": 541,
+    "unverifiable": 244
+  },
+  "detections": {
+    "entity_rows": 200,
+    "mean_post_mask_fraction": 0.6792478942871094,
+    "mean_pre_mask_fraction": 0.880394515991211,
+    "zero_post_boxes": 28,
+    "zero_pre_boxes": 10
+  },
+  "elapsed_seconds": 45.74632640182972,
+  "models": {
+    "Change-Agent": {
+      "captions": 100,
+      "coverage": 0.7189962651727356,
+      "faithfulness": 0.12342558760072134,
+      "overall": 0.25396091615635885,
+      "temporal": 0.07677372388280133,
+      "unverifiable_rate": 0.2916666666666667
+    },
+    "Chg2Cap": {
+      "captions": 100,
+      "coverage": 0.7523692810457515,
+      "faithfulness": 0.11560434137902714,
+      "overall": 0.25570440930758587,
+      "temporal": 0.05874768786713744,
+      "unverifiable_rate": 0.3
+    },
+    "Draft": {
+      "captions": 100,
+      "coverage": 0.7717740429505136,
+      "faithfulness": 0.12127096389740429,
+      "overall": 0.26981767263750106,
+      "temporal": 0.0796464807017678,
+      "unverifiable_rate": 0.22666666666666668
+    },
+    "RSICCformer": {
+      "captions": 100,
+      "coverage": 0.7176563958916898,
+      "faithfulness": 0.11368146475461181,
+      "overall": 0.2452642527321592,
+      "temporal": 0.05458890639971613,
+      "unverifiable_rate": 0.29166666666666663
+    },
+    "Refined": {
+      "captions": 100,
+      "coverage": 0.7517740429505134,
+      "faithfulness": 0.11749771161263942,
+      "overall": 0.2602206637924081,
+      "temporal": 0.0691879179824697,
+      "unverifiable_rate": 0.22166666666666665
+    }
+  },
+  "peak_gpu_memory_mib": 1487.490234375,
+  "scenes": 100,
+  "threshold_policy": "predeclared defaults; no test-set tuning"
+}

@@ -1,0 +1,805 @@
+{
+  "protocol": "paper-experiments-source-ledger-v1",
+  "source_hash_contract": "SHA-256 of parsed JSON serialized with sorted keys, UTF-8, ensure_ascii=False, separators=(',', ':'); independent of checkout line endings",
+  "sources": {
+    "availability": {
+      "path": "artifacts/semantic-change/second-cc-200-v1/label-availability-curve-v2-verifiable/curve_summary.json",
+      "canonical_json_sha256": "a01c196c1ffcd53ca15a2812fbab770a4be655de7a6e3761e80a7190b8c0855a"
+    },
+    "evidence": {
+      "path": "artifacts/semantic-change/second-cc-200-v1/evidence_summary.json",
+      "canonical_json_sha256": "200b1ffc010441d6335770638cbad75a2d5b66651f59243f59399d57e62d1a57"
+    },
+    "errors": {
+      "path": "artifacts/ablations/minimal-error-decomposition-secondcc-200-v1/summary.json",
+      "canonical_json_sha256": "92b3d376cb2d94df7e96f974701ba87563386faee219b2fbd93f6a2ca22770ee"
+    },
+    "external": {
+      "path": "artifacts/baselines/p0-grounding-factual-2026-08-13/external-metric-comparison.json",
+      "canonical_json_sha256": "3e0be39815efa7f8e50c46d25850616f50b72a4d3e6c6217cf7d9916c52c9245"
+    },
+    "unified": {
+      "path": "artifacts/baselines/p0-unified-2026-08-12/segearth_unified_1000_summary.json",
+      "canonical_json_sha256": "82bbd87d150be363b9f88dbf6745bfbd19d02c4f012dafe415e19318a18a7fd3"
+    },
+    "manifest": {
+      "path": "artifacts/baselines/p0-unified-2026-08-12/model_outputs_manifest.summary.json",
+      "canonical_json_sha256": "2c9780981c4aee1b08ae1683367a0662514c101d1c3c26008a263e6b5c117710"
+    },
+    "text": {
+      "path": "artifacts/baselines/p0-unified-2026-08-12/text_metric_summary.json",
+      "canonical_json_sha256": "895be18e325ff662ba3ebe191fec42561a305259d7dc3f15e210b8b25d8e2c98"
+    },
+    "spice": {
+      "path": "artifacts/baselines/p0-unified-2026-08-12/spice_summary.json",
+      "canonical_json_sha256": "3df52ab1282991993745236de464e9b65bf9cc1984a36451d9582a6e9be1d064"
+    },
+    "bert": {
+      "path": "artifacts/baselines/p0-unified-2026-08-12/bertscore_summary.json",
+      "canonical_json_sha256": "dbe0f8918c8ff591da7501ac86f7b04daed1a0eef2a12691165002f086614da3"
+    },
+    "clip": {
+      "path": "artifacts/baselines/p0-unified-2026-08-12/clipscore_summary.json",
+      "canonical_json_sha256": "185fb00ba7c8d80bad49a827b84dc4d276a64696e37e5e3c18ba7c363f6bdf43"
+    },
+    "composites": {
+      "path": "artifacts/baselines/p0-grounding-factual-2026-08-13/rscc-composite-metrics.json",
+      "canonical_json_sha256": "8e3f20c5e6943da0ba8c5f04d87a002c8e9dde66fc1a9217f7fda0c5697f52b2"
+    },
+    "alignment": {
+      "path": "artifacts/baselines/p0-unified-2026-08-12/unified_metric_alignment.json",
+      "canonical_json_sha256": "f06373cb6302e09cea558d53bb8036167ac050dc3354393ffa515b3b77a60646"
+    },
+    "roi": {
+      "path": "artifacts/ablations/predicted-roi-calibration-secondcc-200-v1/hybrid_calibration_summary.json",
+      "canonical_json_sha256": "e1c07c6fb0930249d997735f77cb666ff8034f42f5f6264fa71eeb5f785244b3"
+    },
+    "dino": {
+      "path": "artifacts/baselines/p0-grounding-factual-2026-08-13/grounding-dino-size-ablation.json",
+      "canonical_json_sha256": "708dd1e3359a72ea335c9546bdf916907c82be93f865bf2d982a33bde7646453"
+    },
+    "human": {
+      "path": "artifacts/ablations/hybrid-human-50x3-3raters-v1/human_alignment_summary.json",
+      "canonical_json_sha256": "bec065970caf6abb1dc7a4d98368b801c1b177984da2e36e1a976ff673a9f3ec"
+    },
+    "raters": {
+      "path": "artifacts/human-eval/three-rater-v1/summary.json",
+      "canonical_json_sha256": "0d9186a632bef1f3e48314f97e24c5aa77524f5f890d23f8e3f8a9a207188fa3"
+    },
+    "parser": {
+      "path": "artifacts/semantic-change/second-cc-200-v1/parser_report_compact.json",
+      "canonical_json_sha256": "59ec4277d0eadb7da74442fd97d3942394f04c6d8ed6954c30321f28eaf57f4a"
+    },
+    "parser_configured": {
+      "path": "artifacts/semantic-change/second-cc-200-v1/parser_report_v3.json",
+      "canonical_json_sha256": "62510dcce28d9cd030160011834d74959e99501d7213b7870d0e35c40253ea6c"
+    },
+    "selective": {
+      "path": "artifacts/ablations/selective-prediction-minimal-errors-200-v1/visual_confidence_summary.json",
+      "canonical_json_sha256": "2f3d29f2358caef3a6a73fc5715bbf07db1b97a56d184b6528a77caa19f9ca06"
+    },
+    "qwen": {
+      "path": "artifacts/qwen3-vl-supplement-v1/summary.json",
+      "canonical_json_sha256": "7c29f71c72ff78f100eb45e2b6a7908900b06e44b4c6a36ac04bff6d8eb868a1"
+    }
+  },
+  "tables": {
+    "availability": {
+      "headers": [
+        "Visible classes",
+        "Subsets",
+        "Eval. coverage ↑",
+        "Neutral AUC ↑",
+        "BAcc ↑",
+        "FSR ↓",
+        "U ↓"
+      ],
+      "rows": [
+        [
+          "0/6",
+          1,
+          0.915,
+          0.5224875,
+          0.5530457409787755,
+          0.15568862275449102,
+          0.08499999999999996
+        ],
+        [
+          "1/6",
+          6,
+          0.9288888888888889,
+          0.58983125,
+          0.5950864911969224,
+          0.18075633697788318,
+          0.07111111111111111
+        ],
+        [
+          "2/6",
+          15,
+          0.942888888888889,
+          0.6578758333333335,
+          0.6467432563456534,
+          0.18792709987413794,
+          0.05711111111111111
+        ],
+        [
+          "3/6",
+          20,
+          0.9569999999999999,
+          0.7266406250000002,
+          0.7072413928863357,
+          0.17891511998649118,
+          0.043
+        ],
+        [
+          "4/6",
+          15,
+          0.971222222222222,
+          0.7965649999999999,
+          0.7758712015577547,
+          0.15530471730333834,
+          0.028777777777777777
+        ],
+        [
+          "5/6",
+          6,
+          0.9855555555555556,
+          0.8685083333333332,
+          0.8519859471247012,
+          0.11855428376106919,
+          0.014444444444444463
+        ],
+        [
+          "6/6",
+          1,
+          1.0,
+          0.94375,
+          0.935,
+          0.07,
+          0.0
+        ]
+      ],
+      "sources": [
+        "availability"
+      ],
+      "selector": "curve[*]"
+    },
+    "routes": {
+      "headers": [
+        "Condition",
+        "Method",
+        "Eval. coverage ↑",
+        "Neutral AUC ↑",
+        "BAcc ↑",
+        "FSR ↓"
+      ],
+      "rows": [
+        [
+          "closed_set",
+          "GTClassLookup",
+          1.0,
+          0.875,
+          0.875,
+          0.25
+        ],
+        [
+          "closed_set",
+          "MGA-OV + GT-ROI",
+          1.0,
+          0.5799375,
+          0.56,
+          0.13
+        ],
+        [
+          "closed_set",
+          "MGA-Hybrid",
+          1.0,
+          0.94375,
+          0.935,
+          0.07
+        ],
+        [
+          "closed_set",
+          "MGA-GT (oracle)",
+          1.0,
+          0.9575,
+          0.9575,
+          0.075
+        ],
+        [
+          "hidden_class",
+          "GTClassLookup",
+          0.195,
+          0.6361625,
+          0.8857142857142857,
+          0.22857142857142856
+        ],
+        [
+          "hidden_class",
+          "MGA-OV + GT-ROI",
+          1.0,
+          0.5799375,
+          0.56,
+          0.13
+        ],
+        [
+          "hidden_class",
+          "MGA-Hybrid",
+          1.0,
+          0.710525,
+          0.7024999999999999,
+          0.18
+        ],
+        [
+          "hidden_class",
+          "MGA-GT (oracle)",
+          1.0,
+          0.9575,
+          0.9575,
+          0.075
+        ]
+      ],
+      "sources": [
+        "evidence"
+      ],
+      "selector": "conditions.*.*"
+    },
+    "errors": {
+      "headers": [
+        "Error",
+        "Strict pair acc. ↑",
+        "Neutral AUC ↑",
+        "BAcc ↑",
+        "FSR ↓",
+        "U ↓"
+      ],
+      "rows": [
+        [
+          "direction",
+          0.735,
+          0.8675,
+          0.86,
+          0.0,
+          0.0
+        ],
+        [
+          "entity",
+          0.735,
+          0.822875,
+          0.86,
+          0.0,
+          0.0
+        ],
+        [
+          "hallucination",
+          0.385,
+          0.6875,
+          0.6825,
+          0.355,
+          0.0
+        ],
+        [
+          "location",
+          0.41,
+          0.67325,
+          0.6699999999999999,
+          0.38,
+          0.0
+        ],
+        [
+          "no-change",
+          0.7424242424242424,
+          0.866,
+          0.86,
+          0.0,
+          0.01
+        ],
+        [
+          "omission",
+          0.73,
+          0.742175,
+          0.86,
+          0.0,
+          0.0
+        ],
+        [
+          "relation",
+          0.735,
+          0.8675,
+          0.86,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        "errors"
+      ],
+      "selector": "paired_diagnostic[mode=hybrid]"
+    },
+    "external": {
+      "headers": [
+        "Method",
+        "ROC-AUC ↑",
+        "Scene bootstrap 95% CI",
+        "Oracle BAcc ↑"
+      ],
+      "rows": [
+        [
+          "ALOHa-local",
+          0.5781303571428572,
+          "[0.566, 0.590]",
+          0.6596428571428572
+        ],
+        [
+          "FMScore-Qwen",
+          0.8225,
+          "[0.812, 0.833]",
+          0.8225
+        ],
+        [
+          "MGA-Hybrid",
+          0.7895428571428571,
+          "[0.756, 0.821]",
+          0.8089285714285714
+        ]
+      ],
+      "sources": [
+        "external"
+      ],
+      "selector": "metrics.*"
+    },
+    "deltas": {
+      "headers": [
+        "Paired contrast",
+        "AUC difference",
+        "Scene bootstrap 95% CI"
+      ],
+      "rows": [
+        [
+          "MGA-Hybrid_minus_ALOHa",
+          0.2114124999999999,
+          "[0.174, 0.248]"
+        ],
+        [
+          "MGA-Hybrid_minus_FMScore-Qwen",
+          -0.03295714285714291,
+          "[-0.070, 0.002]"
+        ]
+      ],
+      "sources": [
+        "external"
+      ],
+      "selector": "paired_auc_deltas.MGA-Hybrid*"
+    },
+    "unified": {
+      "headers": [
+        "System",
+        "Captions",
+        "Faithfulness",
+        "Fact coverage",
+        "Temporal",
+        "Overall",
+        "U",
+        "Parser no-claim rate"
+      ],
+      "rows": [
+        [
+          "Change-Agent",
+          1000,
+          0.9139703310909911,
+          0.8933078783673044,
+          0.8873951974953793,
+          0.8962888443509325,
+          0.024666666666666667,
+          0.011
+        ],
+        [
+          "Chg2Cap",
+          1000,
+          0.9058287274210429,
+          0.8756920026636699,
+          0.8819828632907574,
+          0.8915661922130631,
+          0.01616666666666667,
+          0.003
+        ],
+        [
+          "Draft",
+          1000,
+          0.8842445803206999,
+          0.867269246790875,
+          0.8027801276929372,
+          0.8611390597622368,
+          0.036833333333333336,
+          0.019
+        ],
+        [
+          "RSICCformer",
+          1000,
+          0.8846403812774444,
+          0.8720058388890772,
+          0.8233255104062281,
+          0.8743982265384274,
+          0.015166666666666667,
+          0.003
+        ],
+        [
+          "Refined",
+          1000,
+          0.7984422018825084,
+          0.7442682727649012,
+          0.6962097955271704,
+          0.7364801756588963,
+          0.08283333333333333,
+          0.065
+        ]
+      ],
+      "sources": [
+        "unified",
+        "manifest"
+      ],
+      "selector": "results.hybrid_mask_temporal.models.*; parser.*.no_claim/captions"
+    },
+    "text": {
+      "headers": [
+        "System",
+        "BLEU-4",
+        "METEOR",
+        "ROUGE-L",
+        "CIDEr"
+      ],
+      "rows": [
+        [
+          "Draft",
+          0.5377665561977042,
+          0.3738759376020085,
+          0.7254361416068581,
+          1.2161275448317619
+        ],
+        [
+          "Refined",
+          0.42702377252385443,
+          0.325562101236726,
+          0.6380826281261534,
+          0.9620014724845846
+        ]
+      ],
+      "sources": [
+        "text"
+      ],
+      "selector": "models.*"
+    },
+    "semantic_text": {
+      "headers": [
+        "System",
+        "SPICE",
+        "BERTScore-F1",
+        "BiTemporal CLIP mean",
+        "S*m",
+        "SPIDEr"
+      ],
+      "rows": [
+        [
+          "Draft",
+          0.3085111986714852,
+          0.9611966640353203,
+          0.23888675359636546,
+          0.7133015450595832,
+          0.7623193717516236
+        ],
+        [
+          "Refined",
+          0.25678669195401777,
+          0.9479945442676544,
+          0.24249681812524795,
+          0.5881674935928296,
+          0.6093940822193011
+        ]
+      ],
+      "sources": [
+        "spice",
+        "bert",
+        "clip",
+        "composites"
+      ],
+      "selector": "models.{Draft,Refined}"
+    },
+    "correlations": {
+      "headers": [
+        "Metric",
+        "MGA component",
+        "n",
+        "Spearman ρ",
+        "Kendall τ"
+      ],
+      "rows": [
+        [
+          "BLEU-4",
+          "MGA-Overall",
+          2000,
+          0.7173817601938974,
+          0.5778869349481166
+        ],
+        [
+          "BLEU-4",
+          "MGA-Temporal",
+          1136,
+          0.4354645042105385,
+          0.3229357192167637
+        ],
+        [
+          "CIDEr",
+          "MGA-Overall",
+          2000,
+          0.7140120743511105,
+          0.5807612760525493
+        ],
+        [
+          "CIDEr",
+          "MGA-Temporal",
+          1136,
+          0.45667721707932296,
+          0.34130080995915363
+        ],
+        [
+          "BERTScore-F1",
+          "MGA-Overall",
+          2000,
+          0.7316528993785826,
+          0.5973352583429696
+        ],
+        [
+          "BERTScore-F1",
+          "MGA-Temporal",
+          1136,
+          0.418771249344131,
+          0.30932999802275
+        ],
+        [
+          "BiTemporal-CLIP-mean",
+          "MGA-Overall",
+          2000,
+          -0.3996674819444335,
+          -0.2920263736871124
+        ],
+        [
+          "BiTemporal-CLIP-mean",
+          "MGA-Temporal",
+          1136,
+          -0.0952509568158364,
+          -0.07033533114662267
+        ]
+      ],
+      "sources": [
+        "alignment"
+      ],
+      "selector": "correlations[metric/component filter]"
+    },
+    "roi": {
+      "headers": [
+        "ROI",
+        "Eval. coverage ↑",
+        "Neutral AUC ↑",
+        "BAcc ↑",
+        "FSR ↓"
+      ],
+      "rows": [
+        [
+          "feature_difference_roi",
+          0.9676375404530745,
+          0.7201432745781884,
+          0.7368582219046647,
+          0.28865979381443296
+        ],
+        [
+          "no_roi",
+          0.9676375404530745,
+          0.7482326326703742,
+          0.746350923752169,
+          0.30927835051546393
+        ],
+        [
+          "oracle_gt_roi",
+          0.9676375404530745,
+          0.7387124139881233,
+          0.7292028171889353,
+          0.17525773195876287
+        ],
+        [
+          "predicted_cd_roi",
+          0.9676375404530745,
+          0.693185031576963,
+          0.7127181790343984,
+          0.25773195876288657
+        ]
+      ],
+      "sources": [
+        "roi"
+      ],
+      "selector": "methods.*.test_at_selected_threshold"
+    },
+    "dino": {
+      "headers": [
+        "Component",
+        "Base minus Tiny (five-system macro mean)"
+      ],
+      "rows": [
+        [
+          "coverage",
+          -0.15762034035474426
+        ],
+        [
+          "faithfulness",
+          0.1791174867540156
+        ],
+        [
+          "overall",
+          0.08070956050635056
+        ],
+        [
+          "temporal",
+          0.5780675338098531
+        ],
+        [
+          "unverifiable_rate",
+          0.21266666666666664
+        ]
+      ],
+      "sources": [
+        "dino"
+      ],
+      "selector": "macro_model_mean.*.base_minus_tiny"
+    },
+    "parser": {
+      "headers": [
+        "Parser setting",
+        "Exact match ↑",
+        "Precision ↑",
+        "Recall ↑",
+        "F1 ↑"
+      ],
+      "rows": [
+        [
+          "ontology_only",
+          0.5,
+          1.0,
+          0.5,
+          0.6666666666666666
+        ],
+        [
+          "ontology_gliner",
+          0.5183333333333333,
+          0.9465695203400122,
+          0.6495833333333333,
+          0.7704472448727453
+        ],
+        [
+          "configured_ontology",
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          "configured_ontology_gliner",
+          0.9266666666666666,
+          0.9646302250803859,
+          1.0,
+          0.9819967266775776
+        ]
+      ],
+      "sources": [
+        "parser",
+        "parser_configured"
+      ],
+      "selector": "parsers.* (distinct ontology configurations)"
+    },
+    "pilot": {
+      "headers": [
+        "Mode",
+        "Component",
+        "n",
+        "ROC-AUC ↑",
+        "BAcc @ 0.60 ↑"
+      ],
+      "rows": [
+        [
+          "full_target",
+          "overall",
+          149,
+          0.4660204081632653,
+          0.5842857142857143
+        ],
+        [
+          "full_target",
+          "temporal",
+          93,
+          0.7818930041152263,
+          0.7391975308641976
+        ],
+        [
+          "hybrid_mask_temporal",
+          "overall",
+          149,
+          0.5115306122448979,
+          0.6392857142857142
+        ],
+        [
+          "hybrid_mask_temporal",
+          "temporal",
+          93,
+          0.7818930041152263,
+          0.7391975308641976
+        ],
+        [
+          "mask_label_only",
+          "overall",
+          149,
+          0.5928571428571429,
+          0.6442857142857142
+        ],
+        [
+          "mask_label_only",
+          "temporal",
+          0,
+          null,
+          null
+        ]
+      ],
+      "sources": [
+        "human"
+      ],
+      "selector": "validity_alignment.*.{overall,temporal}"
+    },
+    "selective": {
+      "headers": [
+        "Selection",
+        "Coverage",
+        "Accuracy ↑",
+        "FSR ↓",
+        "Supported precision ↑"
+      ],
+      "rows": [
+        [
+          "All scored",
+          0.99875,
+          0.8729662077596996,
+          0.10515021459227468,
+          0.4948453608247423
+        ],
+        [
+          "Requested 0.10",
+          0.193125,
+          0.9611650485436893,
+          0.041044776119402986,
+          0.7843137254901961
+        ],
+        [
+          "Requested 0.25",
+          0.25125,
+          0.945273631840796,
+          0.05763688760806916,
+          0.726027397260274
+        ],
+        [
+          "Requested 0.50",
+          0.504375,
+          0.872366790582404,
+          0.12283236994219653,
+          0.532967032967033
+        ],
+        [
+          "Requested 0.75",
+          0.753125,
+          0.8829875518672199,
+          0.10586011342155009,
+          0.5130434782608696
+        ]
+      ],
+      "sources": [
+        "selective"
+      ],
+      "selector": "methods.MGA-Hybrid.{full_scored_set,target_coverages}"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+name: mga
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip>=24
+  - pip:
+      - -e .[dev,llm]

@@ -1,0 +1,57 @@
+{
+  "balanced_accuracy_oracle_threshold": 0.8225,
+  "by_error_type": {
+    "direction": {
+      "count": 200,
+      "drop_from_factual": 0.5,
+      "mean": 0.5
+    },
+    "entity": {
+      "count": 200,
+      "drop_from_factual": 0.33499999999999996,
+      "mean": 0.665
+    },
+    "hallucination": {
+      "count": 200,
+      "drop_from_factual": 0.03249999999999997,
+      "mean": 0.9675
+    },
+    "location": {
+      "count": 200,
+      "drop_from_factual": 1.0,
+      "mean": 0.0
+    },
+    "no-change": {
+      "count": 200,
+      "drop_from_factual": 1.0,
+      "mean": 0.0
+    },
+    "none": {
+      "count": 200,
+      "drop_from_factual": 0.0,
+      "mean": 1.0
+    },
+    "omission": {
+      "count": 200,
+      "drop_from_factual": 0.32999999999999996,
+      "mean": 0.67
+    },
+    "relation": {
+      "count": 200,
+      "drop_from_factual": 0.06000000000000005,
+      "mean": 0.94
+    }
+  },
+  "elapsed_seconds": 11.511768333613873,
+  "factual_mean": 1.0,
+  "manifest": "/root/autodl-tmp/mga-artifacts/controlled-errors/second-cc-200-v1/minimal_error_manifest.jsonl",
+  "manifest_sha256": "01a53327ce137ad74b7499c9d6379b7b99dd57b100930c291cada7beab37bc19",
+  "oracle_threshold": 1.0,
+  "parse_failures": 0,
+  "protocol": "FMScore yes/no fact-deduction protocol",
+  "questions": 3200,
+  "reasoner": "/root/autodl-tmp/models/Qwen3-VL-2B-Instruct",
+  "reasoner_note": "Local Qwen3-VL-2B deterministic protocol reproduction; original paper uses Vicuna-13B.",
+  "roc_auc": 0.8225,
+  "rows": 1600
+}

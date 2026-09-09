@@ -1,0 +1,54 @@
+{
+  "cached_scene_count": 100,
+  "cached_scene_ids_sha256": "276cde9672017f0e10fe140e3083484fc17e8ffc2d367a91e7a88a6fc7eadd0d",
+  "cross_model_exact_caption_agreement_count": 488,
+  "cross_model_exact_caption_agreement_rate": 0.488,
+  "model_summaries": {
+    "Chg2Cap": {
+      "checkpoint": {
+        "checkpoint": "/root/autodl-tmp/caption-bench-20260808/incoming/LEVIR_CC_batchsize_32_resnet101.pth",
+        "checkpoint_sha256": "d737a92afa3cb76a07f672ee905afb59278211c77ccce517a37ae4637110194c",
+        "checkpoint_size": 1317159961,
+        "repository": "/root/autodl-tmp/caption-bench-20260808/repos/Chg2Cap",
+        "repository_commit": "7b8cda937002e614d51a6dab3d949aa7de77c176"
+      },
+      "count": 1000,
+      "exact_no_change_count": 502,
+      "exact_no_change_rate": 0.502,
+      "mean_tokens": 8.609,
+      "median_tokens": 7.0,
+      "mentions_building_or_house": 436,
+      "mentions_road": 373,
+      "mentions_tree_or_vegetation": 78,
+      "output_path": "/root/autodl-tmp/caption-bench-20260808/outputs/chg2cap_mga1000.jsonl",
+      "output_sha256": "d344c99636cdc54152df8ae9c5c1c95192f5fb25814366238477a02fa642f018",
+      "output_size": 547296,
+      "unique_caption_count": 157
+    },
+    "RSICCformer": {
+      "checkpoint": {
+        "checkpoint": "/root/autodl-tmp/caption-bench-20260808/BEST_checkpoint_resnet101_MCCFormers_diff_as_Q_trans.pth.tar",
+        "checkpoint_sha256": "caf3d36646f1f62f81a58965115fd02fc0222106ef2f299167c1d2fb6bff757d",
+        "checkpoint_size": 1131102595,
+        "repository": "/root/autodl-tmp/caption-bench-20260808/repos/RSICC",
+        "repository_commit": "d1505e514c450c3728782ca723e82761e70bafd3"
+      },
+      "count": 1000,
+      "exact_no_change_count": 465,
+      "exact_no_change_rate": 0.465,
+      "mean_tokens": 8.178,
+      "median_tokens": 7.0,
+      "mentions_building_or_house": 480,
+      "mentions_road": 368,
+      "mentions_tree_or_vegetation": 44,
+      "output_path": "/root/autodl-tmp/caption-bench-20260808/outputs/rsiccformer_mga1000.jsonl",
+      "output_sha256": "79dc9157d2b798a6c5f97e6641d4760ff6e628539a34b04d9e2b7379f4da16ca",
+      "output_size": 568150,
+      "unique_caption_count": 239
+    }
+  },
+  "raw_manifest": "/root/autodl-tmp/caption-bench-20260808/mga-eval/caption_models_mga1000_raw.jsonl",
+  "raw_manifest_rows": 2000,
+  "raw_manifest_sha256": "17d707cc299c93118c3f9c4e79227b8fe5253804f5a16fde81aa3cf3e2f77ba9",
+  "scope": "LEVIR-MCI 1000-scene caption generation; MGA scoring reuses the named 100-scene building/road cache"
+}

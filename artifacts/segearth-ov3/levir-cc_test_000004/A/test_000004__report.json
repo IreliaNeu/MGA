@@ -1,0 +1,75 @@
+{
+  "backend": "segearth-ov3-native:sam3.pt:confidence=0.1:logit=0.1:expansion=remote-sensing",
+  "combined_overlay_path": "/root/autodl-tmp/mga-artifacts/segearth-ov3/levir-cc_test_000004/A/test_000004__combined_overlay.png",
+  "entities": [
+    {
+      "confidence": 0.025146484375,
+      "entity": "building",
+      "instance_count": 0,
+      "mask_fraction": 0.0,
+      "mask_path": "/root/autodl-tmp/mga-artifacts/segearth-ov3/levir-cc_test_000004/A/test_000004__building.png",
+      "mask_pixels": 0,
+      "overlay_path": "/root/autodl-tmp/mga-artifacts/segearth-ov3/levir-cc_test_000004/A/test_000004__building__overlay.png",
+      "presence_scores": [
+        0.00970458984375,
+        0.00885009765625,
+        0.00058746337890625,
+        0.0028839111328125,
+        0.025146484375
+      ],
+      "queries": [
+        "building",
+        "house",
+        "residential building",
+        "villa",
+        "structure"
+      ]
+    },
+    {
+      "confidence": 0.1845703125,
+      "entity": "road",
+      "instance_count": 0,
+      "mask_fraction": 0.042083740234375,
+      "mask_path": "/root/autodl-tmp/mga-artifacts/segearth-ov3/levir-cc_test_000004/A/test_000004__road.png",
+      "mask_pixels": 2758,
+      "overlay_path": "/root/autodl-tmp/mga-artifacts/segearth-ov3/levir-cc_test_000004/A/test_000004__road__overlay.png",
+      "presence_scores": [
+        0.1630859375,
+        0.0128173828125,
+        0.03466796875,
+        0.1845703125
+      ],
+      "queries": [
+        "road",
+        "street",
+        "roadway",
+        "paved road"
+      ]
+    },
+    {
+      "confidence": 0.77734375,
+      "entity": "tree",
+      "instance_count": 325,
+      "mask_fraction": 0.999603271484375,
+      "mask_path": "/root/autodl-tmp/mga-artifacts/segearth-ov3/levir-cc_test_000004/A/test_000004__tree.png",
+      "mask_pixels": 65510,
+      "overlay_path": "/root/autodl-tmp/mga-artifacts/segearth-ov3/levir-cc_test_000004/A/test_000004__tree__overlay.png",
+      "presence_scores": [
+        0.5625,
+        0.77734375,
+        0.59375,
+        0.03369140625
+      ],
+      "queries": [
+        "tree",
+        "trees",
+        "vegetation",
+        "woodland"
+      ]
+    }
+  ],
+  "image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/A/test_000004.png",
+  "inference_seconds": 1.325120935216546,
+  "model_load_seconds": 19.972306489944458,
+  "peak_gpu_memory_mib": 5410.26123046875
+}

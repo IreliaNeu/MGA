@@ -1,0 +1,343 @@
+{
+  "ablation_dir": "/root/autodl-tmp/mga-artifacts/ablations/hybrid-human-50x3-3raters-v1",
+  "caption_alignment": {
+    "complete_scenes": 49,
+    "matched": 149,
+    "mismatches": [
+      {
+        "human_caption": "massive houses along the roads appear in the previously undeveloped area .",
+        "manifest_caption": "massive houses along the roads appear in the vegetated area .",
+        "model": "Guided",
+        "reason": "caption_mismatch",
+        "sample_id": "levir-cc_test_000217"
+      }
+    ],
+    "total": 150
+  },
+  "human": {
+    "gt_mask_missing_localized_object": {
+      "positive": 16,
+      "rate": 0.32
+    },
+    "human_llm_cohen_kappa": 0.37203597710547825,
+    "human_llm_exact_agreement": 0.6666666666666666,
+    "human_llm_n": 48,
+    "human_preference": {
+      "Draft": 15,
+      "NoMajority": 2,
+      "Refined": 31,
+      "Tie": 2
+    },
+    "llm_judge": {
+      "Draft": 20,
+      "Refined": 25,
+      "Tie": 5
+    },
+    "refined_extra_correct_detail": {
+      "positive": 28,
+      "rate": 0.56
+    },
+    "scenes": 50,
+    "validity": {
+      "Change-Agent": {
+        "positive": 31,
+        "rate": 0.62
+      },
+      "Draft": {
+        "positive": 34,
+        "rate": 0.68
+      },
+      "Guided": {
+        "positive": 36,
+        "rate": 0.72
+      }
+    }
+  },
+  "human_eval_jsonl": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/human_eval_50_majority_3raters.jsonl",
+  "preference_alignment": {
+    "full_target": {
+      "coverage": {
+        "accuracy_fractional_tie_credit": 0.2814814814814815,
+        "accuracy_tie_as_correct": 0.6888888888888889,
+        "automatic_ties": 43,
+        "correct": 31,
+        "n": 45,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 2
+      },
+      "faithfulness": {
+        "accuracy_fractional_tie_credit": 0.2462121212121212,
+        "accuracy_tie_as_correct": 0.5909090909090909,
+        "automatic_ties": 38,
+        "correct": 26,
+        "n": 44,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 6
+      },
+      "overall": {
+        "accuracy_fractional_tie_credit": 0.24814814814814815,
+        "accuracy_tie_as_correct": 0.6,
+        "automatic_ties": 39,
+        "correct": 27,
+        "n": 45,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 6
+      },
+      "temporal": {
+        "accuracy_fractional_tie_credit": 0.45238095238095244,
+        "accuracy_tie_as_correct": 0.7142857142857143,
+        "automatic_ties": 18,
+        "correct": 30,
+        "n": 42,
+        "unique_winner_accuracy": 0.5,
+        "unique_winner_correct": 12,
+        "unique_winner_n": 24
+      },
+      "verifiability": {
+        "accuracy_fractional_tie_credit": 0.3111111111111112,
+        "accuracy_tie_as_correct": 0.8888888888888888,
+        "automatic_ties": 43,
+        "correct": 40,
+        "n": 45,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 2
+      }
+    },
+    "hybrid_mask_temporal": {
+      "coverage": {
+        "accuracy_fractional_tie_credit": 0.2814814814814815,
+        "accuracy_tie_as_correct": 0.6888888888888889,
+        "automatic_ties": 43,
+        "correct": 31,
+        "n": 45,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 2
+      },
+      "faithfulness": {
+        "accuracy_fractional_tie_credit": 0.23484848484848483,
+        "accuracy_tie_as_correct": 0.5681818181818182,
+        "automatic_ties": 37,
+        "correct": 25,
+        "n": 44,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 7
+      },
+      "overall": {
+        "accuracy_fractional_tie_credit": 0.23703703703703702,
+        "accuracy_tie_as_correct": 0.5777777777777777,
+        "automatic_ties": 38,
+        "correct": 26,
+        "n": 45,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 7
+      },
+      "temporal": {
+        "accuracy_fractional_tie_credit": 0.45238095238095244,
+        "accuracy_tie_as_correct": 0.7142857142857143,
+        "automatic_ties": 18,
+        "correct": 30,
+        "n": 42,
+        "unique_winner_accuracy": 0.5,
+        "unique_winner_correct": 12,
+        "unique_winner_n": 24
+      },
+      "verifiability": {
+        "accuracy_fractional_tie_credit": 0.31481481481481494,
+        "accuracy_tie_as_correct": 0.9333333333333333,
+        "automatic_ties": 45,
+        "correct": 42,
+        "n": 45,
+        "unique_winner_accuracy": null,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 0
+      }
+    },
+    "mask_label_only": {
+      "coverage": {
+        "accuracy_fractional_tie_credit": 0.2814814814814815,
+        "accuracy_tie_as_correct": 0.6888888888888889,
+        "automatic_ties": 43,
+        "correct": 31,
+        "n": 45,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 2
+      },
+      "faithfulness": {
+        "accuracy_fractional_tie_credit": 0.26136363636363635,
+        "accuracy_tie_as_correct": 0.6363636363636364,
+        "automatic_ties": 40,
+        "correct": 28,
+        "n": 44,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 4
+      },
+      "overall": {
+        "accuracy_fractional_tie_credit": 0.2666666666666667,
+        "accuracy_tie_as_correct": 0.6444444444444445,
+        "automatic_ties": 41,
+        "correct": 29,
+        "n": 45,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 4
+      },
+      "temporal": {
+        "accuracy_fractional_tie_credit": null,
+        "accuracy_tie_as_correct": null,
+        "automatic_ties": 0,
+        "correct": 0,
+        "n": 0,
+        "unique_winner_accuracy": null,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 0
+      },
+      "verifiability": {
+        "accuracy_fractional_tie_credit": 0.27407407407407414,
+        "accuracy_tie_as_correct": 0.7777777777777778,
+        "automatic_ties": 42,
+        "correct": 35,
+        "n": 45,
+        "unique_winner_accuracy": 0.0,
+        "unique_winner_correct": 0,
+        "unique_winner_n": 3
+      }
+    }
+  },
+  "validity_alignment": {
+    "full_target": {
+      "coverage": {
+        "balanced_accuracy_at_0_60": 0.6192857142857143,
+        "n": 149,
+        "point_biserial_r": 0.26942941177391433,
+        "positive": 100,
+        "roc_auc": 0.6042857142857143,
+        "spearman_rho": 0.2051116587822261
+      },
+      "faithfulness": {
+        "balanced_accuracy_at_0_60": 0.4569746376811594,
+        "n": 142,
+        "point_biserial_r": -0.019058696673249366,
+        "positive": 96,
+        "roc_auc": 0.44802989130434784,
+        "spearman_rho": -0.0855515410992698
+      },
+      "overall": {
+        "balanced_accuracy_at_0_60": 0.5842857142857143,
+        "n": 149,
+        "point_biserial_r": 0.1241464006132595,
+        "positive": 100,
+        "roc_auc": 0.4660204081632653,
+        "spearman_rho": -0.056219375702827805
+      },
+      "temporal": {
+        "balanced_accuracy_at_0_60": 0.7391975308641976,
+        "n": 93,
+        "point_biserial_r": 0.43651650345961523,
+        "positive": 81,
+        "roc_auc": 0.7818930041152263,
+        "spearman_rho": 0.33518623365374667
+      },
+      "verifiability": {
+        "balanced_accuracy_at_0_60": 0.4008163265306122,
+        "n": 149,
+        "point_biserial_r": -0.16899066769280024,
+        "positive": 100,
+        "roc_auc": 0.4073469387755102,
+        "spearman_rho": -0.21045260826372073
+      }
+    },
+    "hybrid_mask_temporal": {
+      "coverage": {
+        "balanced_accuracy_at_0_60": 0.6192857142857143,
+        "n": 149,
+        "point_biserial_r": 0.2710388830158183,
+        "positive": 100,
+        "roc_auc": 0.61,
+        "spearman_rho": 0.21933438485296508
+      },
+      "faithfulness": {
+        "balanced_accuracy_at_0_60": 0.6123188405797102,
+        "n": 142,
+        "point_biserial_r": 0.27752797613991004,
+        "positive": 96,
+        "roc_auc": 0.5194746376811594,
+        "spearman_rho": 0.03390273437874765
+      },
+      "overall": {
+        "balanced_accuracy_at_0_60": 0.6392857142857142,
+        "n": 149,
+        "point_biserial_r": 0.2637579950151528,
+        "positive": 100,
+        "roc_auc": 0.5115306122448979,
+        "spearman_rho": 0.019696991129790363
+      },
+      "temporal": {
+        "balanced_accuracy_at_0_60": 0.7391975308641976,
+        "n": 93,
+        "point_biserial_r": 0.43651650345961523,
+        "positive": 81,
+        "roc_auc": 0.7818930041152263,
+        "spearman_rho": 0.33518623365374667
+      },
+      "verifiability": {
+        "balanced_accuracy_at_0_60": 0.4956122448979592,
+        "n": 149,
+        "point_biserial_r": -0.016476426124135954,
+        "positive": 100,
+        "roc_auc": 0.4956122448979592,
+        "spearman_rho": -0.016476426124135905
+      }
+    },
+    "mask_label_only": {
+      "coverage": {
+        "balanced_accuracy_at_0_60": 0.6192857142857143,
+        "n": 149,
+        "point_biserial_r": 0.2710388830158183,
+        "positive": 100,
+        "roc_auc": 0.61,
+        "spearman_rho": 0.21933438485296508
+      },
+      "faithfulness": {
+        "balanced_accuracy_at_0_60": 0.6123188405797102,
+        "n": 142,
+        "point_biserial_r": 0.2992934056425822,
+        "positive": 96,
+        "roc_auc": 0.6245471014492754,
+        "spearman_rho": 0.271682075668783
+      },
+      "overall": {
+        "balanced_accuracy_at_0_60": 0.6442857142857142,
+        "n": 149,
+        "point_biserial_r": 0.2860015152959971,
+        "positive": 100,
+        "roc_auc": 0.5928571428571429,
+        "spearman_rho": 0.17816422237928647
+      },
+      "temporal": {
+        "balanced_accuracy_at_0_60": null,
+        "n": 0,
+        "point_biserial_r": null,
+        "positive": 0,
+        "roc_auc": null,
+        "spearman_rho": null
+      },
+      "verifiability": {
+        "balanced_accuracy_at_0_60": 0.3706122448979592,
+        "n": 149,
+        "point_biserial_r": -0.216193943033042,
+        "positive": 100,
+        "roc_auc": 0.36979591836734693,
+        "spearman_rho": -0.28102474044599957
+      }
+    }
+  }
+}

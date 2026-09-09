@@ -1,0 +1,44 @@
+{
+  "item_count": 1200,
+  "class_map": {
+    "1": "low vegetation",
+    "2": "tree",
+    "3": "non-vegetated ground",
+    "4": "water",
+    "5": "playground",
+    "6": "building"
+  },
+  "model_name": "urchade/gliner_small-v2.1",
+  "parsers": {
+    "ontology_only": {
+      "exact_match": 0.5,
+      "claim_precision": 1.0,
+      "claim_recall": 0.5,
+      "claim_f1": 0.6666666666666666,
+      "by_sample_type_exact": {
+        "contradiction": 1.0,
+        "contradiction_surface_stress": 0.0,
+        "factual": 1.0,
+        "factual_surface_stress": 0.0,
+        "paraphrase": 1.0,
+        "paraphrase_surface_stress": 0.0
+      },
+      "runtime_seconds": 6.625909637659788
+    },
+    "ontology_gliner": {
+      "exact_match": 0.5183333333333333,
+      "claim_precision": 0.9465695203400122,
+      "claim_recall": 0.6495833333333333,
+      "claim_f1": 0.7704472448727453,
+      "by_sample_type_exact": {
+        "contradiction": 1.0,
+        "contradiction_surface_stress": 0.015,
+        "factual": 1.0,
+        "factual_surface_stress": 0.075,
+        "paraphrase": 1.0,
+        "paraphrase_surface_stress": 0.02
+      },
+      "runtime_seconds": 27.730456687510014
+    }
+  }
+}

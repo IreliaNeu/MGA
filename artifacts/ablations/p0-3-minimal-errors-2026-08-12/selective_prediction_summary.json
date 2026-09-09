@@ -1,0 +1,268 @@
+{
+  "protocol": "binary-selective-prediction-v1",
+  "input": "/root/autodl-tmp/mga-artifacts/controlled-errors/second-cc-200-v1/minimal-error-decomposition-v1/scores.jsonl",
+  "label_field": "is_factually_correct",
+  "method_paths": {
+    "MGA-GT": "scores.oracle.diagnostic_score",
+    "MGA-Hybrid": "scores.hybrid.diagnostic_score",
+    "MGA-OV": "scores.open_vocab.diagnostic_score"
+  },
+  "confidence_paths": {
+    "MGA-GT": "scores.oracle.visual_confidence",
+    "MGA-Hybrid": "scores.hybrid.visual_confidence",
+    "MGA-OV": "scores.open_vocab.visual_confidence"
+  },
+  "metric_notes": {
+    "risk": "misclassification rate among retained predictions",
+    "false_support_rate": "false supported decisions divided by retained negatives",
+    "supported_precision": "correct supported decisions divided by retained supported decisions",
+    "explicit_abstention": "missing/non-finite score; never inferred from the prediction"
+  },
+  "methods": {
+    "MGA-GT": {
+      "n": 1600,
+      "n_scored": 1600,
+      "evaluation_coverage": 1.0,
+      "explicit_abstention_rate": 0.0,
+      "threshold": 0.5,
+      "confidence_definition": "provided confidence when configured; otherwise absolute distance between the factuality score and the decision threshold",
+      "tie_policy": "include all items sharing the boundary confidence",
+      "aurc": 0.08578125,
+      "aurc_total_axis": 0.08578125,
+      "aurc_definition": "right-continuous area under selective risk over scored coverage; aurc is normalized by maximum attainable coverage",
+      "full_scored_set": {
+        "selected_count": 1600,
+        "risk": 0.07625,
+        "accuracy": 0.92375,
+        "false_support_rate": 0.08571428571428572,
+        "supported_precision": 0.6226415094339622,
+        "predicted_supported_count": 318
+      },
+      "target_coverages": [
+        {
+          "target_coverage": 0.1,
+          "attainable": true,
+          "coverage": 0.875,
+          "conditional_coverage": 0.875,
+          "confidence_threshold": 1.0,
+          "selected_count": 1400,
+          "risk": 0.08714285714285715,
+          "accuracy": 0.9128571428571428,
+          "false_support_rate": 0.1,
+          "supported_precision": 0.6226415094339622,
+          "predicted_supported_count": 318
+        },
+        {
+          "target_coverage": 0.25,
+          "attainable": true,
+          "coverage": 0.875,
+          "conditional_coverage": 0.875,
+          "confidence_threshold": 1.0,
+          "selected_count": 1400,
+          "risk": 0.08714285714285715,
+          "accuracy": 0.9128571428571428,
+          "false_support_rate": 0.1,
+          "supported_precision": 0.6226415094339622,
+          "predicted_supported_count": 318
+        },
+        {
+          "target_coverage": 0.5,
+          "attainable": true,
+          "coverage": 0.875,
+          "conditional_coverage": 0.875,
+          "confidence_threshold": 1.0,
+          "selected_count": 1400,
+          "risk": 0.08714285714285715,
+          "accuracy": 0.9128571428571428,
+          "false_support_rate": 0.1,
+          "supported_precision": 0.6226415094339622,
+          "predicted_supported_count": 318
+        },
+        {
+          "target_coverage": 0.75,
+          "attainable": true,
+          "coverage": 0.875,
+          "conditional_coverage": 0.875,
+          "confidence_threshold": 1.0,
+          "selected_count": 1400,
+          "risk": 0.08714285714285715,
+          "accuracy": 0.9128571428571428,
+          "false_support_rate": 0.1,
+          "supported_precision": 0.6226415094339622,
+          "predicted_supported_count": 318
+        },
+        {
+          "target_coverage": 1.0,
+          "attainable": true,
+          "coverage": 1.0,
+          "conditional_coverage": 1.0,
+          "confidence_threshold": 0.5,
+          "selected_count": 1600,
+          "risk": 0.07625,
+          "accuracy": 0.92375,
+          "false_support_rate": 0.08571428571428572,
+          "supported_precision": 0.6226415094339622,
+          "predicted_supported_count": 318
+        }
+      ]
+    },
+    "MGA-Hybrid": {
+      "n": 1600,
+      "n_scored": 1598,
+      "evaluation_coverage": 0.99875,
+      "explicit_abstention_rate": 0.0012499999999999734,
+      "threshold": 0.5,
+      "confidence_definition": "provided confidence when configured; otherwise absolute distance between the factuality score and the decision threshold",
+      "tie_policy": "include all items sharing the boundary confidence",
+      "aurc": 0.09474422306293326,
+      "aurc_total_axis": 0.0946257927841046,
+      "aurc_definition": "right-continuous area under selective risk over scored coverage; aurc is normalized by maximum attainable coverage",
+      "full_scored_set": {
+        "selected_count": 1598,
+        "risk": 0.12703379224030037,
+        "accuracy": 0.8729662077596996,
+        "false_support_rate": 0.10515021459227468,
+        "supported_precision": 0.4948453608247423,
+        "predicted_supported_count": 291
+      },
+      "target_coverages": [
+        {
+          "target_coverage": 0.1,
+          "attainable": true,
+          "coverage": 0.193125,
+          "conditional_coverage": 0.19336670838548184,
+          "confidence_threshold": 1.0,
+          "selected_count": 309,
+          "risk": 0.038834951456310676,
+          "accuracy": 0.9611650485436893,
+          "false_support_rate": 0.041044776119402986,
+          "supported_precision": 0.7843137254901961,
+          "predicted_supported_count": 51
+        },
+        {
+          "target_coverage": 0.25,
+          "attainable": true,
+          "coverage": 0.25125,
+          "conditional_coverage": 0.25156445556946183,
+          "confidence_threshold": 0.87109375,
+          "selected_count": 402,
+          "risk": 0.05472636815920398,
+          "accuracy": 0.945273631840796,
+          "false_support_rate": 0.05763688760806916,
+          "supported_precision": 0.726027397260274,
+          "predicted_supported_count": 73
+        },
+        {
+          "target_coverage": 0.5,
+          "attainable": true,
+          "coverage": 0.504375,
+          "conditional_coverage": 0.5050062578222778,
+          "confidence_threshold": 0.55859375,
+          "selected_count": 807,
+          "risk": 0.12763320941759604,
+          "accuracy": 0.872366790582404,
+          "false_support_rate": 0.12283236994219653,
+          "supported_precision": 0.532967032967033,
+          "predicted_supported_count": 182
+        },
+        {
+          "target_coverage": 0.75,
+          "attainable": true,
+          "coverage": 0.753125,
+          "conditional_coverage": 0.7540675844806007,
+          "confidence_threshold": 0.40234375,
+          "selected_count": 1205,
+          "risk": 0.11701244813278008,
+          "accuracy": 0.8829875518672199,
+          "false_support_rate": 0.10586011342155009,
+          "supported_precision": 0.5130434782608696,
+          "predicted_supported_count": 230
+        },
+        {
+          "target_coverage": 1.0,
+          "attainable": false,
+          "reason": "explicit_abstentions_limit_maximum_coverage"
+        }
+      ]
+    },
+    "MGA-OV": {
+      "n": 1600,
+      "n_scored": 1597,
+      "evaluation_coverage": 0.998125,
+      "explicit_abstention_rate": 0.00187499999999996,
+      "threshold": 0.5,
+      "confidence_definition": "provided confidence when configured; otherwise absolute distance between the factuality score and the decision threshold",
+      "tie_policy": "include all items sharing the boundary confidence",
+      "aurc": 0.17318187367177315,
+      "aurc_total_axis": 0.17285715765863857,
+      "aurc_definition": "right-continuous area under selective risk over scored coverage; aurc is normalized by maximum attainable coverage",
+      "full_scored_set": {
+        "selected_count": 1597,
+        "risk": 0.17845961177207265,
+        "accuracy": 0.8215403882279273,
+        "false_support_rate": 0.15390121689334288,
+        "supported_precision": 0.37681159420289856,
+        "predicted_supported_count": 345
+      },
+      "target_coverages": [
+        {
+          "target_coverage": 0.1,
+          "attainable": true,
+          "coverage": 0.101875,
+          "conditional_coverage": 0.10206637445209768,
+          "confidence_threshold": 0.8046875,
+          "selected_count": 163,
+          "risk": 0.13496932515337423,
+          "accuracy": 0.8650306748466258,
+          "false_support_rate": 0.13013698630136986,
+          "supported_precision": 0.42424242424242425,
+          "predicted_supported_count": 33
+        },
+        {
+          "target_coverage": 0.25,
+          "attainable": true,
+          "coverage": 0.251875,
+          "conditional_coverage": 0.25234815278647466,
+          "confidence_threshold": 0.671875,
+          "selected_count": 403,
+          "risk": 0.19106699751861042,
+          "accuracy": 0.8089330024813896,
+          "false_support_rate": 0.1855072463768116,
+          "supported_precision": 0.41284403669724773,
+          "predicted_supported_count": 109
+        },
+        {
+          "target_coverage": 0.5,
+          "attainable": true,
+          "coverage": 0.575,
+          "conditional_coverage": 0.5760801502817783,
+          "confidence_threshold": 0.5,
+          "selected_count": 920,
+          "risk": 0.16956521739130434,
+          "accuracy": 0.8304347826086956,
+          "false_support_rate": 0.16339066339066338,
+          "supported_precision": 0.38425925925925924,
+          "predicted_supported_count": 216
+        },
+        {
+          "target_coverage": 0.75,
+          "attainable": true,
+          "coverage": 0.756875,
+          "conditional_coverage": 0.7582968065122104,
+          "confidence_threshold": 0.3125,
+          "selected_count": 1211,
+          "risk": 0.1874483897605285,
+          "accuracy": 0.8125516102394715,
+          "false_support_rate": 0.17267552182163187,
+          "supported_precision": 0.38095238095238093,
+          "predicted_supported_count": 294
+        },
+        {
+          "target_coverage": 1.0,
+          "attainable": false,
+          "reason": "explicit_abstentions_limit_maximum_coverage"
+        }
+      ]
+    }
+  }
+}

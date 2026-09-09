@@ -1,0 +1,10 @@
+{
+  "min_grounding_confidence": 0.25,
+  "supported_threshold": 0.6,
+  "contradicted_threshold": 0.25,
+  "spatial_weight": 0.65,
+  "temporal_weight": 0.35,
+  "component_overlap_threshold": 0.1,
+  "min_component_area": 4
+}
+

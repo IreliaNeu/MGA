@@ -1,0 +1,33 @@
+{
+  "item_count": 1200,
+  "class_map": {
+    "1": "low vegetation",
+    "2": "tree",
+    "3": "non-vegetated ground",
+    "4": "water",
+    "5": "playground",
+    "6": "building"
+  },
+  "surface_map_file": "configs/parser_surface_forms/second_cc_v3.json",
+  "model_name": null,
+  "input_sha256": "7e3fc5925a307802bd45bb0a74b217d951613f6386e022069e695506a099104a",
+  "surface_map_sha256": "422948c3a949064aff130fa3f96956b395b4ee17cd66f5ee163a602253d2c6f8",
+  "evaluation_contract": "exact set of (entity, change_type); not span/location/attribute F1",
+  "parsers": {
+    "configured_ontology": {
+      "exact_match": 1.0,
+      "claim_precision": 1.0,
+      "claim_recall": 1.0,
+      "claim_f1": 1.0,
+      "by_sample_type_exact": {
+        "contradiction": 1.0,
+        "contradiction_surface_stress": 1.0,
+        "factual": 1.0,
+        "factual_surface_stress": 1.0,
+        "paraphrase": 1.0,
+        "paraphrase_surface_stress": 1.0
+      },
+      "runtime_seconds": 7.814975534565747
+    }
+  }
+}

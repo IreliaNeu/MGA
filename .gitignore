@@ -1,0 +1,44 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Model and experiment artifacts. Keep compact, publication-facing summaries in Git;
+# raw JSONL records, per-scene images, masks, caches, and checkpoints stay external.
+artifacts/**
+!artifacts/**/
+!artifacts/**/*.json
+!artifacts/**/*.csv
+!artifacts/**/*.md
+checkpoints/
+outputs/
+cache/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Local datasets should be referenced through manifests, not committed.
+datasets/
+data/private/
+
+# Local recovery material and human-rating workbooks are backed up separately.
+.claude_resources.json
+.tmp/
+tmp/
+*.xlsx
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

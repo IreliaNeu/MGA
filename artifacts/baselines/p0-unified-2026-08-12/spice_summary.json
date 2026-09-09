@@ -1,0 +1,22 @@
+{
+  "configuration": {
+    "BERTScore": {
+      "idf": false,
+      "model_type": "roberta-large",
+      "num_layers": 17,
+      "rescale_with_baseline": false
+    },
+    "SPICE": "pycocoevalcap 1.2 official Java implementation"
+  },
+  "models": {
+    "Draft": {
+      "SPICE": 0.3085111986714852,
+      "count": 1000
+    },
+    "Refined": {
+      "SPICE": 0.25678669195401777,
+      "count": 1000
+    }
+  },
+  "scope": "project-recomputed Draft/Refined on the aligned 1000-scene LEVIR-MCI subset"
+}

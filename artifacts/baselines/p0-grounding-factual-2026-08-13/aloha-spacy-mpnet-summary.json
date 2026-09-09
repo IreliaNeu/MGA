@@ -1,0 +1,87 @@
+{
+  "adaptation": "Text references/facts only; no MGA parser, masks, temporal direction, or location logic.",
+  "controlled_errors": {
+    "balanced_accuracy_oracle_threshold": 0.6596428571428572,
+    "by_error_type": {
+      "direction": {
+        "count": 200,
+        "drop_from_factual": 0.0,
+        "mean": 0.9999999246001243
+      },
+      "entity": {
+        "count": 200,
+        "drop_from_factual": 0.6943700232356786,
+        "mean": 0.3056299013644457
+      },
+      "hallucination": {
+        "count": 200,
+        "drop_from_factual": -3.2484531398147e-08,
+        "mean": 0.9999999570846557
+      },
+      "location": {
+        "count": 200,
+        "drop_from_factual": 0.05695531278848642,
+        "mean": 0.9430446118116379
+      },
+      "no-change": {
+        "count": 200,
+        "drop_from_factual": 0.792627834379673,
+        "mean": 0.20737209022045136
+      },
+      "none": {
+        "count": 200,
+        "drop_from_factual": 0.0,
+        "mean": 0.9999999246001243
+      },
+      "omission": {
+        "count": 200,
+        "drop_from_factual": -2.4735927639518707e-08,
+        "mean": 0.999999949336052
+      },
+      "relation": {
+        "count": 200,
+        "drop_from_factual": 0.12454021580517294,
+        "mean": 0.8754597087949514
+      }
+    },
+    "factual_mean": 0.9999999246001243,
+    "input": "/root/autodl-tmp/mga-artifacts/controlled-errors/second-cc-200-v1/minimal_error_manifest.jsonl",
+    "input_sha256": "01a53327ce137ad74b7499c9d6379b7b99dd57b100930c291cada7beab37bc19",
+    "negative_rows": 1400,
+    "oracle_threshold": 0.9999998807907104,
+    "positive_rows": 200,
+    "roc_auc": 0.5781303571428572,
+    "rows": 1600
+  },
+  "elapsed_seconds": 526.2148959971964,
+  "mpnet_model": "/root/mga-external/models/all-mpnet-base-v2",
+  "protocol": "ALOHa official local variant: SpacyObjectParser + MPNetSimilarity + Hungarian/min",
+  "real_outputs": {
+    "input": "/root/autodl-tmp/mga-artifacts/p0-1-unified-baselines-20260812/model_outputs_manifest.jsonl",
+    "input_sha256": "4a61643fa0dc5325d2f1fa4eb3cecbc53815fca471bac6dd920d3413eb57f275",
+    "models": {
+      "Change-Agent": {
+        "count": 1000,
+        "mean": 0.8761918022930623
+      },
+      "Chg2Cap": {
+        "count": 1000,
+        "mean": 0.8518578377813101
+      },
+      "Draft": {
+        "count": 1000,
+        "mean": 0.7688161324858666
+      },
+      "RSICCformer": {
+        "count": 1000,
+        "mean": 0.829765876211226
+      },
+      "Refined": {
+        "count": 1000,
+        "mean": 0.6514429023265839
+      }
+    },
+    "rows": 5000
+  },
+  "spacy_model": "en_core_web_sm 3.7.1 (official local parser interface; paper repository defaults to lg)"
+}

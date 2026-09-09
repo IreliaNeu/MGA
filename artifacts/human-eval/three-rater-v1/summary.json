@@ -1,0 +1,414 @@
+{
+  "workbooks": [
+    "D:\\Python_Practice\\MGA\\human evla_filled_1.xlsx",
+    "D:\\Python_Practice\\MGA\\human evla_filled_2.xlsx",
+    "D:\\Python_Practice\\MGA\\human evla_filled_3.xlsx"
+  ],
+  "scenes": 50,
+  "per_rater": {
+    "human evla_filled_1.xlsx": {
+      "binary_positive": {
+        "change_agent_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 36,
+          "rate": 0.72
+        },
+        "draft_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 36,
+          "rate": 0.72
+        },
+        "refined_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 34,
+          "rate": 0.68
+        },
+        "refined_extra_correct_detail": {
+          "n": 50,
+          "missing": 0,
+          "count": 34,
+          "rate": 0.68
+        },
+        "gt_mask_missing_localized_object": {
+          "n": 50,
+          "missing": 0,
+          "count": 14,
+          "rate": 0.28
+        }
+      },
+      "human_preference": {
+        "Refined": 27,
+        "Draft": 18,
+        "Change": 5
+      },
+      "llm_judge": {
+        "Refined": 25,
+        "Draft": 20,
+        "Tie": 5
+      }
+    },
+    "human evla_filled_2.xlsx": {
+      "binary_positive": {
+        "change_agent_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 29,
+          "rate": 0.58
+        },
+        "draft_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 34,
+          "rate": 0.68
+        },
+        "refined_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 37,
+          "rate": 0.74
+        },
+        "refined_extra_correct_detail": {
+          "n": 50,
+          "missing": 0,
+          "count": 24,
+          "rate": 0.48
+        },
+        "gt_mask_missing_localized_object": {
+          "n": 50,
+          "missing": 0,
+          "count": 17,
+          "rate": 0.34
+        }
+      },
+      "human_preference": {
+        "Refined": 37,
+        "Draft": 11,
+        "Tie": 2
+      },
+      "llm_judge": {
+        "Refined": 25,
+        "Draft": 20,
+        "Tie": 5
+      }
+    },
+    "human evla_filled_3.xlsx": {
+      "binary_positive": {
+        "change_agent_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 37,
+          "rate": 0.74
+        },
+        "draft_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 35,
+          "rate": 0.7
+        },
+        "refined_correct": {
+          "n": 50,
+          "missing": 0,
+          "count": 30,
+          "rate": 0.6
+        },
+        "refined_extra_correct_detail": {
+          "n": 50,
+          "missing": 0,
+          "count": 25,
+          "rate": 0.5
+        },
+        "gt_mask_missing_localized_object": {
+          "n": 49,
+          "missing": 1,
+          "count": 40,
+          "rate": 0.8163265306122449
+        }
+      },
+      "human_preference": {
+        "Refined": 24,
+        "Tie": 6,
+        "Draft": 20
+      },
+      "llm_judge": {
+        "Refined": 25,
+        "Draft": 20,
+        "Tie": 5
+      }
+    }
+  },
+  "questions": {
+    "change_agent_correct": {
+      "fleiss": {
+        "items": 50,
+        "raters": 3,
+        "exact_agreement": 0.62,
+        "mean_pair_agreement": 0.7466666666666667,
+        "chance": 0.5648000000000001,
+        "kappa": 0.41789215686274506,
+        "category_rates": {
+          "0": 0.32,
+          "1": 0.68
+        }
+      },
+      "complete_items": 50,
+      "items_with_missing": 0,
+      "pairwise": {
+        "r1_r2": {
+          "agreement": 0.78,
+          "chance": 0.5352,
+          "kappa": 0.5266781411359726,
+          "n": 50
+        },
+        "r1_r3": {
+          "agreement": 0.7,
+          "chance": 0.6056,
+          "kappa": 0.2393509127789045,
+          "n": 50
+        },
+        "r2_r3": {
+          "agreement": 0.76,
+          "chance": 0.5384,
+          "kappa": 0.4800693240901214,
+          "n": 50
+        }
+      },
+      "mean_pairwise_kappa": 0.4153661260016661
+    },
+    "draft_correct": {
+      "fleiss": {
+        "items": 50,
+        "raters": 3,
+        "exact_agreement": 0.7,
+        "mean_pair_agreement": 0.8,
+        "chance": 0.58,
+        "kappa": 0.523809523809524,
+        "category_rates": {
+          "0": 0.3,
+          "1": 0.7
+        }
+      },
+      "complete_items": 50,
+      "items_with_missing": 0,
+      "pairwise": {
+        "r1_r2": {
+          "agreement": 0.88,
+          "chance": 0.5792,
+          "kappa": 0.714828897338403,
+          "n": 50
+        },
+        "r1_r3": {
+          "agreement": 0.74,
+          "chance": 0.588,
+          "kappa": 0.36893203883495146,
+          "n": 50
+        },
+        "r2_r3": {
+          "agreement": 0.78,
+          "chance": 0.572,
+          "kappa": 0.48598130841121506,
+          "n": 50
+        }
+      },
+      "mean_pairwise_kappa": 0.5232474148615232
+    },
+    "refined_correct": {
+      "fleiss": {
+        "items": 50,
+        "raters": 3,
+        "exact_agreement": 0.74,
+        "mean_pair_agreement": 0.8266666666666667,
+        "chance": 0.5600888888888889,
+        "kappa": 0.6059810062638917,
+        "category_rates": {
+          "0": 0.32666666666666666,
+          "1": 0.6733333333333333
+        }
+      },
+      "complete_items": 50,
+      "items_with_missing": 0,
+      "pairwise": {
+        "r1_r2": {
+          "agreement": 0.9,
+          "chance": 0.5864,
+          "kappa": 0.758220502901354,
+          "n": 50
+        },
+        "r1_r3": {
+          "agreement": 0.8,
+          "chance": 0.536,
+          "kappa": 0.5689655172413793,
+          "n": 50
+        },
+        "r2_r3": {
+          "agreement": 0.78,
+          "chance": 0.548,
+          "kappa": 0.5132743362831859,
+          "n": 50
+        }
+      },
+      "mean_pairwise_kappa": 0.6134867854753064
+    },
+    "refined_extra_correct_detail": {
+      "fleiss": {
+        "items": 50,
+        "raters": 3,
+        "exact_agreement": 0.46,
+        "mean_pair_agreement": 0.64,
+        "chance": 0.5056888888888889,
+        "kappa": 0.2717137205538573,
+        "category_rates": {
+          "0": 0.44666666666666666,
+          "1": 0.5533333333333333
+        }
+      },
+      "complete_items": 50,
+      "items_with_missing": 0,
+      "pairwise": {
+        "r1_r2": {
+          "agreement": 0.72,
+          "chance": 0.4928,
+          "kappa": 0.44794952681388006,
+          "n": 50
+        },
+        "r1_r3": {
+          "agreement": 0.58,
+          "chance": 0.5,
+          "kappa": 0.15999999999999992,
+          "n": 50
+        },
+        "r2_r3": {
+          "agreement": 0.62,
+          "chance": 0.5,
+          "kappa": 0.24,
+          "n": 50
+        }
+      },
+      "mean_pairwise_kappa": 0.2826498422712933
+    },
+    "gt_mask_missing_localized_object": {
+      "fleiss": {
+        "items": 49,
+        "raters": 3,
+        "exact_agreement": 0.12244897959183673,
+        "mean_pair_agreement": 0.4149659863945578,
+        "chance": 0.5005784626775881,
+        "kappa": -0.17142327650111214,
+        "category_rates": {
+          "0": 0.5170068027210885,
+          "1": 0.48299319727891155
+        }
+      },
+      "complete_items": 49,
+      "items_with_missing": 1,
+      "pairwise": {
+        "r1_r2": {
+          "agreement": 0.9,
+          "chance": 0.5704,
+          "kappa": 0.7672253258845438,
+          "n": 50
+        },
+        "r1_r3": {
+          "agreement": 0.14285714285714285,
+          "chance": 0.36443148688046645,
+          "kappa": -0.34862385321100914,
+          "n": 49
+        },
+        "r2_r3": {
+          "agreement": 0.20408163265306123,
+          "chance": 0.4031653477717618,
+          "kappa": -0.333565945568737,
+          "n": 49
+        }
+      },
+      "mean_pairwise_kappa": 0.02834517570159924
+    }
+  },
+  "preference": {
+    "fleiss": {
+      "items": 50,
+      "raters": 3,
+      "exact_agreement": 0.46,
+      "mean_pair_agreement": 0.6266666666666667,
+      "chance": 0.45484444444444444,
+      "kappa": 0.3151801728354802,
+      "category_rates": {
+        "Change": 0.03333333333333333,
+        "Draft": 0.32666666666666666,
+        "Refined": 0.5866666666666667,
+        "Tie": 0.05333333333333334
+      }
+    },
+    "complete_items": 50,
+    "items_with_missing": 0,
+    "pairwise": {
+      "r1_r2": {
+        "agreement": 0.64,
+        "chance": 0.4788,
+        "kappa": 0.30928626247122026,
+        "n": 50
+      },
+      "r1_r3": {
+        "agreement": 0.58,
+        "chance": 0.4032,
+        "kappa": 0.2962466487935656,
+        "n": 50
+      },
+      "r2_r3": {
+        "agreement": 0.66,
+        "chance": 0.448,
+        "kappa": 0.38405797101449274,
+        "n": 50
+      }
+    },
+    "mean_pairwise_kappa": 0.3298636274264262
+  },
+  "majority": {
+    "validity": {
+      "Change-Agent": {
+        "n": 50,
+        "missing": 0,
+        "count": 31,
+        "rate": 0.62
+      },
+      "Draft": {
+        "n": 50,
+        "missing": 0,
+        "count": 34,
+        "rate": 0.68
+      },
+      "Guided": {
+        "n": 50,
+        "missing": 0,
+        "count": 36,
+        "rate": 0.72
+      }
+    },
+    "refined_extra_correct_detail": {
+      "n": 50,
+      "missing": 0,
+      "count": 28,
+      "rate": 0.56
+    },
+    "gt_mask_missing_localized_object": {
+      "n": 50,
+      "missing": 0,
+      "count": 16,
+      "rate": 0.32
+    },
+    "human_preference": {
+      "Refined": 31,
+      "Draft": 15,
+      "NoMajority": 2,
+      "Tie": 2
+    },
+    "human_llm": {
+      "n": 48,
+      "agreement": 0.6666666666666666,
+      "chance": 0.4691840277777778,
+      "kappa": 0.37203597710547825
+    }
+  }
+}

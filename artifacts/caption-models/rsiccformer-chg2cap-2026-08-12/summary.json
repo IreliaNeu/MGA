@@ -1,0 +1,393 @@
+{
+  "captions": 200,
+  "manifest": "/root/autodl-tmp/caption-bench-20260808/mga-eval/caption_models_cached100_claims.jsonl",
+  "mode_descriptions": {
+    "full_target": "当前实现：Add 使用 post，Remove 使用 pre，Modify 使用 pre ∪ post。",
+    "gt_roi_gated": "先用对应类别的真实变化 ROI 门控 pre/post，再判断时相存在性；这是乐观的 v1 风格对照。",
+    "hybrid_mask_temporal": "Spatial/Coverage 使用 Parser 直接匹配真实类别标签；Temporal 仅使用 SegEarth 的双时相证据。",
+    "mask_label_only": "不使用 SegEarth；Parser 的 target_labels 直接匹配真实标签 road=1、building=2，不能判断时相方向和静态上下文。",
+    "temporal_delta": "Add = post - pre，Remove = pre - post，Modify = pre XOR post。"
+  },
+  "modes": [
+    "full_target",
+    "temporal_delta",
+    "gt_roi_gated",
+    "mask_label_only",
+    "hybrid_mask_temporal"
+  ],
+  "output_dir": "/root/autodl-tmp/caption-bench-20260808/mga-eval/evidence-modes-cached100-v1",
+  "pairwise_delta_vs_full_target": {
+    "gt_roi_gated": {
+      "Chg2Cap": {
+        "coverage": -0.027789682539682545,
+        "faithfulness": 0.3056854693396572,
+        "overall": 0.16117958750189082,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.3266666666666667
+      },
+      "RSICCformer": {
+        "coverage": -0.025789682539682543,
+        "faithfulness": 0.31088769837551566,
+        "overall": 0.16454081347161303,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.3633333333333333
+      }
+    },
+    "hybrid_mask_temporal": {
+      "Chg2Cap": {
+        "coverage": -0.010611800780918428,
+        "faithfulness": 0.3056854693396572,
+        "overall": 0.16547405794158185,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.3266666666666667
+      },
+      "RSICCformer": {
+        "coverage": -0.00761180078091843,
+        "faithfulness": 0.31088769837551566,
+        "overall": 0.16908528391130406,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.3633333333333333
+      }
+    },
+    "mask_label_only": {
+      "Chg2Cap": {
+        "coverage": -0.010611800780918428,
+        "faithfulness": 0.3317038927912468,
+        "overall": 0.19038748045706075,
+        "temporal": null,
+        "unverifiable_rate": -0.135
+      },
+      "RSICCformer": {
+        "coverage": -0.00761180078091843,
+        "faithfulness": 0.3430351567021946,
+        "overall": 0.20107390551817175,
+        "temporal": null,
+        "unverifiable_rate": -0.19
+      }
+    },
+    "temporal_delta": {
+      "Chg2Cap": {
+        "coverage": -0.03487305472305472,
+        "faithfulness": 0.022627438332789428,
+        "overall": 0.0037268274022705084,
+        "temporal": 0.0,
+        "unverifiable_rate": 0.011666666666666667
+      },
+      "RSICCformer": {
+        "coverage": -0.03276615236615237,
+        "faithfulness": 0.01451440844853,
+        "overall": -0.00020861344484659428,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.0033333333333333327
+      }
+    }
+  },
+  "results": {
+    "full_target": {
+      "by_entity": {
+        "building": {
+          "claims": 167,
+          "faithfulness": 0.6449326899748711,
+          "spatial_support": 0.4784028565389577,
+          "statuses": {
+            "contradicted": 21,
+            "supported": 48,
+            "unverifiable": 98
+          },
+          "temporal_support": 0.9542023806415662
+        },
+        "road": {
+          "claims": 140,
+          "faithfulness": 0.7949973680602465,
+          "spatial_support": 0.45504892748556336,
+          "statuses": {
+            "contradicted": 25,
+            "supported": 100,
+            "unverifiable": 15
+          },
+          "temporal_support": 0.6127682763857779
+        },
+        "scene": {
+          "claims": 17,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 17
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Chg2Cap": {
+          "captions": 100,
+          "coverage": 0.8373817059543462,
+          "faithfulness": 0.5632961072087532,
+          "overall": 0.6832906149096355,
+          "temporal": 0.8920235296534489,
+          "unverifiable_rate": 0.3566666666666667
+        },
+        "RSICCformer": {
+          "captions": 100,
+          "coverage": 0.8326124942292522,
+          "faithfulness": 0.5469648432978054,
+          "overall": 0.6686138111844326,
+          "temporal": 0.8770880429303648,
+          "unverifiable_rate": 0.3783333333333333
+        }
+      },
+      "captions": 200,
+      "claim_statuses": {
+        "contradicted": 63,
+        "supported": 148,
+        "unverifiable": 113
+      },
+      "elapsed_seconds": 6.0259045250713825,
+      "scenes": 100
+    },
+    "gt_roi_gated": {
+      "by_entity": {
+        "building": {
+          "claims": 167,
+          "faithfulness": 0.972294186517961,
+          "spatial_support": 0.9820359281437125,
+          "statuses": {
+            "contradicted": 3,
+            "supported": 159,
+            "unverifiable": 5
+          },
+          "temporal_support": 0.9542023806415662
+        },
+        "road": {
+          "claims": 140,
+          "faithfulness": 0.9176958155263663,
+          "spatial_support": 0.9444444444444444,
+          "statuses": {
+            "contradicted": 19,
+            "supported": 119,
+            "unverifiable": 2
+          },
+          "temporal_support": 0.6127682763857779
+        },
+        "scene": {
+          "claims": 17,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 17
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Chg2Cap": {
+          "captions": 100,
+          "coverage": 0.8095920234146639,
+          "faithfulness": 0.8689815765484109,
+          "overall": 0.844470202411526,
+          "temporal": 0.8920235296534489,
+          "unverifiable_rate": 0.03
+        },
+        "RSICCformer": {
+          "captions": 100,
+          "coverage": 0.8068228116895696,
+          "faithfulness": 0.8578525416733216,
+          "overall": 0.8331546246560451,
+          "temporal": 0.8770880429303648,
+          "unverifiable_rate": 0.015
+        }
+      },
+      "captions": 200,
+      "claim_statuses": {
+        "contradicted": 39,
+        "supported": 278,
+        "unverifiable": 7
+      },
+      "elapsed_seconds": 5.564657226204872,
+      "scenes": 100
+    },
+    "hybrid_mask_temporal": {
+      "by_entity": {
+        "building": {
+          "claims": 167,
+          "faithfulness": 0.972294186517961,
+          "spatial_support": 0.9820359281437125,
+          "statuses": {
+            "contradicted": 3,
+            "supported": 159,
+            "unverifiable": 5
+          },
+          "temporal_support": 0.9542023806415662
+        },
+        "road": {
+          "claims": 140,
+          "faithfulness": 0.9176958155263663,
+          "spatial_support": 0.9444444444444444,
+          "statuses": {
+            "contradicted": 19,
+            "supported": 119,
+            "unverifiable": 2
+          },
+          "temporal_support": 0.6127682763857779
+        },
+        "scene": {
+          "claims": 17,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 17
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Chg2Cap": {
+          "captions": 100,
+          "coverage": 0.826769905173428,
+          "faithfulness": 0.8689815765484109,
+          "overall": 0.848764672851217,
+          "temporal": 0.8920235296534489,
+          "unverifiable_rate": 0.03
+        },
+        "RSICCformer": {
+          "captions": 100,
+          "coverage": 0.8250006934483338,
+          "faithfulness": 0.8578525416733216,
+          "overall": 0.8376990950957363,
+          "temporal": 0.8770880429303648,
+          "unverifiable_rate": 0.015
+        }
+      },
+      "captions": 200,
+      "claim_statuses": {
+        "contradicted": 39,
+        "supported": 278,
+        "unverifiable": 7
+      },
+      "elapsed_seconds": 5.577361661940813,
+      "scenes": 100
+    },
+    "mask_label_only": {
+      "by_entity": {
+        "building": {
+          "claims": 167,
+          "faithfulness": 0.9820359281437125,
+          "spatial_support": 0.9820359281437125,
+          "statuses": {
+            "contradicted": 3,
+            "supported": 164
+          },
+          "temporal_support": null
+        },
+        "road": {
+          "claims": 140,
+          "faithfulness": 0.9444444444444444,
+          "spatial_support": 0.9444444444444444,
+          "statuses": {
+            "contradicted": 3,
+            "supported": 51,
+            "unverifiable": 86
+          },
+          "temporal_support": null
+        },
+        "scene": {
+          "claims": 17,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 17
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Chg2Cap": {
+          "captions": 100,
+          "coverage": 0.826769905173428,
+          "faithfulness": 0.895,
+          "overall": 0.8736780953666964,
+          "temporal": null,
+          "unverifiable_rate": 0.22166666666666665
+        },
+        "RSICCformer": {
+          "captions": 100,
+          "coverage": 0.8250006934483338,
+          "faithfulness": 0.89,
+          "overall": 0.8696877167026045,
+          "temporal": null,
+          "unverifiable_rate": 0.18833333333333332
+        }
+      },
+      "captions": 200,
+      "claim_statuses": {
+        "contradicted": 23,
+        "supported": 215,
+        "unverifiable": 86
+      },
+      "elapsed_seconds": 5.47920036315918,
+      "scenes": 100
+    },
+    "temporal_delta": {
+      "by_entity": {
+        "building": {
+          "claims": 167,
+          "faithfulness": 0.6734675089833497,
+          "spatial_support": 0.5223025780904634,
+          "statuses": {
+            "contradicted": 9,
+            "supported": 60,
+            "unverifiable": 98
+          },
+          "temporal_support": 0.9542023806415662
+        },
+        "road": {
+          "claims": 140,
+          "faithfulness": 0.77820281279727,
+          "spatial_support": 0.3880620973768262,
+          "statuses": {
+            "contradicted": 24,
+            "supported": 103,
+            "unverifiable": 13
+          },
+          "temporal_support": 0.6127682763857779
+        },
+        "scene": {
+          "claims": 17,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 17
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Chg2Cap": {
+          "captions": 100,
+          "coverage": 0.8025086512312916,
+          "faithfulness": 0.5859235455415426,
+          "overall": 0.6870174423119062,
+          "temporal": 0.8920235296534489,
+          "unverifiable_rate": 0.36833333333333335
+        },
+        "RSICCformer": {
+          "captions": 100,
+          "coverage": 0.7998463418630999,
+          "faithfulness": 0.5614792517463354,
+          "overall": 0.6684051977395857,
+          "temporal": 0.8770880429303648,
+          "unverifiable_rate": 0.375
+        }
+      },
+      "captions": 200,
+      "claim_statuses": {
+        "contradicted": 50,
+        "supported": 163,
+        "unverifiable": 111
+      },
+      "elapsed_seconds": 5.833437118679285,
+      "scenes": 100
+    }
+  },
+  "scenes": 100,
+  "segmentation_run_dir": "/root/autodl-tmp/mga-artifacts/segearth-ov3/building-road-100x3-v4"
+}

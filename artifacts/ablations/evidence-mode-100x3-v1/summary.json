@@ -1,0 +1,367 @@
+{
+  "captions": 300,
+  "manifest": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/manifests/building_road_100x3_claims_v4.jsonl",
+  "mode_descriptions": {
+    "full_target": "当前实现：Add 使用 post，Remove 使用 pre，Modify 使用 pre ∪ post。",
+    "gt_roi_gated": "先用对应类别的真实变化 ROI 门控 pre/post，再判断时相存在性；这是乐观的 v1 风格对照。",
+    "mask_label_only": "不使用 SegEarth；Parser 的 target_labels 直接匹配真实标签 road=1、building=2，不能判断时相方向和静态上下文。",
+    "temporal_delta": "Add = post - pre，Remove = pre - post，Modify = pre XOR post。"
+  },
+  "modes": [
+    "full_target",
+    "temporal_delta",
+    "gt_roi_gated",
+    "mask_label_only"
+  ],
+  "output_dir": "/root/autodl-tmp/mga-artifacts/ablations/evidence-mode-100x3-v1",
+  "pairwise_delta_vs_full_target": {
+    "gt_roi_gated": {
+      "Change-Agent": {
+        "coverage": -0.027789682539682545,
+        "faithfulness": 0.29771168001262016,
+        "overall": 0.1551565891319511,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.33
+      },
+      "Draft": {
+        "coverage": -0.022789682539682544,
+        "faithfulness": 0.3082726049361546,
+        "overall": 0.1621570127528155,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.3616666666666667
+      },
+      "Guided": {
+        "coverage": -0.022789682539682544,
+        "faithfulness": 0.30571995077465175,
+        "overall": 0.1590856328326167,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.3783333333333333
+      }
+    },
+    "mask_label_only": {
+      "Change-Agent": {
+        "coverage": -0.010056245225362873,
+        "faithfulness": 0.325284623489956,
+        "overall": 0.18575631925329947,
+        "temporal": null,
+        "unverifiable_rate": -0.18166666666666667
+      },
+      "Draft": {
+        "coverage": -0.010611800780918428,
+        "faithfulness": 0.3376017665830863,
+        "overall": 0.1950032104241744,
+        "temporal": null,
+        "unverifiable_rate": -0.22
+      },
+      "Guided": {
+        "coverage": -0.005611800780918428,
+        "faithfulness": 0.34063214594689617,
+        "overall": 0.20594701208315833,
+        "temporal": null,
+        "unverifiable_rate": -0.26166666666666666
+      }
+    },
+    "temporal_delta": {
+      "Change-Agent": {
+        "coverage": -0.02531244866244866,
+        "faithfulness": 0.018657554570114032,
+        "overall": 0.0038309262978149274,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.02
+      },
+      "Draft": {
+        "coverage": -0.03687804047804048,
+        "faithfulness": 0.019248677929116383,
+        "overall": 0.0012613950128937546,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.005
+      },
+      "Guided": {
+        "coverage": -0.04254470714470715,
+        "faithfulness": 0.013618098820816962,
+        "overall": -0.0032960215217564437,
+        "temporal": 0.0,
+        "unverifiable_rate": -0.02
+      }
+    }
+  },
+  "results": {
+    "full_target": {
+      "by_entity": {
+        "building": {
+          "claims": 254,
+          "faithfulness": 0.6348810757696075,
+          "spatial_support": 0.4704612476060653,
+          "statuses": {
+            "contradicted": 36,
+            "supported": 71,
+            "unverifiable": 147
+          },
+          "temporal_support": 0.9402321852161835
+        },
+        "road": {
+          "claims": 187,
+          "faithfulness": 0.7549565283542656,
+          "spatial_support": 0.4683736569270898,
+          "statuses": {
+            "contradicted": 41,
+            "supported": 126,
+            "unverifiable": 20
+          },
+          "temporal_support": 0.5563999784607703
+        },
+        "scene": {
+          "claims": 20,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 20
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Change-Agent": {
+          "captions": 100,
+          "coverage": 0.8039281659459676,
+          "faithfulness": 0.5484527502474177,
+          "overall": 0.6570161559718897,
+          "temporal": 0.884278606604936,
+          "unverifiable_rate": 0.375
+        },
+        "Draft": {
+          "captions": 100,
+          "coverage": 0.8564529685124509,
+          "faithfulness": 0.5613881324068128,
+          "overall": 0.6811971544919296,
+          "temporal": 0.8585535865335492,
+          "unverifiable_rate": 0.3916666666666667
+        },
+        "Guided": {
+          "captions": 100,
+          "coverage": 0.8477863018457843,
+          "faithfulness": 0.5624290785428998,
+          "overall": 0.6725450194996124,
+          "temporal": 0.846500917760985,
+          "unverifiable_rate": 0.4183333333333333
+        }
+      },
+      "captions": 300,
+      "claim_statuses": {
+        "contradicted": 97,
+        "supported": 197,
+        "unverifiable": 167
+      },
+      "elapsed_seconds": 8.538808606099337,
+      "scenes": 100
+    },
+    "gt_roi_gated": {
+      "by_entity": {
+        "building": {
+          "claims": 254,
+          "faithfulness": 0.961097075102344,
+          "spatial_support": 0.9723320158102767,
+          "statuses": {
+            "contradicted": 9,
+            "supported": 238,
+            "unverifiable": 7
+          },
+          "temporal_support": 0.9402321852161835
+        },
+        "road": {
+          "claims": 187,
+          "faithfulness": 0.8832786389874693,
+          "spatial_support": 0.8953488372093024,
+          "statuses": {
+            "contradicted": 35,
+            "supported": 147,
+            "unverifiable": 5
+          },
+          "temporal_support": 0.5563999784607703
+        },
+        "scene": {
+          "claims": 20,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 20
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Change-Agent": {
+          "captions": 100,
+          "coverage": 0.7761384834062852,
+          "faithfulness": 0.8461644302600382,
+          "overall": 0.8121727451038403,
+          "temporal": 0.884278606604936,
+          "unverifiable_rate": 0.045
+        },
+        "Draft": {
+          "captions": 100,
+          "coverage": 0.8336632859727685,
+          "faithfulness": 0.8696607373429677,
+          "overall": 0.8433541672447449,
+          "temporal": 0.8585535865335492,
+          "unverifiable_rate": 0.03
+        },
+        "Guided": {
+          "captions": 100,
+          "coverage": 0.8249966193061017,
+          "faithfulness": 0.868149029317552,
+          "overall": 0.8316306523322287,
+          "temporal": 0.846500917760985,
+          "unverifiable_rate": 0.04
+        }
+      },
+      "captions": 300,
+      "claim_statuses": {
+        "contradicted": 64,
+        "supported": 385,
+        "unverifiable": 12
+      },
+      "elapsed_seconds": 8.565053754951805,
+      "scenes": 100
+    },
+    "mask_label_only": {
+      "by_entity": {
+        "building": {
+          "claims": 254,
+          "faithfulness": 0.9724409448818898,
+          "spatial_support": 0.9724409448818898,
+          "statuses": {
+            "contradicted": 7,
+            "supported": 247
+          },
+          "temporal_support": null
+        },
+        "road": {
+          "claims": 187,
+          "faithfulness": 0.8953488372093024,
+          "spatial_support": 0.8953488372093024,
+          "statuses": {
+            "contradicted": 9,
+            "supported": 77,
+            "unverifiable": 101
+          },
+          "temporal_support": null
+        },
+        "scene": {
+          "claims": 20,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 20
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Change-Agent": {
+          "captions": 100,
+          "coverage": 0.7938719207206049,
+          "faithfulness": 0.8737373737373737,
+          "overall": 0.842772475225189,
+          "temporal": null,
+          "unverifiable_rate": 0.19333333333333336
+        },
+        "Draft": {
+          "captions": 100,
+          "coverage": 0.8458411677315327,
+          "faithfulness": 0.898989898989899,
+          "overall": 0.8762003649161042,
+          "temporal": null,
+          "unverifiable_rate": 0.1716666666666667
+        },
+        "Guided": {
+          "captions": 100,
+          "coverage": 0.8421745010648659,
+          "faithfulness": 0.9040404040404041,
+          "overall": 0.8784920315827708,
+          "temporal": null,
+          "unverifiable_rate": 0.15666666666666665
+        }
+      },
+      "captions": 300,
+      "claim_statuses": {
+        "contradicted": 36,
+        "supported": 324,
+        "unverifiable": 101
+      },
+      "elapsed_seconds": 8.490549909882247,
+      "scenes": 100
+    },
+    "temporal_delta": {
+      "by_entity": {
+        "building": {
+          "claims": 254,
+          "faithfulness": 0.6598518497969117,
+          "spatial_support": 0.5088778230326872,
+          "statuses": {
+            "contradicted": 23,
+            "supported": 89,
+            "unverifiable": 142
+          },
+          "temporal_support": 0.9402321852161835
+        },
+        "road": {
+          "claims": 187,
+          "faithfulness": 0.7358323733750016,
+          "spatial_support": 0.4047405115578021,
+          "statuses": {
+            "contradicted": 39,
+            "supported": 131,
+            "unverifiable": 17
+          },
+          "temporal_support": 0.5563999784607703
+        },
+        "scene": {
+          "claims": 20,
+          "faithfulness": 0.0,
+          "spatial_support": 0.0,
+          "statuses": {
+            "contradicted": 20
+          },
+          "temporal_support": null
+        }
+      },
+      "by_model": {
+        "Change-Agent": {
+          "captions": 100,
+          "coverage": 0.7786157172835191,
+          "faithfulness": 0.5671103048175318,
+          "overall": 0.6608470822697045,
+          "temporal": 0.884278606604936,
+          "unverifiable_rate": 0.355
+        },
+        "Draft": {
+          "captions": 100,
+          "coverage": 0.8195749280344106,
+          "faithfulness": 0.5806368103359292,
+          "overall": 0.6824585495048235,
+          "temporal": 0.8585535865335492,
+          "unverifiable_rate": 0.38666666666666666
+        },
+        "Guided": {
+          "captions": 100,
+          "coverage": 0.8052415947010774,
+          "faithfulness": 0.5760471773637168,
+          "overall": 0.669248997977856,
+          "temporal": 0.846500917760985,
+          "unverifiable_rate": 0.39833333333333326
+        }
+      },
+      "captions": 300,
+      "claim_statuses": {
+        "contradicted": 82,
+        "supported": 220,
+        "unverifiable": 159
+      },
+      "elapsed_seconds": 8.552423798944801,
+      "scenes": 100
+    }
+  },
+  "scenes": 100,
+  "segmentation_run_dir": "/root/autodl-tmp/mga-artifacts/segearth-ov3/building-road-100x3-v4"
+}

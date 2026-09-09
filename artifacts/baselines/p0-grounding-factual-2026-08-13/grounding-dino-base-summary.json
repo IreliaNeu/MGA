@@ -1,0 +1,62 @@
+{
+  "backend": "hf-dino-box:IDEA-Research/grounding-dino-base:box=0.3:text=0.25:query-expansion=remote-sensing",
+  "captions": 2500,
+  "claim_statuses": {
+    "contradicted": 850,
+    "supported": 918,
+    "unverifiable": 1645
+  },
+  "detections": {
+    "entity_rows": 1000,
+    "mean_post_mask_fraction": 0.2888378295898438,
+    "mean_pre_mask_fraction": 0.3492703399658203,
+    "zero_post_boxes": 371,
+    "zero_pre_boxes": 486
+  },
+  "elapsed_seconds": 222.89478082209826,
+  "models": {
+    "Change-Agent": {
+      "captions": 500,
+      "coverage": 0.6191440660568098,
+      "faithfulness": 0.6603519994291511,
+      "overall": 0.6013833084360952,
+      "temporal": 0.7025021128027256,
+      "unverifiable_rate": 0.39799999999999996
+    },
+    "Chg2Cap": {
+      "captions": 500,
+      "coverage": 0.6048240361039624,
+      "faithfulness": 0.649835313094835,
+      "overall": 0.5895761267417974,
+      "temporal": 0.6961711095709505,
+      "unverifiable_rate": 0.411
+    },
+    "Draft": {
+      "captions": 500,
+      "coverage": 0.6070274345888623,
+      "faithfulness": 0.6233465694290379,
+      "overall": 0.5775668548085903,
+      "temporal": 0.6463256925724162,
+      "unverifiable_rate": 0.38799999999999996
+    },
+    "RSICCformer": {
+      "captions": 500,
+      "coverage": 0.5726737069267757,
+      "faithfulness": 0.6161267204158979,
+      "overall": 0.5635984247295643,
+      "temporal": 0.6465178407540813,
+      "unverifiable_rate": 0.39866666666666656
+    },
+    "Refined": {
+      "captions": 500,
+      "coverage": 0.5099737105351385,
+      "faithfulness": 0.5267275289079706,
+      "overall": 0.48101525103580867,
+      "temporal": 0.5523403306433259,
+      "unverifiable_rate": 0.4036666666666667
+    }
+  },
+  "peak_gpu_memory_mib": 1722.6240234375,
+  "scenes": 500,
+  "threshold_policy": "predeclared defaults; no test-set tuning"
+}

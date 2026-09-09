@@ -1,0 +1,32 @@
+[
+  {
+    "case": "base_selective",
+    "sample_id": "levir-cc_test_000031",
+    "entity": "building",
+    "tiny_mean_fraction": 1.0,
+    "base_mean_fraction": 0.0054931640625,
+    "reduction": 0.9945068359375,
+    "pre_image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/A/test_000031.png",
+    "post_image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/B/test_000031.png"
+  },
+  {
+    "case": "base_selective",
+    "sample_id": "levir-cc_test_000172",
+    "entity": "road",
+    "tiny_mean_fraction": 1.0,
+    "base_mean_fraction": 0.01373291015625,
+    "reduction": 0.98626708984375,
+    "pre_image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/A/test_000172.png",
+    "post_image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/B/test_000172.png"
+  },
+  {
+    "case": "base_abstains",
+    "sample_id": "levir-cc_test_000002",
+    "entity": "building",
+    "tiny_mean_fraction": 1.0,
+    "base_mean_fraction": 0.0,
+    "reduction": 1.0,
+    "pre_image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/A/test_000002.png",
+    "post_image": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/images/B/test_000002.png"
+  }
+]

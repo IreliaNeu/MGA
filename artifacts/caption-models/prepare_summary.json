@@ -1,0 +1,16 @@
+{
+  "archive": "/root/autodl-tmp/datasets/LEVIR-MCI-dataset.zip",
+  "selected_zip_files": 3858,
+  "pair_count": 1929,
+  "index_count": 1929,
+  "images_root": "/root/autodl-tmp/caption-bench-20260808/data/LEVIR-MCI-dataset/images/test",
+  "index_output": "/root/autodl-tmp/caption-bench-20260808/outputs/levir_test_1929_index.jsonl",
+  "caption_json": "/root/autodl-tmp/caption-bench-20260808/repos/RSICC/Levir_CC_dataset/LevirCCcaptions.json",
+  "rsiccformer_vocab_size": 468,
+  "chg2cap_vocab_size": 501,
+  "vocab_output_root": "/root/autodl-tmp/caption-bench-20260808/data/vocabs",
+  "intersection_manifest": "/root/autodl-tmp/datasets/organized/mga_levir_mci_1000/manifests/path_mapping.jsonl",
+  "manifest_unique_ids": 1000,
+  "intersection_count": 1000,
+  "intersection_output": "/root/autodl-tmp/caption-bench-20260808/outputs/levir_test_mga1000_index.jsonl"
+}

@@ -1,0 +1,181 @@
+{
+  "scene_count": 200,
+  "item_count": 600,
+  "class_map": {
+    "1": "low vegetation",
+    "2": "tree",
+    "3": "non-vegetated ground",
+    "4": "water",
+    "5": "playground",
+    "6": "building"
+  },
+  "hidden_entities": [
+    "low vegetation",
+    "tree",
+    "water"
+  ],
+  "runtime_seconds": 34.54450016468763,
+  "grounder_backend": "segearth-ov3-native:sam3.pt:confidence=0.1:logit=0.1:expansion=remote-sensing",
+  "conditions": {
+    "closed_set": {
+      "gt_class_lookup": {
+        "n": 600,
+        "n_scored": 600,
+        "coverage": 1.0,
+        "conditional_auc": 0.875,
+        "neutral_auc": 0.875,
+        "balanced_accuracy": 0.875,
+        "positive_mean": 1.0,
+        "negative_mean": 0.25,
+        "false_support_rate": 0.25
+      },
+      "open_vocab_only": {
+        "n": 600,
+        "n_scored": 600,
+        "coverage": 1.0,
+        "conditional_auc": 0.5799375,
+        "neutral_auc": 0.5799375,
+        "balanced_accuracy": 0.56,
+        "positive_mean": 0.2510560240775625,
+        "negative_mean": 0.15721811220694418,
+        "false_support_rate": 0.13
+      },
+      "known_gt_unknown_ov": {
+        "n": 600,
+        "n_scored": 600,
+        "coverage": 1.0,
+        "conditional_auc": 0.94375,
+        "neutral_auc": 0.94375,
+        "balanced_accuracy": 0.935,
+        "positive_mean": 0.7561960906811818,
+        "negative_mean": 0.06797539579654857,
+        "false_support_rate": 0.07
+      },
+      "oracle_all_class": {
+        "n": 600,
+        "n_scored": 600,
+        "coverage": 1.0,
+        "conditional_auc": 0.9575,
+        "neutral_auc": 0.9575,
+        "balanced_accuracy": 0.9575,
+        "positive_mean": 0.99,
+        "negative_mean": 0.075,
+        "false_support_rate": 0.075
+      }
+    },
+    "hidden_class": {
+      "gt_class_lookup": {
+        "n": 600,
+        "n_scored": 117,
+        "coverage": 0.195,
+        "conditional_auc": 0.8857142857142857,
+        "neutral_auc": 0.6361625,
+        "balanced_accuracy": 0.8857142857142857,
+        "positive_mean": 1.0,
+        "negative_mean": 0.22857142857142856,
+        "false_support_rate": 0.22857142857142856
+      },
+      "open_vocab_only": {
+        "n": 600,
+        "n_scored": 600,
+        "coverage": 1.0,
+        "conditional_auc": 0.5799375,
+        "neutral_auc": 0.5799375,
+        "balanced_accuracy": 0.56,
+        "positive_mean": 0.2510560240775625,
+        "negative_mean": 0.15721811220694418,
+        "false_support_rate": 0.13
+      },
+      "known_gt_unknown_ov": {
+        "n": 600,
+        "n_scored": 600,
+        "coverage": 1.0,
+        "conditional_auc": 0.710525,
+        "neutral_auc": 0.710525,
+        "balanced_accuracy": 0.7024999999999999,
+        "positive_mean": 0.4859045870552713,
+        "negative_mean": 0.16618734572891306,
+        "false_support_rate": 0.18
+      },
+      "oracle_all_class": {
+        "n": 600,
+        "n_scored": 600,
+        "coverage": 1.0,
+        "conditional_auc": 0.9575,
+        "neutral_auc": 0.9575,
+        "balanced_accuracy": 0.9575,
+        "positive_mean": 0.99,
+        "negative_mean": 0.075,
+        "false_support_rate": 0.075
+      }
+    }
+  },
+  "grounder": {
+    "building": {
+      "n": 111,
+      "mean_pre_iou": 0.11920303541584477,
+      "mean_post_iou": 0.12866465377467848,
+      "mean_add_iou": 0.18932369033117344,
+      "mean_remove_iou": 0.1598077101975372,
+      "mean_pre_confidence": 0.8316457937429617,
+      "mean_post_confidence": 0.8226659276463963,
+      "mean_pre_fraction": 0.43964777766047297,
+      "mean_post_fraction": 0.4267954783396678
+    },
+    "low vegetation": {
+      "n": 112,
+      "mean_pre_iou": 0.08420819000203204,
+      "mean_post_iou": 0.10401497777069842,
+      "mean_add_iou": 0.07812266154267204,
+      "mean_remove_iou": 0.06964664355654365,
+      "mean_pre_confidence": 0.5971352713448661,
+      "mean_post_confidence": 0.6134033203125,
+      "mean_pre_fraction": 0.4535383496965681,
+      "mean_post_fraction": 0.4571755273001535
+    },
+    "non-vegetated ground": {
+      "n": 124,
+      "mean_pre_iou": 0.0696252674089233,
+      "mean_post_iou": 0.08247575443178878,
+      "mean_add_iou": 0.047281588027121714,
+      "mean_remove_iou": 0.052959075750659286,
+      "mean_pre_confidence": 0.6060987903225806,
+      "mean_post_confidence": 0.6126590851814516,
+      "mean_pre_fraction": 0.5213616894137475,
+      "mean_post_fraction": 0.5154391873267389
+    },
+    "playground": {
+      "n": 55,
+      "mean_pre_iou": 0.033724919272869115,
+      "mean_post_iou": 0.050679183946516826,
+      "mean_add_iou": 0.05053298621287033,
+      "mean_remove_iou": 0.016990682614333393,
+      "mean_pre_confidence": 0.38047207919034093,
+      "mean_post_confidence": 0.41956343217329545,
+      "mean_pre_fraction": 0.19580244584517045,
+      "mean_post_fraction": 0.21968883167613637
+    },
+    "tree": {
+      "n": 133,
+      "mean_pre_iou": 0.05007548214623622,
+      "mean_post_iou": 0.04830514177898644,
+      "mean_add_iou": 0.04833093382810633,
+      "mean_remove_iou": 0.059227782608134306,
+      "mean_pre_confidence": 0.5501369390272557,
+      "mean_post_confidence": 0.5769446810385338,
+      "mean_pre_fraction": 0.26996274102003054,
+      "mean_post_fraction": 0.269951153518562
+    },
+    "water": {
+      "n": 65,
+      "mean_pre_iou": 0.07394662168016836,
+      "mean_post_iou": 0.0587055012515555,
+      "mean_add_iou": 0.04057477980383882,
+      "mean_remove_iou": 0.06796940641778795,
+      "mean_pre_confidence": 0.5300480769230769,
+      "mean_post_confidence": 0.494921875,
+      "mean_pre_fraction": 0.10658193734975961,
+      "mean_post_fraction": 0.10002300555889423
+    }
+  }
+}
